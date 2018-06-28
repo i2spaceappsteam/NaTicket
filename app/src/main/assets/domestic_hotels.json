@@ -1,0 +1,143 @@
+[
+
+  {
+    "CityId": "1",
+    "CityName": "AGRA",
+    "Expedia": "AGRA",
+    "Arzoo": "AGRA",
+    "MakeMyTrip": "AGR",
+    "AxisRooms": "Agra",
+    "GRNCONNECT": "C!008895",
+    "TBO": "10482-IN",
+    "OYOROOMS": "Agra"
+  },
+  {
+    "CityId": "2",
+    "CityName": "BANGALORE",
+    "Arzoo": "BANGALORE",
+    "MakeMyTrip": "BLR",
+    "AxisRooms": "Bengaluru",
+    "GRNCONNECT": "C!009767",
+    "TBO": "10391-IN",
+    "OYOROOMS": "Bangalore"
+  },
+  {
+    "CityId": "3",
+    "CityName": "CHENNAI",
+    "Expedia": "CHENNAI",
+    "Arzoo": "CHENNAI",
+    "MakeMyTrip": "MAA",
+    "AxisRooms": "Chennai",
+    "TBO": "10671-IN",
+    "GRNCONNECT": "C!014137",
+    "OYOROOMS": "Chennai"
+  },
+  {
+    "CityId": "4",
+    "CityName": "GOA",
+    "Expedia": "GOA",
+    "Arzoo": "GOA",
+    "MakeMyTrip": "GOI",
+    "AxisRooms": "Goa",
+    "GRNCONNECT": "C!001563",
+    "TBO": "10704-IN",
+    "OYOROOMS": "Goa"
+  },
+  {
+    "CityId": "5",
+    "CityName": "HYDERABAD",
+    "Expedia": "HYDERABAD",
+    "Arzoo": "HYDERABAD",
+    "MakeMyTrip": "HYD",
+    "AxisRooms": "Hyderabad",
+    "GRNCONNECT": "C!020801",
+    "TBO": "10617-IN",
+    "OYOROOMS": "Hyderabad"
+  },
+  {
+    "CityId": "6",
+    "CityName": "JAIPUR",
+    "Expedia": "JAIPUR",
+    "Arzoo": "JAIPUR",
+    "MakeMyTrip": "JAI",
+    "AxisRooms": "Jaipur",
+    "GRNCONNECT": "C!008896",
+    "TBO": "10529-IN",
+    "OYOROOMS": "Jaipur"
+  },
+  {
+    "CityId": "7",
+    "CityName": "KOLKATA",
+    "Expedia": "KOLKATA",
+    "Arzoo": "KOLKATA",
+    "MakeMyTrip": "CCU",
+    "AxisRooms": "Kolkata",
+    "TBO": "10693-IN",
+    "OYOROOMS": "Kolkata"
+  },
+  {
+    "CityId": "8",
+    "CityName": "MUMBAI / BOMBAY",
+    "Expedia": "MUMBAI",
+    "Arzoo": "MUMBAI",
+    "MakeMyTrip": "BOM",
+    "AxisRooms": "Mumbai",
+    "TBO": "10438-IN",
+    "GRNCONNECT": "C!007561"
+  },
+  {
+    "CityId": "9",
+    "CityName": "NEW DELHI",
+    "Expedia": "NEW DELHI",
+    "Arzoo": "NEW DELHI",
+    "MakeMyTrip": "DEL",
+    "AxisRooms": "New Delhi",
+    "GRNCONNECT": "C!055836",
+    "TBO": "10630-IN",
+    "OYOROOMS": "Delhi"
+  },
+  {
+    "CityId": "13",
+    "CityName": "AHMEDABAD",
+    "Expedia": "AHMEDABAD",
+    "Arzoo": "AHMEDABAD",
+    "MakeMyTrip": "AMD",
+    "AxisRooms": "Ahmedabad",
+    "GRNCONNECT": "C!021335",
+    "TBO": "10375-IN",
+    "OYOROOMS": "Ahmedabad"
+  },
+  {
+    "CityId": "18",
+    "CityName": "ALLAHABAD",
+    "Expedia": "ALLAHABAD",
+    "Arzoo": "ALLAHABAD",
+    "MakeMyTrip": "IXD",
+    "AxisRooms": "Allahabad",
+    "GRNCONNECT": "C!026939",
+    "TBO": "10678-IN",
+    "OYOROOMS": "Allahabad"
+  },
+  {
+    "CityId": "32",
+    "CityName": "AURANGABAD",
+    "Expedia": "AURANGABAD",
+    "Arzoo": "AURANGABAD",
+    "MakeMyTrip": "IXU",
+    "AxisRooms": "Aurangabad",
+    "GRNCONNECT": "C!021506",
+    "TBO": "10491-IN",
+    "OYOROOMS": "Aurangabad"
+  },
+  {
+    "CityId": "370",
+    "CityName": "TIRUPATI",
+    "Expedia": "TIRUPATI",
+    "Arzoo": "TIRUPATI",
+    "MakeMyTrip": "TIR",
+    "AxisRooms": "Tirupati",
+    "GRNCONNECT": "C!023836",
+    "TBO": "10607-IN",
+    "OYOROOMS": "Tirupati"
+  }
+]

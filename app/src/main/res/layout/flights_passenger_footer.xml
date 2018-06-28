@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customfontdemo="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black_overlay"
+        android:layout_marginTop="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/promo_layout">
+
+        <com.NaTicket.n.custom.MyTextView
+            android:id="@+id/have_a_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:text="Have a Promocode ?"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            customfontdemo:fontName="@string/custom_font" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:weightSum="1"
+            android:id="@+id/promo_code_layout"
+            android:visibility="gone">
+
+            <com.NaTicket.n.custom.MyEdiTextBold
+                android:id="@+id/promocode_et"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Enter Promo Code"
+                android:padding="8dp"
+                android:inputType="textEmailAddress"
+                android:textSize="15sp"
+                android:layout_weight="0.6"
+                android:background="@drawable/background_left_promo"
+                customfontdemo:fontName="@string/custom_font"/>
+
+            <com.NaTicket.n.custom.MyTextView
+                android:id="@+id/promo_apply"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Apply"
+                android:layout_weight="0.4"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:gravity="center"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/white"
+                android:background="@drawable/background_reverse_right_promo"
+                android:textSize="17sp"
+                customfontdemo:fontName="@string/custom_font" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/promo_amount_layout"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <com.NaTicket.n.custom.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Fare"
+                android:layout_weight="1.0"
+                android:paddingLeft="5dp"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                customfontdemo:fontName="@string/custom_font" />
+
+            <com.NaTicket.n.custom.MyTextView
+                android:id="@+id/fare_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.0"
+                android:paddingLeft="5dp"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                customfontdemo:fontName="@string/custom_font" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            >
+
+            <com.NaTicket.n.custom.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Discount Amount"
+                android:layout_weight="1.0"
+                android:paddingLeft="5dp"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                customfontdemo:fontName="@string/custom_font" />
+
+            <com.NaTicket.n.custom.MyTextView
+                android:id="@+id/discount_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.0"
+                android:paddingLeft="5dp"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                customfontdemo:fontName="@string/custom_font" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <com.NaTicket.n.custom.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="You Pay"
+                android:layout_weight="1.0"
+                android:paddingLeft="5dp"
+                android:textSize="15sp"
+                android:textColor="@android:color/black"
+                customfontdemo:fontName="@string/custom_font" />
+
+            <com.NaTicket.n.custom.MyTextView
+                android:id="@+id/TotalTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.0"
+                android:paddingLeft="5dp"
+                android:textSize="15sp"
+                android:textColor="@android:color/black"
+                customfontdemo:fontName="@string/custom_font" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black_overlay"
+        android:layout_marginTop="10dp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+        <com.NaTicket.n.custom.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_weight="1.0"
+            android:text="Contact Details:"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            customfontdemo:fontName="@string/custom_font" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        >
+        <com.NaTicket.n.custom.MyEdiText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="E Mail"
+            android:padding="8dp"
+            android:inputType="textEmailAddress"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/backgroundforrg"
+            customfontdemo:fontName="@string/custom_font"/>
+        <com.NaTicket.n.custom.MyEdiText
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:hint="Mobile No."
+            android:padding="8dp"
+            android:textSize="15sp"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/backgroundforrg"
+            customfontdemo:fontName="@string/custom_font"/>
+
+        <com.NaTicket.n.custom.MyEdiText
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:hint="Address"
+            android:padding="8dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="15sp"
+            android:inputType="text"
+            android:background="@drawable/backgroundforrg"
+            customfontdemo:fontName="@string/custom_font"/>
+
+        <com.NaTicket.n.custom.MyEdiText
+            android:id="@+id/city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:hint="City"
+            android:padding="8dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="15sp"
+            android:inputType="text"
+            android:background="@drawable/backgroundforrg"
+            customfontdemo:fontName="@string/custom_font"/>
+
+
+        <com.NaTicket.n.custom.MyEdiText
+            android:id="@+id/state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:hint="State"
+            android:padding="8dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="15sp"
+            android:inputType="text"
+            android:background="@drawable/backgroundforrg"
+            customfontdemo:fontName="@string/custom_font"/>
+
+        <com.NaTicket.n.custom.MyEdiText
+            android:id="@+id/postalcode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/backgroundforrg"
+            android:hint="Postal Code"
+            android:inputType="number"
+            android:padding="8dp"
+            android:textSize="15sp"
+            android:maxLength="6"
+            customfontdemo:fontName="@string/custom_font" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:padding="10dp"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/checkboxAgree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="I agree to "
+                android:textSize="15sp"
+                android:textColor="@color/black"/>
+            <com.NaTicket.n.custom.MyTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/TermsConditions"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp"
+                android:gravity="start"
+                android:singleLine="true"
+                android:ellipsize="end"
+                customfontdemo:fontName="@string/custom_font"/>
+        </LinearLayout>
+    </LinearLayout>
+    </LinearLayout>
+</ScrollView>

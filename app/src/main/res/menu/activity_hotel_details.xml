@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/action_overview"
+        android:title="@string/overview"
+        android:icon="@drawable/ic_over"
+        />
+
+    <item
+        android:id="@+id/action_amenities"
+        android:title="@string/amenities"
+        android:icon="@drawable/ic_more"
+        />
+    <item
+        android:id="@+id/action_location"
+        android:title="@string/location"
+        android:icon="@drawable/ic_location_pointer"/>
+
+
+
+</menu>

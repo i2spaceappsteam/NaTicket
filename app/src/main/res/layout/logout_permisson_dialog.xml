@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customfontdemo="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Transparent"
+    android:padding="5dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:minWidth="500dp"
+        android:minHeight="200dp"
+        android:gravity="center">
+
+
+    <com.NaTicket.n.custom.MyTextView
+        android:id="@+id/Msg_alert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:text="Are you sure you want to logout?"
+        customfontdemo:fontName="@string/custom_font"/>
+
+        <com.NaTicket.n.custom.MyTextViewBold
+            android:id="@+id/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:layout_gravity="center"
+            android:text="@string/Logout"
+            android:background="@drawable/button_background"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingStart="50dp"
+            android:paddingEnd="50dp"
+            android:textColor="@color/white"
+            android:layout_marginTop="15dp"
+            customfontdemo:fontName="@string/custom_font"/>
+
+        <com.NaTicket.n.custom.MyTextView
+            android:id="@+id/dialog_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:text="Cancel"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            customfontdemo:fontName="@string/custom_font"/>
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

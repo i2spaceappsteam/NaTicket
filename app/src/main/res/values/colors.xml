@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#004e89</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#ff7f00</color>
+    <color name="white">#ffffff</color>
+    <color name="colorBlack">#000000</color>
+
+    <color name="colorBlue">#0383B4</color>
+    <color name="colorYellow">#FFAD00</color>
+    <color name="colorGreenL">#82C214</color>
+    <color name="colorRed">#ED3712</color>
+    <color name="colorAqua">#14B691</color>
+
+
+
+    <color name="Colorgray">#848484</color>
+    <color name="colorBlock">#000000</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="Colorgreen">#00998b</color>
+    <color name="light_grey">#dfdfdf</color>
+    <color name="grey">#c9c9c9</color>
+    <color name="Transparent">#00000000</color>
+    <color name="lightblack">#626262</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="back_ground">#d6d6d6</color>
+    <color name="red">#e71414</color>
+    <color name="text_primary">#254f66</color>
+    <color name="text_secondary">#5b8ea5</color>
+
+    <color name="black">#000000</color>
+
+    ///Set touch color same as ColorPrimary with 50% Transparancry
+    <color name="touchColor">#7cff7f00</color>
+
+    <color name="slide3bg">#4ddbc9</color>
+
+
+    <color name="Grey">#818181</color>
+
+
+
+
+    <!-- dots inactive colors -->
+    <color name="slide1_dot_dark_screen1">#2d2e40</color>
+    <color name="slide2_dot_dark_screen2">#2d2e40</color>
+    <color name="slide3_dot_dark_screen3">#2d2e40</color>
+
+
+    <!-- dots active colors -->
+    <color name="slide1_dot_light_screen1">#ffffff</color>
+    <color name="slide2_dot_light_screen2">#ffffff</color>
+    <color name="slide3_dot_light_screen3">#ffffff</color>
+
+    <array name="slider_array_dot_active">
+        <item>@color/slide1_dot_light_screen1</item>
+        <item>@color/slide2_dot_light_screen2</item>
+        <item>@color/slide3_dot_light_screen3</item>
+
+    </array>
+
+    <array name="slider_array_dot_inactive">
+        <item>@color/slide1_dot_dark_screen1</item>
+        <item>@color/slide2_dot_dark_screen2</item>
+        <item>@color/slide3_dot_dark_screen3</item>
+    </array>
+    <!-- //#FF4081-->
+
+
+    <color name="dot_dark_screen1">#ffffff</color>
+    <color name="dot_dark_screen2">#ffffff</color>
+    <color name="dot_dark_screen3">#ffffff</color>
+    <color name="dot_dark_screen4">#ffffff</color>
+    <color name="dot_dark_screen5">#ffffff</color>
+    <color name="dot_dark_screen6">#ffffff</color>
+
+    <color name="dot_light_screen1">#000</color>
+    <color name="dot_light_screen2">#000</color>
+    <color name="dot_light_screen3">#000</color>
+    <color name="dot_light_screen4">#000</color>
+    <color name="dot_light_screen5">#000</color>
+    <color name="dot_light_screen6">#000</color>
+    <color name="colorGreyText">#c4c4c4</color>
+    <color name="GreenLight">#b1ff80</color>
+
+    <array name="array_dot_active">
+        <item>@color/dot_light_screen1</item>
+        <item>@color/dot_light_screen2</item>
+        <item>@color/dot_light_screen3</item>
+        <item>@color/dot_light_screen4</item>
+        <item>@color/dot_light_screen5</item>
+        <item>@color/dot_light_screen6</item>
+    </array>
+
+
+    <array name="array_dot_inactive">
+        <item>@color/dot_dark_screen1</item>
+        <item>@color/dot_dark_screen2</item>
+        <item>@color/dot_dark_screen3</item>
+        <item>@color/dot_dark_screen4</item>
+        <item>@color/dot_dark_screen5</item>
+        <item>@color/dot_dark_screen6</item>
+    </array>
+</resources>

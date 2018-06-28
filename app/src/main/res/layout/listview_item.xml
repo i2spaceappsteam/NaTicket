@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:customfontdemo="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="8dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/touch_color">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="2sp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:src="@drawable/ic_green_bus" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="6.5"
+                android:paddingLeft="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <!-- <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/M_ticket_Icon"
+                android:layout_gravity="center"
+                android:background="@drawable/mobileicon"
+                android:visibility="invisible"/>-->
+
+                    <com.NaTicket.n.custom.MyTextViewBold
+
+                        android:id="@+id/Travels"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="Morning Star Travels"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#000"
+                        customfontdemo:fontName="GothamRoundedBook_21018.ttf" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:layout_marginTop="8dp">
+
+
+                    <com.NaTicket.n.custom.MyTextView
+                        android:id="@+id/BusType"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:ellipsize="end"
+                        android:gravity="start"
+                        android:singleLine="true"
+                        android:textSize="12dp"
+                        android:text="SCANIA MULTIAXEL SEMI SLEEPER"
+                        customfontdemo:fontName="GothamRoundedBook_21018.ttf" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp"
+                    android:gravity="bottom">
+
+
+                    <com.NaTicket.n.custom.MyTextView
+                        android:id="@+id/BusSeats"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="36 Seats"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        customfontdemo:fontName="GothamRoundedBook_21018.ttf" />
+
+
+                    <com.NaTicket.n.custom.MyTextView
+                        android:id="@+id/Duration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="11:00 Hrs"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        android:layout_marginLeft="5dp"
+                        customfontdemo:fontName="GothamRoundedBook_21018.ttf" />
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_gravity="center"
+                        android:id="@+id/M_ticket_Icon"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="2.5"
+                android:gravity="end"
+                android:paddingRight="5dp"
+                android:layout_marginTop="10dp">
+
+                <com.NaTicket.n.custom.MyTextViewBold
+                    android:id="@+id/DepartureTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="12:00 PM"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/colorBlock"
+                    android:textSize="16sp"
+                    customfontdemo:fontName="GothamRoundedBook_21018.ttf" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="8dp">
+
+                    <com.NaTicket.n.custom.MyTextView
+                        android:id="@+id/ArrivalTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:singleLine="true"
+                        android:text="12:00 PM"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="15sp"
+                        customfontdemo:fontName="GothamRoundedBook_21018.ttf" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="end"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="10dp">
+
+                    <com.NaTicket.n.custom.MyTextViewBold
+                        android:id="@+id/NetFares"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="end"
+                        android:singleLine="true"
+                        android:text="INR 1500"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textSize="15dp"
+                        android:textColor="@color/colorPrimary"
+                        customfontdemo:fontName="GothamRoundedBook_21018.ttf" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>

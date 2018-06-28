@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/Buses"
+            android:icon="@drawable/nav_bus"
+            android:title="@string/Bus"
+            />
+        <item
+        android:id="@+id/flights"
+        android:icon="@drawable/nav_flights"
+        android:title="@string/Flight" />
+        <item
+            android:id="@+id/hotels"
+            android:icon="@drawable/nav_hotel"
+            android:title="@string/Hotels" />
+        <item
+            android:id="@+id/Holidays"
+            android:icon="@drawable/nav_holidays"
+            android:title="@string/Holidays" />
+        <item
+            android:id="@+id/Recharges"
+            android:icon="@drawable/nav_recharge"
+            android:title="@string/Recharges"/>
+
+
+
+
+    </group>
+
+
+
+    <group android:checkableBehavior="single">
+
+
+        <item
+            android:id="@+id/login"
+            android:icon="@drawable/nav_profile"
+            android:title="@string/LogIn"/>
+
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/nav_profile"
+            android:title="@string/Profile"/>
+
+        <item
+            android:id="@+id/Reports"
+            android:icon="@drawable/nav_reports"
+            android:title="@string/Reports" />
+
+        <item
+            android:id="@+id/offers"
+            android:icon="@drawable/nav_offers"
+            android:title="@string/Offers"/>
+
+        <item
+            android:id="@+id/cancel_ticket"
+            android:icon="@drawable/nav_can_tickt"
+            android:title="@string/CancelTicket" />
+
+        <item
+            android:id="@+id/aboutus"
+            android:icon="@drawable/ic_about_us"
+            android:title="@string/AboutUs" />
+        <item
+            android:id="@+id/changepwd"
+            android:icon="@drawable/nav_change_pwd"
+            android:title="@string/ChangePassword" />
+        <item
+            android:id="@+id/terms"
+            android:icon="@drawable/ic_tnc"
+            android:title="@string/TermsConditions" />
+        <item
+            android:id="@+id/faqs"
+            android:icon="@drawable/ic_faq_1"
+            android:title="@string/FAQs" />
+
+        <item
+            android:id="@+id/feedback"
+            android:icon="@drawable/ic_feedback"
+            android:title="@string/WriteFeedback" />
+
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_logout"
+            android:title="@string/Logout" />
+    </group>
+
+
+
+</menu>

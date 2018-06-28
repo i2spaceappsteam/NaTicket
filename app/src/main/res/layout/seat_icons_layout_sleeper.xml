@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/grey"
+    android:paddingBottom="5dp">
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/seat_icon_available_sleeper"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="8sp"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center"
+        android:text="Available"/>
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:src="@drawable/seat_icon_sleeper_selected"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="8sp"
+        android:paddingTop="5dp"
+        android:layout_gravity="center"
+        android:text="Selected"/>
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:src="@drawable/seat_icon_sleeper_ladies"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="8sp"
+        android:paddingTop="5dp"
+        android:layout_gravity="center"
+        android:text="Ladies"/>
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:src="@drawable/seat_icon_sleeper_notavailable"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="8sp"
+        android:paddingTop="5dp"
+        android:layout_gravity="center"
+        android:text="Booked"/>
+
+</LinearLayout>

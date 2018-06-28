@@ -1,0 +1,64 @@
+[{
+		"AirportCode": "GOI",
+		"City": "Goa",
+		"Country": "India",
+		"AirportDesc": "Dabolim",
+		"Type": "C"
+	},
+	{
+		"AirportCode": "BLR",
+		"City": "BANGALORE",
+		"Country": "India",
+		"AirportDesc": "Bangalore International Airport",
+		"Type": "C"
+	},
+	{
+		"AirportCode": "MAA",
+		"City": "CHENNAI",
+		"Country": "India",
+		"AirportDesc": "Madras International [Meenambakkam]",
+		"Type": "C"
+	},
+	{
+		"AirportCode": "BOM",
+		"City": "MUMBAI",
+		"Country": "India",
+		"AirportDesc": "Chhatrapati Shivaji International",
+		"Type": "C"
+	},
+	{
+		"AirportCode": "DEL",
+		"City": "NEW DELHI",
+		"Country": "India",
+		"AirportDesc": "Indira Gandhi Intl",
+		"Type": "C"
+	},
+	{
+		"AirportCode": "GOI",
+		"City": "Goa",
+		"Country": "India",
+		"AirportDesc": "Dabolim",
+		"Type": "C"
+	},
+	{
+		"AirportCode": "HYD",
+		"City": "HYDERABAD",
+		"Country": "India",
+		"AirportDesc": "Rajiv Gandhi Airport",
+		"Type": "C"
+	},
+	{
+		"AirportCode": "CCU",
+		"City": "KOLKATA",
+		"Country": "India",
+		"AirportDesc": "Netaji Subhas Chandra",
+		"Type": "C"
+	},
+	{
+		"AirportCode": "PNQ",
+		"City": "Pune",
+		"Country": "India",
+		"AirportDesc": "Lohegaon",
+		"Type": "C"
+	}
+]

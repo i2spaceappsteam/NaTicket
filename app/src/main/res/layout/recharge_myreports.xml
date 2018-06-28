@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:customfontdemo="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#fff">
+
+
+        <TextView
+            android:id="@+id/refno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+
+            android:padding="2dp"
+            />
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#fff">
+
+        <com.NaTicket.n.custom.MyTextView
+            android:id="@+id/bcadapterdest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            customfontdemo:fontName="GothamRoundedBook_21018.ttf"
+            />
+        <com.NaTicket.n.custom.MyTextView
+            android:id="@+id/bcadaptersrc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            customfontdemo:fontName="GothamRoundedBook_21018.ttf"
+            />
+
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#fff">
+        <com.NaTicket.n.custom.MyTextView
+            android:id="@+id/bcadapteramount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            customfontdemo:fontName="GothamRoundedBook_21018.ttf"
+
+            />
+    <com.NaTicket.n.custom.MyTextView
+        android:id="@+id/bcadapterbookingstatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        customfontdemo:fontName="GothamRoundedBook_21018.ttf"
+        />
+
+        </LinearLayout>
+    <com.NaTicket.n.custom.MyTextView
+        android:id="@+id/psaname"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        customfontdemo:fontName="GothamRoundedBook_21018.ttf"
+
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/seperator"
+        android:background="#000"
+        />
+
+
+</LinearLayout>

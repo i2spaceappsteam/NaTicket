@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customfontdemo="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.NaTicket.n.flights.Dom_Onward_Flight_Filters_Activity"
+    tools:showIn="@layout/flight_filters_activity">
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+
+    <com.NaTicket.n.custom.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fare Type"
+        android:textSize="12sp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:gravity="start"
+        customfontdemo:fontName="@string/custom_font"
+        />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/check_box_faretype_layout"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/lightblack"
+        android:layout_marginTop="20dp"/>
+
+
+    <com.NaTicket.n.custom.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stops"
+        android:textSize="12sp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:gravity="start"
+        customfontdemo:fontName="@string/custom_font"
+        />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/check_box_stops_layout"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        />
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/lightblack"
+                android:layout_marginTop="20dp" />
+
+
+            <com.NaTicket.n.custom.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price"
+                android:textSize="12sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:gravity="start"
+                customfontdemo:fontName="@string/custom_font"
+                />
+
+
+            <com.crystal.crystalrangeseekbar.widgets.CrystalRangeSeekbar
+                android:id="@+id/price_rangeSeekbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:corner_radius="10"
+                app:bar_color="#8990C4"
+                app:bar_highlight_color="#2434AD"
+                app:left_thumb_color="#1A246D"
+                app:right_thumb_color="#1A246D"
+                app:left_thumb_color_pressed="#030B47"
+                app:right_thumb_color_pressed="#030B47"
+                app:data_type="_integer"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp">
+
+                <com.NaTicket.n.custom.MyTextViewBold
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/price_min_value"
+                    android:text="30"
+                    android:textSize="20dp"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:gravity="start"
+                    android:layout_weight="1"
+                    customfontdemo:fontName="@string/custom_font"
+                    />
+
+
+                <com.NaTicket.n.custom.MyTextViewBold
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/price_max_value"
+                    android:text="20"
+                    android:textSize="20dp"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    customfontdemo:fontName="@string/custom_font"
+                    />
+            </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/lightblack"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"/>
+
+    <com.NaTicket.n.custom.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Departure"
+        android:textSize="12sp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:gravity="start"
+        android:visibility="gone"
+        customfontdemo:fontName="@string/custom_font"
+        />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="2"
+            android:id="@+id/dept_layout"
+            android:layout_marginLeft="10dp"
+            android:visibility="gone"/>
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/lightblack"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"/>
+    <com.NaTicket.n.custom.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Arrival"
+        android:textSize="12sp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:gravity="start"
+        android:visibility="gone"
+        customfontdemo:fontName="@string/custom_font"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="2"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/arrival_layout"
+        android:visibility="gone">
+
+
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/lightblack"
+        android:layout_marginTop="20dp"/>
+
+            <com.NaTicket.n.custom.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Airlines"
+                android:textSize="12sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:gravity="start"
+                customfontdemo:fontName="@string/custom_font"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/check_box_airline_layout"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp"
+
+                />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

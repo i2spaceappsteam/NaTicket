@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customfontdemo="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutFare"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+
+
+    <com.NaTicket.n.custom.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Fare Details"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/colorAccent"
+        customfontdemo:fontName="@string/custom_font"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:weightSum="1">
+
+        <com.NaTicket.n.custom.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+
+            android:text="No of Adults"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/colorBlock"
+            customfontdemo:fontName="@string/custom_font"/>
+
+        <com.NaTicket.n.custom.MyTextView
+            android:id="@+id/NoOfAdults"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1.02"
+            android:gravity="right"
+            android:text="Small Text"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/colorBlock"
+            customfontdemo:fontName="@string/custom_font"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/NumberOfChildLinearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:visibility="gone"
+        android:weightSum="1">
+
+        <com.NaTicket.n.custom.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="No of Child"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/colorBlock"
+            customfontdemo:fontName="@string/custom_font"/>
+
+        <com.NaTicket.n.custom.MyTextView
+            android:id="@+id/NoOfChild"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1.02"
+            android:gravity="right"
+            android:text="Small Text"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/colorBlock"
+            customfontdemo:fontName="@string/custom_font"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/NumberOfInfantLinearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:visibility="gone"
+        android:weightSum="1">
+
+        <com.NaTicket.n.custom.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="No of Infant"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/colorBlock"
+            customfontdemo:fontName="@string/custom_font"/>
+
+        <com.NaTicket.n.custom.MyTextView
+            android:id="@+id/NoOfInfant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1.02"
+            android:gravity="right"
+            android:text="Small Text"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/colorBlock"
+            customfontdemo:fontName="@string/custom_font"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:weightSum="1">
+
+        <com.NaTicket.n.custom.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Base Fare "
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/colorBlock"
+            customfontdemo:fontName="@string/custom_font"/>
+
+        <com.NaTicket.n.custom.MyTextView
+            android:id="@+id/BaseFare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1.02"
+            android:gravity="right"
+            android:text="Small Text"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/colorBlock"
+            customfontdemo:fontName="@string/custom_font"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:weightSum="1">
+
+        <com.NaTicket.n.custom.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Fee and Surcharges"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/colorBlock"
+            customfontdemo:fontName="@string/custom_font"/>
+
+        <com.NaTicket.n.custom.MyTextView
+            android:id="@+id/feeandsercharges"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1.02"
+            android:gravity="right"
+            android:text="Small Text"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/colorBlock"
+            customfontdemo:fontName="@string/custom_font"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ServiceTaxLinerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:visibility="gone"
+        android:weightSum="1">
+
+        <com.NaTicket.n.custom.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="GST"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/colorBlock"
+            customfontdemo:fontName="@string/custom_font"/>
+
+        <com.NaTicket.n.custom.MyTextView
+            android:id="@+id/Service_Tax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1.02"
+            android:gravity="right"
+            android:text="Small Text"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/colorBlock"
+            customfontdemo:fontName="@string/custom_font"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:weightSum="1"
+        android:visibility="gone">
+
+        <com.NaTicket.n.custom.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="TCharge:"
+
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/colorBlock"
+            customfontdemo:fontName="@string/custom_font"/>
+
+        <com.NaTicket.n.custom.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1.02"
+            android:gravity="right"
+            android:text="Small Text"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/colorBlock"
+            customfontdemo:fontName="@string/custom_font"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:weightSum="1"
+        android:visibility="gone">
+
+        <com.NaTicket.n.custom.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+
+            android:text="Trn Chg / Fees :"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/colorBlock"
+            customfontdemo:fontName="@string/custom_font"/>
+
+        <com.NaTicket.n.custom.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1.02"
+            android:gravity="right"
+            android:text="Small Text"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/colorBlock"
+            customfontdemo:fontName="@string/custom_font"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ConvenienceFeeLinerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:visibility="gone"
+        android:weightSum="1">
+
+        <com.NaTicket.n.custom.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+
+            android:text="Conv. Fee"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/colorBlock"
+            customfontdemo:fontName="@string/custom_font"/>
+
+        <com.NaTicket.n.custom.MyTextView
+            android:id="@+id/FLightsConvenienceFee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1.02"
+            android:gravity="right"
+            android:text="Small Text"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/colorBlock"
+            customfontdemo:fontName="@string/custom_font"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:weightSum="1">
+
+        <com.NaTicket.n.custom.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Total Fare:"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/colorBlock"
+            android:textStyle="bold"
+            customfontdemo:fontName="@string/custom_font"/>
+
+        <com.NaTicket.n.custom.MyTextView
+            android:id="@+id/TotalAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1.02"
+            android:gravity="right"
+            android:text="Small Text"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/colorBlock"
+            android:textStyle="bold"
+            customfontdemo:fontName="@string/custom_font"/>
+    </LinearLayout>
+
+
+</LinearLayout>
+

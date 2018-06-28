@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customfontdemo="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/flights_layout">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/Transparent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+
+            <com.NaTicket.n.custom.MyTextViewBold
+                android:id="@+id/source"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="start"
+                android:text="PEN"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="@color/text_primary"
+                android:textSize="25dp"
+                customfontdemo:fontName="@string/custom_font" />
+
+            <ImageView
+                android:id="@+id/AirlineImage"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="2"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/colorBlock"
+                android:textStyle="bold" />
+
+            <com.NaTicket.n.custom.MyTextViewBold
+                android:id="@+id/destination"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_weight="2"
+                android:gravity="end"
+                android:text="KUL"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="@color/text_primary"
+                android:textSize="25dp"
+                customfontdemo:fontName="@string/custom_font" />
+
+        </LinearLayout>
+
+        <com.NaTicket.n.custom.MyTextViewBold
+            android:id="@+id/flightNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="5dp"
+            android:text=""
+            customfontdemo:fontName="@string/custom_font"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <com.NaTicket.n.custom.MyTextViewBold
+                android:id="@+id/FromAirport"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="start"
+                android:text="Rajiv gandhi international airport"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="@color/text_primary"
+                android:textSize="10sp"
+                customfontdemo:fontName="@string/custom_font" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:src="@drawable/flght"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/colorBlock"
+                android:textStyle="bold"
+                android:visibility="invisible" />
+
+            <com.NaTicket.n.custom.MyTextViewBold
+                android:id="@+id/ToAirport"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_weight="2"
+                android:gravity="end"
+                android:text="Rajiv gandhi international airport"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="@color/text_primary"
+                android:textSize="10sp"
+                customfontdemo:fontName="@string/custom_font" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+
+            <com.NaTicket.n.custom.MyTextViewBold
+                android:id="@+id/departure_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="start"
+                android:text="08:30"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="@color/text_primary"
+                android:textSize="12sp"
+                customfontdemo:fontName="@string/custom_font" />
+
+
+            <com.NaTicket.n.custom.MyTextViewBold
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:text="08:10"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp"
+                android:visibility="invisible"
+                customfontdemo:fontName="@string/custom_font" />
+
+            <com.NaTicket.n.custom.MyTextViewBold
+                android:id="@+id/arrival_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="end"
+                android:text="08:10"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="@color/text_primary"
+                android:textSize="12sp"
+                customfontdemo:fontName="@string/custom_font" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <com.NaTicket.n.custom.MyTextViewBold
+                android:id="@+id/Departure_Date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="start"
+                android:text="10 Oct,2017"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="@color/text_primary"
+                android:textSize="12sp"
+                customfontdemo:fontName="@string/custom_font" />
+
+
+            <com.NaTicket.n.custom.MyTextViewBold
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:text="10 Oct,2017"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp"
+                android:visibility="invisible"
+                customfontdemo:fontName="@string/custom_font" />
+
+            <com.NaTicket.n.custom.MyTextViewBold
+                android:id="@+id/Arrival_Date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_weight="2"
+                android:gravity="end"
+                android:text="10 Oct,2017"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="@color/text_primary"
+                android:textSize="12sp"
+                customfontdemo:fontName="@string/custom_font" />
+
+
+
+        </LinearLayout>
+
+        <com.NaTicket.n.custom.MyTextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="2"
+            android:gravity="start"
+            android:text="Baggage"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp"
+            customfontdemo:fontName="@string/custom_font" />
+
+
+
+        <com.NaTicket.n.custom.MyTextViewBold
+            android:id="@+id/Baggage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="10dp"
+            android:text=""
+            android:textColor="@color/text_primary"
+            android:textSize="14sp"
+            customfontdemo:fontName="@string/custom_font" />
+
+
+
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:background="@color/light_grey"
+        >
+    </View>
+
+</LinearLayout>

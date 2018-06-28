@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:customfontdemo="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:minHeight="250dp"
+    android:minWidth="1000dp"
+    android:gravity="center"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/back_ground"
+            android:alpha="0.7"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+
+                <com.NaTicket.n.custom.MyTextViewBold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="Your Wallet"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp"
+                    customfontdemo:fontName="@string/custom_font" />
+
+                <ImageView
+                    android:id="@+id/can_dialog"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="end"
+                    android:layout_marginLeft="-30dp"
+                    android:src="@drawable/red_cancel" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/walletimg"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/new_wallet"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="25dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <com.NaTicket.n.custom.MyTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Wallet Balance:"
+                    android:textColor="@color/text_primary"
+                    android:textSize="15dp"
+                    customfontdemo:fontName="@string/custom_font" />
+
+                <com.NaTicket.n.custom.MyTextViewBold
+                    android:id="@+id/wallet_bal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="INR 10000.00"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15dp"
+                    android:textAlignment="textEnd"
+                    customfontdemo:fontName="@string/custom_font" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <com.NaTicket.n.custom.MyTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:text="Amount to be paid:"
+                    android:textColor="@color/text_primary"
+                    android:textSize="15dp"
+                    customfontdemo:fontName="@string/custom_font" />
+
+                <com.NaTicket.n.custom.MyTextViewBold
+                    android:id="@+id/AmountToPay"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight=".7"
+                    android:gravity="end"
+                    android:text="INR 3100"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15dp"
+                    android:textAlignment="textEnd"
+                    customfontdemo:fontName="@string/custom_font" />
+
+
+            </LinearLayout>
+
+            <com.NaTicket.n.custom.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="dont_have_enough_balance"
+                android:visibility="gone" />
+
+
+            <com.NaTicket.n.custom.MyTextViewBold
+                android:id="@+id/pay"
+                android:layout_width="125dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/button_background"
+                android:gravity="center"
+                android:text="Pay"
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

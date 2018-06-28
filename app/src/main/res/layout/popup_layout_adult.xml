@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:customfontdemo="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000"
+    android:gravity="center"
+    android:padding="25dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:orientation="vertical"
+        android:background="@drawable/border_radius">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.NaTicket.n.custom.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="Adult Details"
+                android:textColor="@android:color/black"
+                android:textSize="17sp"
+                customfontdemo:fontName="@string/custom_font"/>
+
+            <ImageView
+                android:id="@+id/closePopup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_close"
+                android:padding="5dp"
+                android:layout_gravity="end"/>
+
+        </LinearLayout>
+
+
+        <Spinner
+            android:id="@+id/surname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:spinnerMode="dialog"
+            android:padding="8dp"
+            />
+        <com.NaTicket.n.custom.MyEdiText
+            android:id="@+id/firstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:hint="First Name"
+            android:padding="8dp"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            android:inputType="text"
+            android:background="@drawable/backgroundforrg"
+            customfontdemo:fontName="@string/custom_font"/>
+
+
+
+        <com.NaTicket.n.custom.MyEdiText
+            android:id="@+id/lastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:hint="Last Name"
+            android:padding="8dp"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            android:inputType="text"
+            android:background="@drawable/backgroundforrg"
+            customfontdemo:fontName="@string/custom_font"/>
+
+        <com.NaTicket.n.custom.MyEdiText
+            android:id="@+id/age"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:hint="Age"
+            android:padding="8dp"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            android:inputType="number"
+            android:background="@drawable/backgroundforrg"
+            customfontdemo:fontName="@string/custom_font"/>
+
+        <com.NaTicket.n.custom.MyTextView
+            android:id="@+id/save"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="SAVE"
+            android:gravity="center"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/backgroundbtnnoradius"
+            android:textSize="17sp"
+            customfontdemo:fontName="@string/custom_font" />
+    </LinearLayout>
+
+</LinearLayout>

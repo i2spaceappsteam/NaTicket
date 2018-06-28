@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customfontdemo="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.NaTicket.n.holidays.HolidayDetailActivity"
+    tools:showIn="@layout/activity_holiday_detail">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical">
+            <RatingBar
+                android:id="@+id/holidayRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:isIndicator="true"
+                android:layout_margin="5dp"
+                android:stepSize="0.1"
+                android:rating="0"
+                style="?android:attr/ratingBarStyleSmall"
+                />
+
+            <com.NaTicket.n.custom.MyTextView
+                android:id="@+id/hotelName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hotel Name"
+                android:textSize="17sp"
+                android:padding="5dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@android:color/black"
+                customfontdemo:fontName="@string/custom_font"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+                <com.NaTicket.n.custom.MyTextView
+                    android:id="@+id/guestDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:text="Hotel Name"
+                    android:textSize="15sp"
+                    android:padding="5dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    customfontdemo:fontName="@string/custom_font"
+                    />
+
+                <com.NaTicket.n.custom.MyTextView
+                    android:id="@+id/selectRoomTv"
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content"
+                    android:text="Book"
+                    android:background="@drawable/backgroundbtnnoradius"
+                    android:textColor="@android:color/white"
+                    android:padding="7dp"
+                    android:textSize="15sp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:gravity="center"
+                    customfontdemo:fontName="@string/custom_font"
+                    />
+            </LinearLayout>
+            <com.NaTicket.n.custom.MyTextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Overview"
+                android:textSize="18sp"
+                android:padding="5dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/colorAccent"
+                customfontdemo:fontName="@string/custom_font"
+                />
+            <WebView
+                android:id="@+id/descwebView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:background="@android:color/white"/>
+            <com.NaTicket.n.custom.MyTextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Itinerary"
+                android:textSize="18sp"
+                android:padding="5dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/colorAccent"
+                customfontdemo:fontName="@string/custom_font"
+                />
+            <WebView
+                android:id="@+id/itinerarywebView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:background="@android:color/white"/>
+            <com.NaTicket.n.custom.MyTextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Inclusions"
+                android:textSize="18sp"
+                android:padding="5dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/colorAccent"
+                customfontdemo:fontName="@string/custom_font"
+                />
+            <WebView
+                android:id="@+id/inclusionswebView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:background="@android:color/white"/>
+            <com.NaTicket.n.custom.MyTextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Exclusions"
+                android:textSize="18sp"
+                android:padding="5dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/colorAccent"
+                customfontdemo:fontName="@string/custom_font"
+                />
+            <WebView
+                android:id="@+id/exclusionswebView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:background="@android:color/white"/>
+            <com.NaTicket.n.custom.MyTextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Terms"
+                android:textSize="18sp"
+                android:padding="5dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/colorAccent"
+                customfontdemo:fontName="@string/custom_font"
+                />
+            <WebView
+                android:id="@+id/termswebview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:background="@android:color/white"/>
+
+
+            <com.NaTicket.n.custom.MyTextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cancel Policy"
+                android:textSize="18sp"
+                android:padding="5dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/colorAccent"
+                customfontdemo:fontName="@string/custom_font"
+                />
+            <WebView
+                android:id="@+id/cancelpolicywebView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:background="@android:color/white"/>
+            <com.NaTicket.n.custom.MyTextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add Info"
+                android:textSize="18sp"
+                android:padding="5dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/colorAccent"
+                customfontdemo:fontName="@string/custom_font"
+                />
+            <WebView
+                android:id="@+id/addInfowebView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:background="@android:color/white"/>
+            <com.NaTicket.n.custom.MyTextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fare Details"
+                android:textSize="18sp"
+                android:padding="5dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/colorAccent"
+                customfontdemo:fontName="@string/custom_font"
+                />
+
+            <com.NaTicket.n.custom.MyTextView
+                android:id="@+id/totalAmountTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fare Details"
+                android:textSize="15sp"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                customfontdemo:fontName="@string/custom_font"
+                />
+            <com.NaTicket.n.custom.MyTextView
+                android:id="@+id/duartionTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fare Details"
+                android:textSize="15sp"
+                android:padding="5dp"
+                customfontdemo:fontName="@string/custom_font"
+                />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

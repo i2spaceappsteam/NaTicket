@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customfontdemo="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+ >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/blur_background_street"
+        android:layout_centerInParent="true"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:alpha="0.5"
+        android:layout_centerInParent="true" />
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Transparent"
+        android:theme="@style/AppTheme.NoActionBar.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/AppTheme.NoActionBar.PopupOverlay">
+            <include layout="@layout/content_back_toolbar" />
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appToolBar">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:padding="45dp">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/nav_profile"
+                android:tint="@color/white" />
+
+
+
+            <RadioGroup
+                android:id="@+id/radio_group_signUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <RadioButton
+                    android:id="@+id/user_radio_signUp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/colorWhite"
+                    android:checked="true"
+                    android:text="User"
+                    android:textColor="@color/colorWhite"/>
+
+                <RadioButton
+                    android:id="@+id/Agent_radio_signUp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/colorWhite"
+                    android:textColor="@color/colorWhite"
+                    android:text="Agent" />
+            </RadioGroup>
+
+
+            <com.NaTicket.n.custom.MyEdiText
+                android:id="@+id/et_first_name"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/edittext_top_bg"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/user"
+                android:drawableTint="@color/Grey"
+                android:gravity="center_vertical"
+                android:hint="First Name"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black_overlay"
+                android:textSize="15dp"
+                customfontdemo:fontName="@string/custom_font" />
+
+            <com.NaTicket.n.custom.MyEdiText
+                android:id="@+id/et_last_name"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/edittext_top_bg"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/user"
+                android:drawableTint="@color/Grey"
+                android:gravity="center_vertical"
+                android:hint="Last Name"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black_overlay"
+                android:textSize="15dp"
+                customfontdemo:fontName="@string/custom_font" />
+
+            <com.NaTicket.n.custom.MyEdiText
+                android:id="@+id/et_email"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/edittext_top_bg"
+                android:drawablePadding="8dp"
+                android:drawableStart="@drawable/mail_icon"
+                android:drawableTint="@color/grey"
+                android:gravity="center_vertical"
+                android:hint="E-mail"
+                android:inputType="textEmailAddress"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black_overlay"
+                android:textSize="15dp"
+                customfontdemo:fontName="@string/custom_font" />
+
+            <com.NaTicket.n.custom.MyEdiText
+                android:id="@+id/et_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/edittext_top_bg"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/telephone_call"
+                android:drawableTint="@color/Grey"
+                android:gravity="center_vertical"
+                android:hint="Mobile No."
+                android:inputType="number"
+                android:maxLength="10"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black_overlay"
+                android:textSize="15sp"
+                customfontdemo:fontName="@string/custom_font" />
+
+
+
+
+
+            <com.NaTicket.n.custom.MyTextViewBold
+                android:id="@+id/signupTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Sign Up"
+                android:textColor="@color/colorAccent"
+                android:textSize="17sp"
+                customfontdemo:fontName="@string/custom_font" />
+
+            <com.NaTicket.n.custom.MyTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/grey"
+                android:textAlignment="textEnd"
+                customfontdemo:fontName="@string/custom_font"
+                android:text="**Once registered you need to login, Password will be sent to your email."/>
+
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

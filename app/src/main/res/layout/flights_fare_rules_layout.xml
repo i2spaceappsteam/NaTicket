@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customfontdemo="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/layoutFareRule"
+    android:background="@color/Transparent">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:visibility="gone">
+
+        <com.NaTicket.n.custom.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Refundable"
+            android:textColor="@color/colorAccent"
+            android:layout_weight="1"
+            customfontdemo:fontName="@string/custom_font"/>
+        <com.NaTicket.n.custom.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Economy Lowest Fare"
+            android:layout_weight="1"
+            android:gravity="end"
+            customfontdemo:fontName="@string/custom_font"
+            android:textColor="@color/colorAccent"/>
+    </LinearLayout>
+
+
+    <com.NaTicket.n.custom.MyTextView
+        android:id="@+id/FareRuleTextView"
+        android:layout_width="80dp"
+        android:layout_height="35dp"
+        android:text="Fare Rules"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_gravity="end"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/backgroundbtn"
+        customfontdemo:fontName="@string/custom_font"/>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/Colorgray"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/view12">
+    </View>
+</LinearLayout>

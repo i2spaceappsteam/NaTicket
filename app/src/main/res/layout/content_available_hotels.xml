@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.NaTicket.n.hotels.AvailableHotelsActivity"
+    tools:showIn="@layout/activity_available_hotels"
+    xmlns:customfontdemo="http://schemas.android.com/apk/res-auto"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_grey"
+        android:orientation="vertical">
+
+
+
+
+        <!--   <SearchView
+                android:id="@+id/searchHotelView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:queryHint="Search Hotel"
+                android:background="@android:color/white"
+                android:iconifiedByDefault="false"
+                android:focusable="false"
+                >
+
+
+            </SearchView>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:weightSum="10"
+            android:background="@color/colorPrimary"
+            android:visibility="gone"
+            >
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="7"
+                android:orientation="horizontal"
+                >
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/calendar"/>
+
+                <com.NaTicket.n.custom.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="29"
+                    android:textColor="@color/colorAccent"
+                    android:gravity="center"
+                    customfontdemo:fontName="@string/custom_font"/>
+
+                <com.NaTicket.n.custom.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text=" ,"
+                    android:gravity="center"
+                    android:textColor="@color/colorAccent"
+                    customfontdemo:fontName="@string/custom_font"/>
+                <com.NaTicket.n.custom.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="1"
+                    android:gravity="center"
+                    android:textColor="@color/colorAccent"
+                    customfontdemo:fontName="@string/custom_font"/>
+                <com.NaTicket.n.custom.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="night"
+                    android:gravity="center"
+                    android:textColor="@color/colorAccent"
+                    customfontdemo:fontName="@string/custom_font"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/green_bed"
+                        android:tint="@color/colorAccent"
+                        android:layout_gravity="center_vertical"/>
+                    <com.NaTicket.n.custom.MyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="1"
+                        android:textColor="@color/colorAccent"
+                        android:gravity="center"
+                        customfontdemo:fontName="@string/custom_font"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/ic_password"
+                        android:layout_gravity="center_vertical"/>
+
+                    <com.NaTicket.n.custom.MyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="1"
+                        android:gravity="center"
+                        android:textColor="@color/colorAccent"
+                        customfontdemo:fontName="@string/custom_font"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_grey"
+        android:orientation="vertical"
+        android:padding="10dp">
+        <SearchView
+            android:id="@+id/searchHotelView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:queryHint="Hotel Name / Address"
+            android:background="@android:color/white"
+            android:iconifiedByDefault="false"
+            android:focusable="false"
+            >
+
+
+        </SearchView>
+
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/hotelsView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:background="@color/light_grey"
+        />
+
+
+
+
+
+</LinearLayout>

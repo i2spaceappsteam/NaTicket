@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:customfontdemo="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.NoActionBar.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.NoActionBar.PopupOverlay">
+            <include layout="@layout/content_back_toolbar" />
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <!--<android.support.design.widget.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="false"
+        app:itemBackground="@color/colorAccent"
+        android:background="@color/colorAccent"
+        app:itemTextColor="@drawable/bottom_nav_setter"
+        app:itemIconTint="@drawable/bottom_nav_setter"
+        />-->
+    <!--<FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+    </FrameLayout>-->
+
+
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="10dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="20dp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                       android:layout_marginTop="95dp"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginEnd="40dp"
+
+                        android:background="@color/grey"/>
+
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:src="@drawable/cancel_ticket_screen"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"/>
+
+
+
+                </RelativeLayout>
+                <com.NaTicket.n.custom.MyTextViewBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enter ticket details"
+                    android:layout_marginTop="30dp"
+                    android:textColor="@color/colorAccent"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:textSize="20sp"
+                    android:textStyle="italic"
+                    android:visibility="gone"
+                    customfontdemo:fontName="@string/custom_font"/>
+
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+                    <com.NaTicket.n.custom.MyEdiTextBold
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/prompt_reference"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:id="@+id/Reference_No"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:drawableStart="@drawable/ticket_sss"
+                        android:drawableTint="@color/colorAccent"
+                        android:drawablePadding="8dp"
+                        android:textCursorDrawable="@drawable/cursorcolor"
+                        customfontdemo:fontName="@string/custom_font"
+                        customfontdemo:targetApi="m" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <com.NaTicket.n.custom.MyEdiTextBold
+                        android:id="@+id/email_cancel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/prompt_email"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:drawableStart="@drawable/mail_icon"
+                        android:drawableTint="@color/colorAccent"
+                        android:drawablePadding="8dp"
+                        android:textCursorDrawable="@drawable/cursorcolor"
+                        customfontdemo:fontName="@string/custom_font"
+                        customfontdemo:targetApi="m" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <com.NaTicket.n.custom.MyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Reference no &amp; Email does't match"
+                        android:id="@+id/error_cancel_ticket"
+                        android:textColor="@color/red"
+                        android:layout_marginLeft="10dp"
+                        android:visibility="gone"
+                        customfontdemo:fontName="@string/custom_font"/>
+                    <com.NaTicket.n.custom.MyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Invalid reference number"
+                        android:id="@+id/Invalid_Reference"
+                        android:textColor="@color/red"
+                        android:layout_marginLeft="10dp"
+                        android:visibility="gone"
+                        customfontdemo:fontName="@string/custom_font"/>
+                    <com.NaTicket.n.custom.MyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Enter  Reference Number "
+                        android:id="@+id/error_Reference_no"
+                        android:layout_marginLeft="10dp"
+                        android:visibility="gone"
+                        customfontdemo:fontName="@string/custom_font"/>
+                    <com.NaTicket.n.custom.MyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Enter Email"
+                        android:id="@+id/error_Email_id"
+                        android:textColor="@color/red"
+                        android:layout_marginLeft="10dp"
+                        android:visibility="gone"
+                        customfontdemo:fontName="@string/custom_font"/>
+                </RelativeLayout>
+
+                <com.NaTicket.n.custom.MyTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="**Check your email or sms sent to you at the time of booking"
+                    android:layout_marginTop="0dp"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/Grey"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:textSize="11sp"
+                    customfontdemo:fontName="@string/custom_font"/>
+
+                <com.NaTicket.n.custom.MyTextViewBold
+                    android:id="@+id/Cancel_Ticket"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Submit"
+                    android:padding="15dp"
+                    android:gravity="center"
+                    android:background="@drawable/button_background"
+                    android:textColor="@android:color/white"
+                    android:layout_margin="15dp"
+                    android:textSize="17sp"
+                    customfontdemo:fontName="@string/custom_font" />
+            </LinearLayout>
+        </ScrollView>
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customfontdemo="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e5e5e5"
+    android:weightSum="6">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.NoActionBar.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.NoActionBar.PopupOverlay">
+            <include layout="@layout/content_back_toolbar" />
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <com.NaTicket.n.custom.MyTextView
+                        android:id="@+id/user_bal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="10dp"
+                        android:text=""
+                        android:textColor="@color/colorAccent"
+                        android:textSize="16dp"
+                        android:visibility="gone"
+                        customfontdemo:fontName="@string/custom_font" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:gravity="end">
+
+
+                        <ImageView
+                            android:id="@+id/edit_profile"
+                            android:layout_width="30dp"
+                            android:layout_height="25dp"
+                            android:layout_marginLeft="15dp"
+                            android:src="@drawable/edit_pencil_orange"
+                            android:tint="@color/colorAccent"
+
+                            />
+
+                        <com.NaTicket.n.custom.MyTextViewBold
+                            android:id="@+id/save_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="10dp"
+                            android:text="Save"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="16dp"
+                            android:visibility="gone"
+                            customfontdemo:fontName="@string/custom_font" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/nav_profile"
+                        android:tint="@color/colorPrimary" />
+
+                    <com.NaTicket.n.custom.MyEdiTextBold
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/Transparent"
+                        android:gravity="center"
+                        android:text=""
+                        android:textSize="18sp"
+                        android:visibility="gone"
+                        customfontdemo:fontName="@string/custom_font" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            customfontdemo:cardBackgroundColor="@color/colorWhite"
+            customfontdemo:cardCornerRadius="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <com.NaTicket.n.custom.MyTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:layout_weight="1.5"
+                        android:gravity="center_vertical"
+                        android:text="First Name"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="15sp"
+                        customfontdemo:fontName="@string/custom_font" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5">
+
+                        <com.NaTicket.n.custom.MyEdiText
+                            android:id="@+id/profile_FirstName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPersonName"
+                            android:textSize="18sp"
+                            customfontdemo:fontName="@string/custom_font" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <com.NaTicket.n.custom.MyTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:layout_weight="1.5"
+                        android:gravity="center_vertical"
+                        android:text="Last Name"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="15sp"
+                        customfontdemo:fontName="@string/custom_font" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5">
+
+                        <com.NaTicket.n.custom.MyEdiText
+                            android:id="@+id/profile_Lastname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPersonName"
+                            android:textSize="18sp"
+                            customfontdemo:fontName="@string/custom_font" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <com.NaTicket.n.custom.MyTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:layout_weight="1.5"
+                        android:gravity="center_vertical"
+                        android:text="Mobile"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="15sp"
+                        customfontdemo:fontName="@string/custom_font" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5">
+
+                        <com.NaTicket.n.custom.MyEdiText
+                            android:id="@+id/profile_Mobile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="phone"
+                            android:maxLength="10"
+                            android:textSize="18sp"
+                            customfontdemo:fontName="@string/custom_font" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <com.NaTicket.n.custom.MyTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:layout_weight="1.5"
+                        android:gravity="center_vertical"
+                        android:text="Email"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="15sp"
+                        customfontdemo:fontName="@string/custom_font" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5">
+
+                        <com.NaTicket.n.custom.MyEdiText
+                            android:id="@+id/profile_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".5"
+                            android:ellipsize="end"
+                            android:inputType="textEmailAddress"
+                            android:maxLines="1"
+                            android:textSize="18sp"
+                            customfontdemo:fontName="@string/custom_font" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <com.NaTicket.n.custom.MyTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:layout_weight="1.5"
+                        android:gravity="center_vertical"
+                        android:text="DOB"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="15sp"
+                        customfontdemo:fontName="@string/custom_font" />
+
+
+                    <LinearLayout
+                        android:id="@+id/age_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:orientation="vertical">
+
+                        <com.NaTicket.n.custom.MyTextView
+                            android:id="@+id/etAge"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableRight="@drawable/ic_cal"
+                            android:drawableTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:text="06-07-1994"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/grey"
+                            android:textSize="18sp"
+                            customfontdemo:fontName="@string/custom_font" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="80dp"
+                    android:background="@color/black_overlay" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <com.NaTicket.n.custom.MyTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1.5"
+                        android:gravity="start"
+                        android:text="Gender"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="15sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioSex"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <RadioButton
+                            android:id="@+id/male"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:buttonTint="@color/colorAccent"
+                            android:checked="true"
+                            android:text="Male" />
+
+
+                        <RadioButton
+                            android:id="@+id/female"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginRight="5dp"
+                            android:buttonTint="@color/colorAccent"
+                            android:text="Female" />
+                    </RadioGroup>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:orientation="vertical">
+
+            <com.NaTicket.n.custom.MyTextViewBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginBottom="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/Transparent"
+                android:text="@string/ChangePassword"
+                android:textAllCaps="false"
+                android:textColor="@color/colorAccent"
+                android:visibility="gone"
+                customfontdemo:fontName="@string/custom_font" />
+
+
+            <com.NaTicket.n.custom.MyTextViewBold
+                android:layout_width="220dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="15dp"
+                android:background="@drawable/button_background"
+                android:gravity="center"
+                android:text="@string/Logout"
+                android:textColor="@color/colorAccent"
+                android:textSize="17sp"
+                android:visibility="gone"
+                customfontdemo:fontName="@string/custom_font" />
+
+        </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

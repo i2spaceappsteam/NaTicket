@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:customfontdemo="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <com.NaTicket.n.custom.MyTextViewBold
+        android:id="@+id/info1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/colorAccent"
+        android:text="@string/AboutUs"
+        android:layout_margin="7dp"
+        customfontdemo:fontName="@string/custom_font"/>
+
+    <com.NaTicket.n.custom.MyTextView
+        android:id="@+id/info"
+        android:layout_below="@+id/info1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/slide3bg"
+        android:text="@string/AboutUs"
+        android:layout_margin="7dp"
+        customfontdemo:fontName="@string/custom_font"/>
+
+</RelativeLayout>

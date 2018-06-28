@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customfontdemo="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_ground">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+
+
+        <com.NaTicket.n.custom.MyTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bus Type"
+            android:textColor="@color/text_primary"
+            android:textSize="20dp"
+            android:layout_margin="5dp"
+            customfontdemo:fontName="GothamRoundedBook_21018.ttf"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="2">
+
+
+                <com.NaTicket.n.custom.MyTextViewBold
+                    customfontdemo:fontName="GothamRoundedBook_21018.ttf"
+                    android:gravity="center"
+                    android:layout_height="50dp"
+                    android:id="@+id/AC_Button"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:layout_margin="3dp"
+                    android:text="A/C"
+                    android:textColor="@color/text_primary"
+                   />
+
+                <com.NaTicket.n.custom.MyTextViewBold
+                    customfontdemo:fontName="GothamRoundedBook_21018.ttf"
+                    android:gravity="center"
+                    android:id="@+id/Non_AcButton"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:layout_margin="3dp"
+                    android:text="NON A/C"
+                    android:textColor="@color/text_primary"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="2">
+
+                <com.NaTicket.n.custom.MyTextViewBold
+                    customfontdemo:fontName="GothamRoundedBook_21018.ttf"
+                    android:gravity="center"
+                    android:id="@+id/Sleeper_Button"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:layout_margin="3dp"
+                    android:text="SLEEPER"
+                    android:textColor="@color/text_primary"/>
+
+
+                <com.NaTicket.n.custom.MyTextViewBold
+                    customfontdemo:fontName="GothamRoundedBook_21018.ttf"
+                    android:gravity="center"
+                    android:id="@+id/Non_Sleeper"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:layout_margin="3dp"
+                    android:text="SEMI-SLEEPER"
+                    android:textColor="@color/text_primary"/>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.NaTicket.n.custom.MyTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Location and Travel Name"
+            android:textColor="@color/text_primary"
+            android:textSize="20dp"
+            android:layout_margin="5dp"
+            android:paddingTop="10dp"
+            customfontdemo:fontName="GothamRoundedBook_21018.ttf"/>
+
+
+        <com.NaTicket.n.custom.MyTextViewBold
+            customfontdemo:fontName="GothamRoundedBook_21018.ttf"
+            android:gravity="center"
+            android:id="@+id/filter_Travels"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TRAVELS"
+            android:textAlignment="textStart"
+            android:drawableRight="@drawable/bus_small"
+            android:background="@color/colorPrimary"
+            android:layout_margin="5dp"
+            android:drawableTint="@color/white"
+            android:textColor="@color/white"
+            android:padding="5dp"/>
+
+
+        <com.NaTicket.n.custom.MyTextViewBold
+            customfontdemo:fontName="GothamRoundedBook_21018.ttf"
+            android:gravity="center"
+            android:id="@+id/filter_boarding_point"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BOARDING POINT"
+            android:textAlignment="textStart"
+            android:drawableRight="@drawable/pointer_filled"
+            android:background="@color/colorPrimary"
+            android:layout_margin="5dp"
+            android:drawableTint="@color/white"
+            android:textColor="@color/white"
+            android:padding="5dp"/>
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/text_primary"
+        android:weightSum="1"
+        android:orientation="horizontal"
+        android:layout_margin="5dp"
+        android:layout_alignParentBottom="true">
+
+        <com.NaTicket.n.custom.MyTextViewBold
+            android:id="@+id/Clear_filter"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:text="Reset All"
+            android:textColor="@color/colorWhite"
+            android:gravity="center"
+            android:textSize="20sp"
+            customfontdemo:fontName="GothamRoundedBook_21018.ttf"/>
+
+
+        <View
+            android:layout_width="@dimen/flight"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite"/>
+
+
+        <com.NaTicket.n.custom.MyTextViewBold
+            android:id="@+id/Apply"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:text="Apply"
+            android:textColor="@color/colorWhite"
+            android:gravity="center"
+            android:textSize="20sp"
+            customfontdemo:fontName="GothamRoundedBook_21018.ttf"
+            />
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

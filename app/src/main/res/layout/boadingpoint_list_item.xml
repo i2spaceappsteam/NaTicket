@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customfontdemo="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@drawable/touch_color">
+
+
+    <com.NaTicket.n.custom.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text fsdfkdjsfdsfjdsfkjfsdfkdsfkdshfhkdshfsdfdskhffsdkfh"
+        android:textSize="20sp"
+        android:id="@+id/boading_point"
+        android:textColor="@color/colorAccent"
+        android:textAlignment="textStart"
+        android:layout_marginLeft="10dp"
+        customfontdemo:fontName="@string/custom_font"/>
+
+    <com.NaTicket.n.custom.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:textSize="15sp"
+        android:id="@+id/boading_time"
+        android:textColor="@color/colorPrimary"
+        android:layout_below="@id/boading_point"
+       android:layout_marginLeft="10dp"
+        android:layout_centerVertical="true"
+        customfontdemo:fontName="@string/custom_font"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black_overlay"
+        android:layout_below="@+id/boading_time"
+        android:layout_marginTop="2dp"/>
+</RelativeLayout>

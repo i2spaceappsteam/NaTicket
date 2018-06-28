@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:customfontdemo="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.NoActionBar.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.NoActionBar.PopupOverlay">
+            <include layout="@layout/content_back_toolbar" />
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="45dp">
+
+            <com.NaTicket.n.custom.MyEdiText
+                android:id="@+id/et_Email"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/edittext_top_bg"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:drawableLeft="@drawable/envelopee"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/Grey"
+                android:textSize="15dp"
+                customfontdemo:fontName="@string/custom_font" />
+
+            <com.NaTicket.n.custom.MyEdiText
+                android:id="@+id/et_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/edittext_top_bg"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:drawableLeft="@drawable/telephone_call"
+                android:hint="Mobile No."
+                android:inputType="phone"
+                android:maxLength="10"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/Grey"
+                android:textSize="15dp"
+                customfontdemo:fontName="@string/custom_font" />
+
+
+            <com.NaTicket.n.custom.MyEdiText
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/edittext_top_bg"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:drawableLeft="@drawable/user"
+                android:hint="Name"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/Grey"
+                android:textSize="15dp"
+                customfontdemo:fontName="@string/custom_font" />
+
+            <com.NaTicket.n.custom.MyEdiText
+                android:id="@+id/et_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/edittext_top_bg"
+                android:gravity="start"
+                android:hint="Your feedback"
+                android:inputType=""
+                android:minHeight="150dp"
+                android:padding="10dp"
+                android:textColorHint="@color/Grey"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                customfontdemo:fontName="@string/custom_font" />
+
+
+            <com.NaTicket.n.custom.MyTextView
+                android:id="@+id/submitTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Submit"
+                android:textColor="@color/colorAccent"
+                android:textSize="17sp"
+                customfontdemo:fontName="@string/custom_font" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

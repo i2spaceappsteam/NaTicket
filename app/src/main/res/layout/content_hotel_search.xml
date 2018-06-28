@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customfontdemo="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/hotel_back"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.NaTicket.n.hotels.HotelSearchActivity"
+    tools:showIn="@layout/activity_hotel_search"
+    >
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+
+                <com.NaTicket.n.custom.MyTextView
+                    android:id="@+id/domestic"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_left"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Domestic"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    customfontdemo:fontName="@string/custom_font" />
+
+                <com.NaTicket.n.custom.MyTextView
+                    android:id="@+id/interantional"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_right"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="International"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15sp"
+                    customfontdemo:fontName="@string/custom_font" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/whichCityTv"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/background_main"
+                android:gravity="center_vertical"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="20dp"
+                android:paddingTop="5dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/location_point" />
+
+                <com.NaTicket.n.custom.MyTextView
+                    android:id="@+id/cityTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:paddingLeft="5dp"
+                    android:text="Select City"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    customfontdemo:fontName="@string/custom_font" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/search_ic" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/background_main"
+                android:gravity="center_vertical"
+                android:padding="5dp">
+
+                <com.NaTicket.n.custom.MyTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp" />
+
+                <Spinner
+                    android:id="@+id/nationalityspinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginLeft="36dp" />
+            </LinearLayout>
+
+            <!--<LinearLayout
+            android:id="@+id/checkIncal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_mytrip"/>
+            <MyTextView
+                android:id="@+id/checkinTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="Check In"
+                android:paddingLeft="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                customfontdemo:fontName="@string/custom_font" />
+
+
+
+            <ImageView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_menu_my_calendar"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/checkOutcal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_mytrip"/>
+            <MyTextView
+                android:id="@+id/checkOutTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="Check Out"
+                android:paddingLeft="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                customfontdemo:fontName="@string/custom_font" />
+
+
+
+            <ImageView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_menu_my_calendar"/>
+        </LinearLayout>-->
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    card_view:cardBackgroundColor="@color/Transparent"
+                    card_view:cardCornerRadius="1dp"
+                    card_view:cardElevation="0dp"
+                    card_view:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:id="@+id/checkIncal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <com.NaTicket.n.custom.MyTextViewBold
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/top_only_corner_primary"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="Check In"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            customfontdemo:fontName="@string/custom_font" />
+
+
+                        <com.NaTicket.n.custom.MyTextView
+                            android:id="@+id/checkinTv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom_only_corner_white"
+                            android:drawableLeft="@drawable/ic_cal"
+                            android:drawableTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:padding="15dp"
+                            android:text="Nov/15/2017"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="12dp"
+                            android:textStyle="bold"
+                            customfontdemo:fontName="@string/custom_font" />
+
+                    </LinearLayout>
+
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    card_view:cardBackgroundColor="@color/Transparent"
+                    card_view:cardCornerRadius="1dp"
+                    card_view:cardElevation="0dp"
+                    card_view:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:id="@+id/checkOutcal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <com.NaTicket.n.custom.MyTextViewBold
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/top_only_corner_primary"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="Check Out"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            customfontdemo:fontName="@string/custom_font" />
+
+
+                        <com.NaTicket.n.custom.MyTextView
+                            android:id="@+id/checkOutTv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom_only_corner_white"
+                            android:drawableLeft="@drawable/ic_cal"
+                            android:drawableTint="@color/colorAccent"
+                            android:gravity="center"
+                            android:padding="15dp"
+                            android:text="Nov/15/2017"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="12dp"
+                            android:textStyle="bold"
+                            customfontdemo:fontName="@string/custom_font" />
+
+
+                    </LinearLayout>
+
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <com.NaTicket.n.custom.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Nationality"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:visibility="gone"
+                customfontdemo:fontName="@string/custom_font" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/background_main"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <com.NaTicket.n.custom.MyTextView
+                        android:id="@+id/totalRoomTv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="5dp"
+                        android:text="Rooms : 1"
+                        android:textColor="@android:color/black"
+                        android:textSize="15sp"
+                        android:layout_gravity="center_vertical"
+                        customfontdemo:fontName="@string/custom_font" />
+
+                    <com.NaTicket.n.custom.MyTextView
+                        android:id="@+id/addRoom"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/backgroundbtnnoradius"
+                        android:padding="5dp"
+                        android:text="+ADD"
+                        android:textColor="@android:color/white"
+                        android:textSize="12sp"
+                        android:textAlignment="center"
+                        customfontdemo:fontName="@string/custom_font" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginLeft="5dp">
+
+                    <com.NaTicket.n.custom.MyTextView
+                        android:id="@+id/totalAdultsTv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="5dp"
+                        android:text="Adults : 1"
+                        android:textColor="@android:color/black"
+                        android:textSize="15sp"
+                        customfontdemo:fontName="@string/custom_font" />
+
+                    <com.NaTicket.n.custom.MyTextView
+                        android:id="@+id/totalChildTv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:paddingLeft="5dp"
+                        android:text="Child : 0"
+                        android:textColor="@android:color/black"
+                        android:textSize="15sp"
+                        customfontdemo:fontName="@string/custom_font" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <com.NaTicket.n.custom.MyTextViewBold
+                android:id="@+id/searchHotelsTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/button_background"
+                android:gravity="center"
+                android:padding="15dp"
+                android:text="Search Hotels"
+                android:textColor="@android:color/white"
+                android:textSize="17sp"
+                customfontdemo:fontName="@string/custom_font" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <!-- <MyTextView
+         android:id="@+id/"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="Search Hotels"
+         android:padding="15dp"
+         android:gravity="center"
+         android:background="@color/colorAccent"
+         android:textColor="@android:color/white"
+         android:textSize="17sp"
+         customfontdemo:fontName="@string/custom_font" />-->
+
+
+
+</LinearLayout>

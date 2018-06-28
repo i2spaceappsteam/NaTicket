@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_city_search"
+    android:orientation="vertical"
+    android:focusable="false"
+    android:focusableInTouchMode="false" >
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_grey"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <!-- <com.youfly.custom.MyEdiText
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:drawableRight="@drawable/ic_close"
+             android:hint="Search City"
+             />-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_main"
+            android:id="@+id/search_layout"
+            android:focusableInTouchMode="true">
+            <SearchView
+                android:id="@+id/searchCityView"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:queryHint="Search City"
+                android:background="@color/Transparent"
+                android:iconifiedByDefault="false"
+                android:clickable="true"
+                android:windowSoftInputMode="stateHidden"
+                android:layout_margin="5dp"
+                >
+
+
+            </SearchView>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/header_lyt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include
+                layout="@layout/header"/>
+        </LinearLayout>
+
+
+        <GridView
+            android:id="@+id/GridView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingStart="10dp"
+            android:verticalSpacing="0dp"
+            android:horizontalSpacing="10dp"
+            android:clipToPadding="false"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:scrollbars="none"
+            android:scrollbarStyle="outsideOverlay"
+            android:numColumns="2"
+            android:layout_marginTop="10dp"
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/cities_view"
+            android:scrollbars="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            />
+    </LinearLayout>
+
+</LinearLayout>

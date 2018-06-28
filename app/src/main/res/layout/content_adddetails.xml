@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customfontdemo="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.NaTicket.n.hotels.AddDetailsActivity"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    tools:showIn="@layout/activity_add_details"
+    android:id="@+id/parentLayout">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0">
+
+        <LinearLayout
+            android:id="@+id/detailsLinear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.NaTicket.n.custom.MyTextView
+        android:id="@+id/savecontinue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save &amp; Continue"
+        android:padding="15dp"
+        android:gravity="center"
+        android:background="@color/colorAccent"
+        android:textColor="@android:color/white"
+        android:textSize="17sp"
+        customfontdemo:fontName="@string/custom_font" />
+
+
+</LinearLayout>

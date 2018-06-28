@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.NaTicket.n.utilities.Operators_list_Activity"
+    tools:showIn="@layout/operator_search"
+    android:orientation="vertical">
+
+
+
+
+    <!-- <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:background="@color/light_grey"
+         android:orientation="vertical"
+         android:padding="25dp">
+
+         &lt;!&ndash; <com.youfly.custom.MyEdiText
+              android:layout_height="wrap_content"
+              android:layout_width="match_parent"
+              android:drawableRight="@drawable/ic_close"
+              android:hint="Search City"
+              />&ndash;&gt;
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:id="@+id/search_layout"
+             >
+             <SearchView
+                 android:id="@+id/searchCityView"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:queryHint="Search City"
+                 android:background="@android:color/white"
+                 android:iconifiedByDefault="false"
+                 android:clickable="true"
+                 >
+
+
+             </SearchView>
+         </LinearLayout>
+     </LinearLayout>-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/cities_view"
+            android:scrollbars="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            />
+    </LinearLayout>
+
+</LinearLayout>

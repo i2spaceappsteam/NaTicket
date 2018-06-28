@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:customfontdemo="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/border_radius"
+    android:layout_margin="8dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/serviceIv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_weight="0.3"
+            android:src="@drawable/nav_hotel"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:orientation="vertical"
+            android:padding="5dp">
+            <com.NaTicket.n.custom.MyTextView
+                android:id="@+id/promoNameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:text="PromoName"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                customfontdemo:fontName="@string/custom_font"/>
+            <com.NaTicket.n.custom.MyTextView
+                android:id="@+id/discountTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text=""
+                android:textSize="13sp"
+                customfontdemo:fontName="@string/custom_font"/>
+            <com.NaTicket.n.custom.MyTextView
+                android:id="@+id/validTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="Valid Till : 17-10-2017"
+                android:textSize="13sp"
+                android:textStyle="italic"
+                android:layout_gravity="start"
+                customfontdemo:fontName="@string/custom_font"/>
+
+            <com.NaTicket.n.custom.MyTextViewBold
+                android:id="@+id/promoTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="HOTEL150"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_gravity="end"
+                android:textColor="@color/white"
+                android:background="@drawable/backgroundcode"
+                customfontdemo:fontName="@string/custom_font"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

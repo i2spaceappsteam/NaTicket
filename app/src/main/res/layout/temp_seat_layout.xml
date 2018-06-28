@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:customfontdemo="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/LoadingLyt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:id="@+id/ViewLyt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       android:visibility="gone">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/info_image_view1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/info_image_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/grey"
+            android:gravity="center"
+            >
+
+            <include layout="@layout/seat_icons_layout" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/info_image_view_sleeper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/grey"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <include layout="@layout/seat_icons_layout_sleeper" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/UppearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/info_image_view1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/Lower"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:layout_weight="0.01"
+            android:background="@color/colorPrimary"
+            android:text="Lower"
+            android:textColor="@color/colorWhite" />
+
+        <Button
+            android:id="@+id/Upper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:layout_weight="0.01"
+            android:background="@color/colorWhite"
+            android:gravity="center"
+            android:text="Upper"
+            android:textColor="@color/colorPrimary" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/Done_layout"
+        android:layout_below="@+id/UppearLayout"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/boarder">
+
+        <LinearLayout
+            android:id="@+id/SeatScrollView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+            <!--//////Please Take back up before modifying this code -->
+
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <ImageView
+                        android:id="@+id/steering"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="20sp"
+                        android:layout_marginTop="20dp"
+                        android:layout_gravity="end"
+                        android:background="@drawable/steering" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/setlayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="10dp">
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+
+                        android:id="@+id/Uppersetlayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="10dp">
+
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </android.support.v4.widget.NestedScrollView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/Done_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_weight="1"
+        android:background="@drawable/boarder"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+
+        <com.NaTicket.n.custom.MyTextViewBold
+            android:id="@+id/No_of_seats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView5"
+            android:layout_alignStart="@+id/textView5"
+            android:layout_below="@+id/textView5"
+            android:text="12"
+            android:textColor="@color/text_primary"
+            xmlns:customfontdemo="http://schemas.android.com/apk/res-auto"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <com.NaTicket.n.custom.MyTextView
+            xmlns:customfontdemo="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/Net_Fare"
+            android:layout_gravity="right"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/Done"
+            android:layout_toStartOf="@+id/Done"
+            android:textColor="@color/text_secondary"
+            android:text="Total:"
+            customfontdemo:fontName="@string/custom_font"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <com.NaTicket.n.custom.MyTextViewBold
+            xmlns:customfontdemo="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/Net_Fare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/textView7"
+            android:layout_alignRight="@+id/textView7"
+            android:layout_alignTop="@+id/No_of_seats"
+            android:textColor="@color/text_primary"
+            android:text="450"
+            customfontdemo:fontName="@string/custom_font"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+
+        <Button
+            android:id="@+id/Done"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorPrimary"
+            android:text="Done"
+            android:textColor="@color/colorWhite" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@+id/textView7"
+            android:layout_toStartOf="@+id/textView7"
+            app:srcCompat="@drawable/uparrow" />
+
+        <com.NaTicket.n.custom.MyTextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:textColor="@color/text_secondary"
+            android:text="Seat(s)"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_alignBottom="@+id/imageView7"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="8dp"
+            customfontdemo:fontName="@string/custom_font"/>
+
+    </RelativeLayout>
+        </RelativeLayout>
+
+
+    <!--<LinearLayout
+        android:id="@+id/Aminites_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/boarder"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/AminitesT"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.50"
+            android:background="@android:color/transparent"
+
+            android:text="AMENITIES" />
+
+        <Button
+            android:id="@+id/Bus_ImagesT"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.50"
+            android:background="@android:color/transparent"
+
+            android:text="IMAGES" />
+
+    </LinearLayout>-->
+
+</RelativeLayout>

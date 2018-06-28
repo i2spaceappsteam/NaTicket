@@ -1,0 +1,66 @@
+<resources>
+    <string name="app_name">NaTicket</string>
+
+    <string name="custom_font">OpenSans_Regular.ttf</string>
+
+    <string name="nav_drawer_opened">drawer opened</string>
+    <string name="nav_drawer_closed">drawer closed</string>
+
+    <string name="Flight">Flights</string>
+    <string name="Bus">Buses</string>
+    <string name="Hotels">Hotels</string>
+    <string name="Holidays">Holidays</string>
+    <string name="Reports">Reports</string>
+    <string name="Offers">Offers</string>
+    <string name="CancelTicket">Cancel Ticket</string>
+    <string name="AboutUs">About Us</string>
+    <string name="ChangePassword">Change Password</string>
+    <string name="TermsConditions"><![CDATA[ Terms & Conditions]]></string>
+    <string name="FAQs">FAQs</string>
+    <string name="WriteFeedback">Write Feedback</string>
+    <string name="Logout">Logout</string>
+    <string name="Recharges">Recharges</string>
+    <string name="LogIn">LogIn</string>
+    <string name="Profile">Profile</string>
+
+
+    <string name="domestic">Domestic</string>
+    <string name="international">International</string>
+    <string name="fare_changed_1">The selected Airline fare is indicative based on airline fare rules. The exact fare is </string>
+    <string name="fare_changed_2">" . Do you wish to proceed?"</string>
+    <string name="error_msg">We are unable to confirm your seats on this flight right now, due to temporary connection issue with Airline servers. You can try again or Choose another Flight.  </string>
+    <string name="No_flights_found">"This could have happened due to:\n 1.No flights operating on this route \n 2.All seats for this route being sold out."</string>
+
+
+    <string name="overview">Overview</string>
+    <string name="location">Location</string>
+    <string name="amenities">Amenities</string>
+
+
+    <string name="prompt_email">Email</string>
+    <string name="prompt_mobile">Mobile Number</string>
+    <string name="prompt_fullname">Full Name</string>
+    <string name="prompt_age">Age</string>
+    <string name="prompt_reference">Enter your Reference No</string>
+    <string name="prompt_address">Enter your address</string>
+    <string name="prompt_address_proof">Enter your ID Proof number</string>
+    <string name="Radio_male">Male</string>
+    <string name="Radio_femail">Female</string>
+    <string name="From_Activity">From</string>
+    <string name="filter">Sort &amp; Filter</string>
+    <string name="passenger_details">Passenger Details</string>
+    <string name="seat_layout_name">Select Your Seat</string>
+    <string name="Ticket">Ticket Details</string>
+    <string name="havePromo">Have a promo code?</string>
+    <string name="there_is_new_version">There is newer version of this application available.</string>
+    <string name="Update_now">Update</string>
+
+
+    <string name="title_activity_available_hotels">AvailableHotelsActivity</string>
+    <string name="title_activity_review">ReviewActivity</string>
+    <string name="title_activity_holiday_detail">HolidayDetailActivity</string>
+    <string name="title_activity_holiday_search">HolidaySearchActivity</string>
+
+    <!-- Atom Payment Details-->
+
+</resources>

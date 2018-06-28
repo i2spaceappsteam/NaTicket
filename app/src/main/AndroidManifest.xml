@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.NaTicket.n">
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+
+
+
+
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <application
+        android:allowBackup="false"
+        android:fullBackupContent="false"
+        android:icon="@drawable/round_na"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/round_na"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:largeHeap="true"
+        tools:replace="android:allowBackup">
+        <activity android:name="com.NaTicket.n.common.Splash_Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name="com.NaTicket.n.common.MainActivity"
+            android:theme="@style/AppTheme"
+            android:alwaysRetainTaskState="true"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity android:name="com.NaTicket.n.common.BaseActivity"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity android:name="com.NaTicket.n.loginpackage.Login_Activity"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            />
+
+        <activity android:name="com.NaTicket.n.loginpackage.Profile_Activity"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            />
+
+       <activity android:name="com.NaTicket.n.common.My_Trips_Activity"
+           android:screenOrientation="portrait" />
+
+        <activity android:name="com.NaTicket.n.common.WelcomeActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name="com.NaTicket.n.common.Offers_Activity"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name="com.NaTicket.n.utils.BackActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name="com.NaTicket.n.loginpackage.Change_Password_Activity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name="com.NaTicket.n.loginpackage.Forgot_Password_Activity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"/>
+
+        <activity android:name="com.NaTicket.n.loginpackage.SignUp_Activity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"/>
+
+
+        <activity android:name=".loginpackage.Otp_Waiting_Activity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"/>
+
+        <activity android:name="com.NaTicket.n.common.drawer_items.Faqs"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name="com.NaTicket.n.common.cancel_pacakge.Cancel_Ticket_Activity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"/>
+
+        <activity android:name="com.NaTicket.n.common.drawer_items.About_us_Activity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name="com.NaTicket.n.common.drawer_items.FeedBackActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name="com.NaTicket.n.common.drawer_items.TermsandConditions"
+            android:screenOrientation="portrait"/>
+
+
+
+        <!--////Buses=====-->
+        <activity
+            android:name="com.NaTicket.n.buses.Buses_MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"
+            android:icon="@mipmap/ic_launcher">
+
+        </activity>
+
+        <activity
+            android:name="com.NaTicket.n.buses.SearchCityBus"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"/>
+
+        <activity
+            android:name="com.NaTicket.n.buses.SearchActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.NaTicket.n.buses.Buses_MainActivity" />
+        </activity>
+        <activity
+            android:name="com.NaTicket.n.buses.FilterActivity"
+            android:label="@string/filter"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme_ActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.NaTicket.n.buses.SearchActivity" />
+        </activity>
+        <activity
+            android:name="com.NaTicket.n.buses.FilterBoardingPoint"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme_ActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.NaTicket.n.buses.FilterActivity" />
+        </activity>
+        <activity
+            android:name="com.NaTicket.n.buses.FilterTravels"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme_ActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.NaTicket.n.buses.FilterActivity" />
+        </activity>
+
+        <activity
+            android:name="com.NaTicket.n.buses.SelectSeatActivity"
+            android:label="@string/seat_layout_name"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme_ActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.NaTicket.n.buses.SearchActivity" />
+        </activity>
+        <activity
+            android:name="com.NaTicket.n.buses.BoadingPointActivity"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme_ActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.NaTicket.n.buses.SelectSeatActivity" />
+        </activity>
+        <activity
+            android:name="com.NaTicket.n.buses.PassengerDetails"
+            android:label="@string/passenger_details"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme_ActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.NaTicket.n.buses.BoadingPointActivity" />
+        </activity>
+
+
+        <activity android:name="com.NaTicket.n.buses.Bus_Booking_Activity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name="com.NaTicket.n.buses.ResponseActivity"
+            android:label="@string/Ticket"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme_ActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.NaTicket.n.buses.Buses_MainActivity" />
+
+        </activity>
+
+        <activity android:name="com.NaTicket.n.common.activities.Reports_Bus_Ticket_Details"
+         android:label="@string/Ticket"
+         android:screenOrientation="portrait"
+         android:launchMode="singleTop"
+         android:theme="@style/AppTheme_ActionBar">
+         <meta-data
+             android:name="android.support.PARENT_ACTIVITY"
+             android:value="com.NaTicket.n.common.My_Trips_Activity" />
+
+
+
+     </activity>
+
+        <activity android:name="com.NaTicket.n.common.cancel_pacakge.Cancel_Bus_Ticket"
+            android:screenOrientation="portrait"/>
+
+        <!--////Buses=====-->
+        
+        
+        
+        ///////////Recharges/////////////////
+        <activity android:name="com.NaTicket.n.recharges.Recharge_MainActivity"
+            android:screenOrientation="portrait"/>
+
+        <!--<activity
+            android:name="Recharge_MainActivity"
+            android:label="@string/Recharges"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme_ActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".common.MainActivity" />
+        </activity>-->
+
+        <!--<activity
+            android:name="recharges.Paymentinfo"
+            android:label="Customer Info"
+            android:screenOrientation="portrait"
+
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="Recharge_MainActivity" />
+        </activity>-->
+
+        <!--<activity
+            android:name="RechargeResponseActivity"
+            android:label="@string/RechargeStatus"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme_ActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".recharges.Recharge_MainActivity" />
+        </activity>-->
+
+        <activity android:name="com.NaTicket.n.recharges.RechargeResponseActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name="com.NaTicket.n.common.activities.Reports_Recharge_Details"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name="com.NaTicket.n.recharges.Operator_list_activity_rec"
+            android:screenOrientation="portrait"/>
+
+
+///////XXXXXX////////Recharges//////XXXXX//////
+
+
+
+
+
+        
+        
+        
+        
+    <!--    ////////Hotels-->
+        <activity android:name="com.NaTicket.n.common.cancel_pacakge.Cancel_Hotel_Ticket"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name="com.NaTicket.n.hotels.HotelSearchActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name="com.NaTicket.n.hotels.CitySearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name="com.NaTicket.n.hotels.AvailableHotelsActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name="com.NaTicket.n.hotels.HotelDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.NaTicket.n.hotels.SelectRoomActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.NaTicket.n.hotels.ReviewActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity
+            android:name="com.NaTicket.n.hotels.AddDetailsActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.NaTicket.n.hotels.SelectRoomActivityNew"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.NaTicket.n.hotels.Rooms_Activity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.NaTicket.n.hotels.Hotel_Booking_Activity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.NaTicket.n.hotels.Hotel_Booking_Details_Activity"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name="com.NaTicket.n.common.activities.Reports_Flight_Ticket_Details"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.NaTicket.n.hotels.Hotel_Filters_Activity"
+            android:screenOrientation="portrait"/>
+
+
+      <!--  ////////Flights-->
+
+        <activity android:name="com.NaTicket.n.common.cancel_pacakge.Cancel_Flight_Ticket"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name="com.NaTicket.n.flights.Flights_Search_Activity"
+            android:label="Flights" />
+
+        <activity
+            android:name="com.NaTicket.n.flights.Flights_City_Search_Activity"
+            android:label=" "
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"/>
+
+        <activity
+            android:name="com.NaTicket.n.flights.Flights_Domestic_Onward"
+            android:label="Flights"/>
+
+        <activity
+            android:name="com.NaTicket.n.flights.Flights_Domestic_Return"
+            android:label="Flights" />
+
+        <activity
+            android:name="com.NaTicket.n.flights.Flights_International_Onward"
+            android:label="Flights" />
+
+        <activity
+            android:name="com.NaTicket.n.flights.Flights_International_Return"
+            android:label="Flights"
+            />
+
+        <activity
+            android:name="com.NaTicket.n.flights.Domestic_Flight_Review"
+            android:label="Flights"/>
+
+        <activity android:name="com.NaTicket.n.flights.International_Flight_Review"
+            android:label="Flights"/>
+
+
+        <activity android:name="com.NaTicket.n.flights.Flight_Passenger_Information"
+            android:label="Flights"
+            android:windowSoftInputMode="adjustPan|stateUnchanged"/>
+
+
+        <activity android:name="com.NaTicket.n.flights.Flight_Booking_Activity"
+            android:label="Flights" />
+
+
+        <activity android:name="com.NaTicket.n.flights.Flight_Ticket_Details"
+            android:label="Flights"/>
+
+
+        <activity android:name="com.NaTicket.n.common.activities.Reports_Hotels_Details_Activity"
+            android:label="Flights"/>
+
+
+        <activity android:name="com.NaTicket.n.flights.Dom_Onward_Flight_Filters_Activity"
+            android:label="Flights"/>
+
+        <activity android:name="com.NaTicket.n.flights.Int_Onward_Flight_Filters_Activity"
+            android:label="Flights"/>
+
+        <activity android:name="com.NaTicket.n.flights.Dom_Return_Flight_Filters_Activity"
+            android:label="Flights"/>
+
+
+
+
+      <!--  /////Holidays-->
+
+        <activity android:name="com.NaTicket.n.common.cancel_pacakge.Cancel_Holiday_Ticket"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.NaTicket.n.holidays.AvailableHolidaysActivity"
+            android:label="@string/title_activity_available_hotels"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.NaTicket.n.holidays.HolidayDetailActivity"
+            android:label="@string/title_activity_holiday_detail"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.NaTicket.n.holidays.HolidaySearchActivity"
+            android:label="@string/title_activity_holiday_search"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.NaTicket.n.holidays.ReviewHolidayActivity"
+            android:label="@string/title_activity_review"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.NaTicket.n.holidays.Holiday_Booking_Activity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.NaTicket.n.holidays.Holiday_Booking_Details_Activity"
+            android:label="Booking Summary"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.NaTicket.n.common.activities.Reports_Holidays_Details_Activity"
+            android:label=""
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name="com.NaTicket.n.holidays.CheckAvailabilityActivity"
+            android:label="Check Availability"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name="com.NaTicket.n.holidays.Holiday_Filters_Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+
+        <activity
+            android:name="com.NaTicket.n.paymnet_gate_ways.Payment_Gateway_Main"
+            android:screenOrientation="portrait"
+            android:alwaysRetainTaskState="true"/>
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyD78TYip2tvNwpna-QulaDsPp_mZJrjYX4" />
+
+        <activity android:name="com.NaTicket.n.hotels.adapters.MapsActivity"
+            android:label="Map"
+            android:parentActivityName="com.NaTicket.n.hotels.HotelDetailActivity"
+            android:theme="@style/AppTheme"/>
+
+        <activity android:name=".common.Version_updater_Activity"
+            />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+       <!-- <activity
+            android:name="com.atom.mobilepaymentsdk.PayActivity"
+            android:label="@string/app_name"
+            android:alwaysRetainTaskState="true"
+            android:theme="@style/AppTheme"/>-->
+
+
+        <activity
+            android:name="com.payumoney.sdkui.ui.activities.PayUmoneyActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme"
+            android:alwaysRetainTaskState="true"
+            tools:replace="android:label,android:theme" />
+
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="7beaf3236477b943bd3c06d1f327333c1d8751bd" />
+    </application>
+
+</manifest>

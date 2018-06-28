@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:customfontdemo="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey">
+
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.NoActionBar.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.NoActionBar.PopupOverlay">
+            <include layout="@layout/content_back_toolbar" />
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                card_view:cardCornerRadius="3dp"
+                card_view:cardElevation="4dp"
+                card_view:cardUseCompatPadding="true">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.NaTicket.n.custom.MyTextView
+                        android:id="@+id/Enter_reference_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_margin="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text="Ref No: 1234567890"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/text_primary"
+                        android:textIsSelectable="true"
+                        android:textStyle="bold"
+                        customfontdemo:fontName="@string/custom_font" />
+
+                    <View
+                        android:id="@+id/view12"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@color/light_grey" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/traveler_with_a_suitcase" />
+
+                        <com.NaTicket.n.custom.MyTextViewBold
+                            android:id="@+id/Journey_Details"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:drawablePadding="8dp"
+                            android:gravity="center"
+                            android:text="Hyderabad to Banglore"
+                            android:textAlignment="textStart"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/text_primary"
+                            android:textStyle="bold"
+                            customfontdemo:fontName="@string/custom_font" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/blu_cal" />
+
+                        <com.NaTicket.n.custom.MyTextViewBold
+                            android:id="@+id/journey_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:gravity="center"
+                            android:text="Thursday, Oct 23, 2017"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/text_primary"
+                            android:textStyle="bold"
+                            customfontdemo:fontName="@string/custom_font" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/flght" />
+
+                        <com.NaTicket.n.custom.MyTextViewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:drawablePadding="8dp"
+                            android:gravity="center"
+                            android:text="Onward flight details"
+                            android:textAlignment="textStart"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/text_primary"
+                            android:textStyle="bold"
+                            customfontdemo:fontName="@string/custom_font" />
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:id="@+id/OnwarFlightdetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginRight="20dp"
+                        android:gravity="start"
+
+                        />
+
+                    <LinearLayout
+                        android:id="@+id/returnflgtDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/flght" />
+
+                        <com.NaTicket.n.custom.MyTextViewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:drawablePadding="8dp"
+                            android:gravity="center"
+                            android:text="Return flight details"
+                            android:textAlignment="textStart"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/text_primary"
+                            android:textStyle="bold"
+                            customfontdemo:fontName="@string/custom_font" />
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:id="@+id/ReturnFlightdetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginRight="20dp"
+                        android:gravity="start"
+                        />
+
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/light_grey" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <com.NaTicket.n.custom.MyTextViewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:text="Total fare"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/text_primary"
+                            android:textStyle="bold"
+                            customfontdemo:fontName="@string/custom_font" />
+
+                        <com.NaTicket.n.custom.MyTextViewBold
+                            android:id="@+id/Total_fare"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:drawablePadding="15dp"
+                            android:gravity="end"
+                            android:text="INR 11300000.0"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/colorAccent"
+                            android:textStyle="bold"
+                            customfontdemo:fontName="@string/custom_font" />
+                    </LinearLayout>
+
+                    <com.NaTicket.n.custom.MyTextViewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="Select Flight and passengers:-"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/text_primary"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        customfontdemo:fontName="@string/custom_font" />
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/linearLayout11"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+
+
+
+                        <!--  <CheckBox
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:id="@+id/checkBox"
+                              android:layout_marginTop="10dp"
+                              android:layout_marginBottom="10dp"
+                              android:layout_marginLeft="35dp" />-->
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout13"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/linearLayout11"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+
+
+
+                        <!--  <CheckBox
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:id="@+id/checkBox"
+                              android:layout_marginTop="10dp"
+                              android:layout_marginBottom="10dp"
+                              android:layout_marginLeft="35dp" />-->
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+                <com.NaTicket.n.custom.MyTextViewBold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="Cancellation Policy"
+                    android:textColor="@color/text_primary"
+                    android:textSize="15dp"
+                    android:visibility="gone"
+                    customfontdemo:fontName="@string/custom_font" />
+
+                <android.support.v7.widget.CardView
+
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    card_view:cardBackgroundColor="@color/colorAccent"
+                    card_view:cardCornerRadius="3dp"
+                    card_view:cardElevation="4dp"
+                    card_view:cardUseCompatPadding="true">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/textView21"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+
+                        <com.NaTicket.n.custom.MyTextViewBold
+                            android:id="@+id/textView22"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Cancellation mode"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/white"
+                            customfontdemo:fontName="@string/custom_font" />
+
+                        <com.NaTicket.n.custom.MyTextViewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignTop="@+id/textView22"
+                            android:layout_marginRight="20dp"
+                            android:text="charges"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/white"
+                            android:visibility="gone"
+                            customfontdemo:fontName="@string/custom_font" />
+
+                        <com.NaTicket.n.custom.MyTextView
+                            android:id="@+id/Cancellation_policy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/textView22"
+                            android:layout_alignStart="@+id/textView22"
+                            android:layout_below="@+id/textView22"
+                            android:layout_marginTop="10dp"
+                            android:text="Refundable"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/white"
+                            customfontdemo:fontName="@string/custom_font" />
+
+                        <com.NaTicket.n.custom.MyTextView
+                            android:id="@+id/Partial"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/Cancellation_policy"
+                            android:layout_margin="10dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Partial"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/white"
+                            android:visibility="gone"
+                            customfontdemo:fontName="@string/custom_font" />
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <com.NaTicket.n.custom.MyTextViewBold
+                    android:id="@+id/Ticket_Cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/primary_background_button"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:text="@string/CancelTicket"
+                    android:textColor="@android:color/white"
+                    android:textSize="17sp"
+                    customfontdemo:fontName="@string/custom_font" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

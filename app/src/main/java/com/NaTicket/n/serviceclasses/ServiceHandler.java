@@ -1,0 +1,118 @@
+package com.NaTicket.n.serviceclasses;
+
+/**
+ * Created by Ankit on 8/16/2017.
+ */
+
+import android.content.Context;
+
+import com.NaTicket.n.utils.Constants;
+
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.utils.URLEncodedUtils;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.protocol.HTTP;
+import org.apache.http.util.EntityUtils;
+
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.util.List;
+
+
+/**
+ * Created by Administrator on 27-04-2016.
+ */
+/*
+public class ServiceHandler {
+}
+*/
+public class ServiceHandler {
+
+    Context context;
+    /* SharedPreferences pref=this.getSharedPreferences("I2space", 0);
+
+     SharedPreferences.Editor editor=pref.edit();;
+ */
+    static String response = null;
+    public final static int GET = 1;
+    public final static int POST = 2;
+
+    public ServiceHandler() {
+
+    }
+
+    /**
+     * Making service call
+     * @url - url to make request
+     * @method - http request method
+     * */
+    public String makeServiceCall(String url, int method) {
+        return this.makeServiceCall(url, method, null);
+    }
+
+    /**
+     * Making service call
+     * @url - url to make request
+     * @method - http request method
+     * @params - http request params
+     * */
+    public String makeServiceCall(String url, int method,
+                                  List<NameValuePair> params) {
+        try {
+            // http client
+            DefaultHttpClient httpClient = new DefaultHttpClient();
+            HttpEntity httpEntity = null;
+            HttpResponse httpResponse = null;
+
+            // Checking http request method type
+            if (method == POST) {
+                HttpPost httpPost = new HttpPost(url);
+                httpPost.setHeader("ConsumerKey", Constants.ConsumerKey);
+                httpPost.setHeader("ConsumerSecret",Constants.ConsumerSecret);
+                httpPost.setHeader(HTTP.CONTENT_TYPE,"application/json");
+
+                // adding post params
+                if (params != null) {
+                    httpPost.setEntity(new UrlEncodedFormEntity(params));
+
+                }
+
+                httpResponse = httpClient.execute(httpPost);
+
+            } else if (method == GET) {
+                HttpGet httpGet = new HttpGet(url);
+                httpGet.setHeader("ConsumerKey", Constants.ConsumerKey);
+                httpGet.setHeader("ConsumerSecret",Constants.ConsumerSecret);
+                // appending params to url
+                if (params != null) {
+
+                    String paramString = URLEncodedUtils
+                            .format(params, "utf-8");
+                    url += "?" + paramString;
+                }
+
+                httpResponse = httpClient.execute(httpGet);
+
+            }
+            httpEntity = httpResponse.getEntity();
+            response = EntityUtils.toString(httpEntity);
+
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        } catch (ClientProtocolException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return response;
+
+    }
+
+}

@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customfontdemo="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    android:gravity="center">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/blur_background_street"
+        android:layout_centerInParent="true"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:alpha="0.5"
+        android:layout_centerInParent="true" />
+
+
+
+    <LinearLayout
+        android:id="@+id/passwordSent_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="20dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/password_in_mail"/>
+
+
+        <com.NaTicket.n.custom.MyTextViewBold
+            android:id="@+id/registeredEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="We have sent your new password to your registered Email Thank You"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:layout_marginTop="20dp"
+            customfontdemo:fontName="@string/custom_font"
+            android:textAlignment="center"/>
+
+
+        <com.NaTicket.n.custom.MyTextViewBold
+            android:id="@+id/sentMailOK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textColor="@color/white"
+            customfontdemo:fontName="@string/custom_font"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:background="@drawable/button_background"
+            android:layout_marginTop="30dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Otp_waiting_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:visibility="visible">
+
+
+
+
+
+        <com.NaTicket.n.custom.MyTextViewBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:text="OTP Verification"
+            android:textColor="@color/colorWhite"
+            android:textSize="25sp"
+            customfontdemo:fontName="@string/custom_font"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            >
+
+            <ProgressBar
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/progress_bar"
+                android:layout_centerInParent="true"
+                android:theme="@style/AppTheme.WhiteAccent" />
+
+            <com.NaTicket.n.custom.MyTextViewBold
+                android:id="@+id/tv_counter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="30"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:layout_marginStart="10dp"
+                android:textSize="18sp"
+                android:layout_centerInParent="true"
+                customfontdemo:fontName="@string/custom_font" />
+
+        </RelativeLayout>
+
+        <com.NaTicket.n.custom.MyTextViewBold
+            android:id="@+id/otp_waiting_TV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Waiting to automatically detect OTP sent to +91-7200721825"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp"
+            customfontdemo:fontName="@string/custom_font" />
+
+        <com.NaTicket.n.custom.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="'If not detected automatically'"
+            android:textColor="@color/colorWhite"
+            android:textSize="15sp"
+            customfontdemo:fontName="@string/custom_font"/>
+
+
+        <com.NaTicket.n.custom.MyTextViewBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Enter recieved OTP"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp"
+            customfontdemo:fontName="@string/custom_font"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <com.NaTicket.n.custom.MyEdiTextBold
+                android:id="@+id/otp_digitone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/white"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="1"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textCursorDrawable="@null"
+                android:textSize="24sp"
+                android:cursorVisible="false"
+                customfontdemo:fontName="@string/custom_font" />
+
+            <com.NaTicket.n.custom.MyEdiTextBold
+                android:id="@+id/otp_digittwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/white"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="1"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                android:textCursorDrawable="@null"
+                android:textSize="24dp"
+                android:cursorVisible="false"
+                customfontdemo:fontName="@string/custom_font" />
+
+            <com.NaTicket.n.custom.MyEdiTextBold
+                android:id="@+id/otp_digitthree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/white"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="1"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                android:textCursorDrawable="@null"
+                android:textSize="24dp"
+                android:cursorVisible="false"
+                customfontdemo:fontName="@string/custom_font" />
+
+            <com.NaTicket.n.custom.MyEdiTextBold
+                android:id="@+id/otp_digitfour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/white"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="1"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                android:textCursorDrawable="@null"
+                android:textSize="24dp"
+                android:cursorVisible="false"
+                customfontdemo:fontName="@string/custom_font" />
+
+            <com.NaTicket.n.custom.MyEdiTextBold
+                android:id="@+id/otp_digitfive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/white"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="1"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                android:textCursorDrawable="@null"
+                android:textSize="24dp"
+                android:cursorVisible="false"
+                customfontdemo:fontName="@string/custom_font" />
+
+            <com.NaTicket.n.custom.MyEdiTextBold
+                android:id="@+id/otp_digitsix"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/white"
+                android:gravity="center"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="1"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                android:textCursorDrawable="@null"
+                android:textSize="24sp"
+                android:cursorVisible="false"
+                customfontdemo:fontName="@string/custom_font" />
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp">
+
+            <com.NaTicket.n.custom.MyTextViewBold
+                android:id="@+id/wrong_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wrong Number?"
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp"
+                customfontdemo:fontName="@string/custom_font"/>
+
+            <com.NaTicket.n.custom.MyTextViewBold
+                android:id="@+id/Resend_otp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="Resend OTP"
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp"
+                customfontdemo:fontName="@string/custom_font"/>
+
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/otp_next_arrow"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/next_arrow" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

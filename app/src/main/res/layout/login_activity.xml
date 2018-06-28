@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customfontdemo="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+   >
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/blur_background_street"
+        android:layout_centerInParent="true"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:alpha="0.5"
+        android:layout_centerInParent="true" />
+
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       >
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="45dp"
+        android:layout_gravity="center"
+        android:weightSum="10">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/na_ticket_log_transparent"
+                    />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="7"
+                android:orientation="vertical">
+
+        <RadioGroup
+            android:id="@+id/radio_group_log"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <RadioButton
+                android:id="@+id/user_radio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/colorWhite"
+                android:checked="true"
+                android:text="User"
+                android:textColor="@color/colorWhite"/>
+
+            <RadioButton
+                android:id="@+id/Agent_radio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/colorWhite"
+                android:textColor="@color/colorWhite"
+                android:text="Agent" />
+        </RadioGroup>
+
+
+        <com.NaTicket.n.custom.MyEdiText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/edittext_top_bg"
+            android:drawableLeft="@drawable/ic_email"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/Grey"
+            android:gravity="center_vertical"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:textColorHint="@color/black_overlay"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            customfontdemo:fontName="@string/custom_font" />
+
+        <com.NaTicket.n.custom.MyEdiText
+            android:id="@+id/etPass"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/edittext_top_bg"
+            android:drawableLeft="@drawable/ic_password"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/Grey"
+            android:gravity="center_vertical"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textColorHint="@color/black_overlay"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            customfontdemo:fontName="@string/custom_font"/>
+
+        <com.NaTicket.n.custom.MyTextViewBold
+
+            android:id="@+id/forgot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="25dp"
+            android:paddingLeft="10dp"
+            android:text="Forgot password ?"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            customfontdemo:fontName="@string/custom_font" />
+
+        <com.NaTicket.n.custom.MyTextView
+            android:id="@+id/loginTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="30dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Login"
+            android:textColor="@color/colorAccent"
+            android:textSize="17sp"
+            customfontdemo:fontName="@string/custom_font" />
+
+
+        <com.NaTicket.n.custom.MyTextViewBold
+
+            android:id="@+id/sign_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:text="New here? Sign Up"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            customfontdemo:fontName="@string/custom_font" />
+
+    </LinearLayout>
+    </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

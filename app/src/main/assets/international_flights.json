@@ -1,0 +1,113 @@
+[{
+		"AirportCode": "BOM",
+		"City": "MUMBAI",
+		"Country": "India",
+		"AirportDesc": "Chhatrapati Shivaji International",
+		"Type": "C"
+	},
+	{
+		"AirportCode": "BLR",
+		"City": "BANGALORE",
+		"Country": "India",
+		"AirportDesc": "Bangalore International Airport",
+		"Type": "C"
+	},
+	{
+		"AirportCode": "DEL",
+		"City": "NEW DELHI",
+		"Country": "India",
+		"AirportDesc": "Indira Gandhi Intl",
+		"Type": "C"
+	},
+	{
+		"AirportCode": "HYD",
+		"City": "HYDERABAD",
+		"Country": "India",
+		"AirportDesc": "Rajiv Gandhi Airport",
+		"Type": "C"
+	},
+	{
+		"AirportCode": "DXB",
+		"City": "Dubai",
+		"Country": "United Arab Emirates",
+		"AirportDesc": "Dubai",
+		"Type": "I"
+	},
+	{
+		"AirportCode": "SFO",
+		"City": "SAN FRANCISCO",
+		"Country": "United States",
+		"AirportDesc": "San Francisco International",
+		"Type": "I"
+	},
+	{
+		"AirportCode": "SIN",
+		"City": "Singapore",
+		"Country": "Singapore",
+		"AirportDesc": "Changi",
+		"Type": "I"
+	},
+	{
+		"AirportCode": "HYD",
+		"City": "HYDERABAD",
+		"Country": "India",
+		"AirportDesc": "Rajiv Gandhi Airport",
+		"Type": "C"
+	},
+	{
+		"AirportCode": "BKK",
+		"City": "Bangkok",
+		"Country": "Thailand",
+		"AirportDesc": "Suvarnabhumi International",
+		"Type": "I"
+	},
+	{
+		"AirportCode": "KTM",
+		"City": "Kathmandu",
+		"Country": "Nepal",
+		"AirportDesc": "Tribhuvan",
+		"Type": "I"
+	},
+	{
+		"AirportCode": "KUL",
+		"City": "Kuala Lumpur",
+		"Country": "Malaysia",
+		"AirportDesc": "Kuala Lumpur International Airport [klia]",
+		"Type": "I"
+	},
+	{
+		"AirportCode": "AUH",
+		"City": "Abu Dhabi",
+		"Country": "United Arab Emirates",
+		"AirportDesc": "Abu Dhabi International",
+		"Type": "I"
+	},
+	{
+		"AirportCode": "SHJ",
+		"City": "Sharjah",
+		"Country": "United Arab Emirates",
+		"AirportDesc": "Sharjah",
+		"Type": "I"
+	},
+	{
+		"AirportCode": "HKG",
+		"City": "Hong Kong",
+		"Country": "China",
+		"AirportDesc": "Hong Kong International",
+		"Type": "I"
+	},
+	{
+		"AirportCode": "LHR",
+		"City": "London",
+		"Country": "United Kingdom",
+		"AirportDesc": "Heathrow",
+		"Type": "I"
+	},
+	{
+		"AirportCode": "CDG",
+		"City": "Paris",
+		"Country": "France",
+		"AirportDesc": "Charles De Gaulle",
+		"Type": "I"
+	}
+]

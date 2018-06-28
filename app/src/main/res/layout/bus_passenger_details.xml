@@ -1,0 +1,1045 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customfontdemo="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:background="@color/back_ground">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <pl.droidsonroids.gif.GifTextView
+            android:id="@+id/promoAppliedGIF"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/promo_applied_gif"
+          android:layout_alignParentBottom="true"
+            android:elevation="5dp"/>
+
+
+    <LinearLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.NaTicket.n.custom.MyTextViewBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Contact Details"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/text_primary"
+            android:textSize="12sp"
+            customfontdemo:fontName="@string/custom_font"/>
+        <android.support.v7.widget.CardView
+
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            card_view:cardUseCompatPadding="true"
+            card_view:cardElevation="2dp"
+            card_view:cardCornerRadius="2dp">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp">
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textColorHint="@color/text_secondary">
+
+                    <com.NaTicket.n.custom.MyEdiText
+                        android:id="@+id/Contact_Email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/prompt_email"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"
+                        android:imeOptions="actionNext"
+                        android:textSize="16sp"
+                        android:textColor="@color/text_primary"
+                        android:textColorHint="@color/text_secondary"
+                        customfontdemo:fontName="@string/custom_font"/>
+
+                </android.support.design.widget.TextInputLayout>
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="@color/text_secondary"
+
+                    >
+
+                    <com.NaTicket.n.custom.MyEdiText
+                        android:id="@+id/Contact_Mobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/prompt_mobile"
+                        android:inputType="phone"
+                        android:maxLength="10"
+                        android:digits="0123456789"
+                        android:textSize="16sp"
+                        android:imeOptions="actionNext"
+                        android:textColor="@color/text_primary"
+                        android:textColorHint="@color/text_secondary"
+                        customfontdemo:fontName="@string/custom_font"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <com.NaTicket.n.custom.MyTextViewBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="* Your tickets will be sent to this contact"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="10sp"
+            android:textColor="@color/text_primary"
+            customfontdemo:fontName="@string/custom_font"/>
+
+
+        <com.NaTicket.n.custom.MyTextViewBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Passenger Details"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="12sp"
+            android:textColor="@color/text_primary"
+            customfontdemo:fontName="@string/custom_font"/>
+        <android.support.v7.widget.CardView
+
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            card_view:cardUseCompatPadding="true"
+            card_view:cardElevation="2dp"
+            card_view:cardCornerRadius="2dp">
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp">
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/view"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="@color/text_secondary">
+
+                    <com.NaTicket.n.custom.MyEdiText
+                        android:id="@+id/full_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/prompt_fullname"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPersonName"
+                        android:maxLines="1"
+                        android:textColor="@color/text_primary"
+                        android:textColorHint="@color/text_secondary"
+                        android:textSize="16sp"
+                        customfontdemo:fontName="@string/custom_font" />
+                </android.support.design.widget.TextInputLayout>
+
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColorHint="@color/text_secondary">
+                        <com.NaTicket.n.custom.MyEdiText
+                            android:id="@+id/Age"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/prompt_age"
+                            android:inputType="number"
+                            android:maxLines="1"
+                            android:maxLength="2"
+                            android:width="100dp"
+                            android:textSize="16sp"
+                            android:textColorHint="@color/text_secondary"
+                            android:textColor="@color/text_primary"
+                            android:imeOptions="actionNext"
+                            customfontdemo:fontName="@string/custom_font"/>
+                    </android.support.design.widget.TextInputLayout>
+
+
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="6dp"
+                    android:id="@+id/group1">
+                    <com.NaTicket.n.custom.MyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gender"
+                        customfontdemo:fontName="@string/custom_font"
+                        android:layout_marginRight="14sp"
+                        android:textColor="@color/text_primary"
+                        android:textSize="12sp"/>
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Radio_male"
+                            android:textSize="12sp"
+                            android:id="@+id/Male"
+                            android:checked="true"
+                            android:textColor="@color/text_secondary"
+
+                            />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Radio_femail"
+                            android:textSize="12sp"
+                            android:id="@+id/Female"
+                            android:textColor="@color/text_secondary"/>
+
+
+</RadioGroup>
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/linearLayout2"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignLeft="@+id/view12"
+                    android:layout_alignStart="@+id/view12"
+                    android:spinnerMode="dropdown"
+                    android:visibility="gone"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/Colorgray"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/view12"
+                    android:visibility="gone">
+                </View>
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone">
+
+                    <com.NaTicket.n.custom.MyEdiText
+                        android:id="@+id/Id_proof_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/prompt_address_proof"
+                        android:maxLines="1"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:layout_alignParentBottom="true"
+                        android:imeOptions="actionNext"/>
+                </android.support.design.widget.TextInputLayout>
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/text_secondary"
+                    android:layout_marginTop="10dp">
+
+                    <com.NaTicket.n.custom.MyEdiText
+                        android:id="@+id/Address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/prompt_address"
+                        android:inputType="textPostalAddress"
+                        android:maxLines="1"
+                        android:imeOptions="actionNext"
+                        android:textSize="16sp"
+                        android:textColor="@color/text_primary"
+                        android:textColorHint="@color/text_secondary"
+                        customfontdemo:fontName="@string/custom_font"/>
+
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:id="@+id/Co_passenger1"
+            android:visibility="gone"
+            card_view:cardUseCompatPadding="true"
+            card_view:cardElevation="2dp"
+            card_view:cardCornerRadius="2dp">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp">
+
+                <com.NaTicket.n.custom.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Co-Passenger"
+                    android:textColor="@color/text_primary"
+                    android:layout_marginTop="10dp"
+                    android:textSize="14sp"
+                    customfontdemo:fontName="@string/custom_font"/>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textColorHint="@color/text_secondary">
+                    <com.NaTicket.n.custom.MyEdiText
+                        android:id="@+id/full_name1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/prompt_fullname"
+                        android:inputType="textPersonName"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                        android:maxLines="1"
+                        android:textSize="16sp"
+                        android:imeOptions="actionNext"
+                        customfontdemo:fontName="@string/custom_font"/>
+                </android.support.design.widget.TextInputLayout>
+
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColorHint="@color/text_secondary"
+                        >
+                        <com.NaTicket.n.custom.MyEdiText
+                            android:id="@+id/Age1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/prompt_age"
+                            android:inputType="number"
+                            android:maxLines="1"
+                            android:maxLength="2"
+                            android:textSize="16sp"
+                            android:width="100dp"
+                            android:imeOptions="actionNext"
+                            customfontdemo:fontName="@string/custom_font"/>
+                    </android.support.design.widget.TextInputLayout>
+
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="6dp"
+                    android:id="@+id/group2">
+                        <com.NaTicket.n.custom.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Gender"
+                            customfontdemo:fontName="@string/custom_font"
+                            android:layout_marginRight="12dp"
+                            android:textSize="12sp"
+                            android:textColor="@color/text_primary"
+
+                            />
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Radio_male"
+                            android:textSize="12sp"
+                            android:id="@+id/Male1"
+                            android:checked="true"
+                            android:textColor="@color/text_secondary"
+
+                            />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Radio_femail"
+                            android:id="@+id/Female1"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp"/>
+
+
+
+                 </RadioGroup>
+
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+
+        <android.support.v7.widget.CardView
+
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:id="@+id/Co_passenger2"
+            android:visibility="gone"
+            card_view:cardUseCompatPadding="true"
+            card_view:cardElevation="2dp"
+            card_view:cardCornerRadius="2dp">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp">
+
+                <com.NaTicket.n.custom.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Co-Passenger"
+                    android:textColor="@color/text_primary"
+                    android:layout_marginTop="10dp"
+                    android:textSize="14sp"
+                    customfontdemo:fontName="@string/custom_font"/>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textColorHint="@color/text_secondary">
+                    <com.NaTicket.n.custom.MyEdiText
+                        android:id="@+id/full_name2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/prompt_fullname"
+                        android:inputType="textPersonName"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                        android:maxLines="1"
+                        android:textSize="16sp"
+                        android:imeOptions="actionNext"
+                        customfontdemo:fontName="@string/custom_font"/>
+                </android.support.design.widget.TextInputLayout>
+
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColorHint="@color/text_secondary"
+                        >
+                        <com.NaTicket.n.custom.MyEdiText
+                            android:id="@+id/Age2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/prompt_age"
+                            android:inputType="number"
+                            android:maxLines="1"
+                            android:maxLength="2"
+                            android:textSize="16sp"
+                            android:width="100dp"
+                            android:imeOptions="actionNext"
+                            customfontdemo:fontName="@string/custom_font"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="6dp"
+                    android:id="@+id/group3">
+                        <com.NaTicket.n.custom.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Gender"
+                            customfontdemo:fontName="@string/custom_font"
+                            android:layout_marginRight="12dp"
+                            android:textSize="12sp"
+                            android:textColor="@color/text_primary"
+                            />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Radio_male"
+                            android:textSize="12sp"
+                            android:id="@+id/Male2"
+                            android:checked="true"
+                            android:textColor="@color/text_secondary"
+
+                            />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Radio_femail"
+                            android:id="@+id/Female2"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp"/>
+
+
+</RadioGroup>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:id="@+id/Co_passenger3"
+            android:visibility="gone"
+            card_view:cardUseCompatPadding="true"
+            card_view:cardElevation="2dp"
+            card_view:cardCornerRadius="2dp">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp">
+
+                <com.NaTicket.n.custom.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Co-Passenger"
+                    android:textColor="@color/text_primary"
+                    android:layout_marginTop="10dp"
+                    android:textSize="14sp"
+                    customfontdemo:fontName="@string/custom_font"/>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textColorHint="@color/text_secondary">
+                    <com.NaTicket.n.custom.MyEdiText
+                        android:id="@+id/full_name3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/prompt_fullname"
+                        android:inputType="textPersonName"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                        android:maxLines="1"
+                        android:textSize="16sp"
+                        android:imeOptions="actionNext"
+                        customfontdemo:fontName="@string/custom_font"/>
+                </android.support.design.widget.TextInputLayout>
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColorHint="@color/text_secondary"
+                        >
+                        <com.NaTicket.n.custom.MyEdiText
+                            android:id="@+id/Age3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/prompt_age"
+                            android:inputType="number"
+                            android:maxLines="1"
+                            android:maxLength="2"
+                            android:textSize="16sp"
+                            android:width="100dp"
+                            android:imeOptions="actionNext"
+                            customfontdemo:fontName="@string/custom_font"/>
+                    </android.support.design.widget.TextInputLayout>
+
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="6dp"
+                    android:id="@+id/group4">
+                        <com.NaTicket.n.custom.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Gender"
+                            customfontdemo:fontName="@string/custom_font"
+                            android:layout_marginRight="12dp"
+                            android:textSize="12sp"
+                            android:textColor="@color/text_primary"
+                            />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Radio_male"
+                            android:textSize="12sp"
+                            android:checked="true"
+                            android:textColor="@color/text_secondary"
+                            android:id="@+id/Male3" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Radio_femail"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp"
+                            android:id="@+id/Female3"/>
+
+
+</RadioGroup>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:id="@+id/Co_passenger4"
+            android:visibility="gone"
+            card_view:cardUseCompatPadding="true"
+            card_view:cardElevation="2dp"
+            card_view:cardCornerRadius="2dp">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp">
+
+                <com.NaTicket.n.custom.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Co-Passenger"
+                    android:textColor="@color/text_primary"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16sp"
+                    customfontdemo:fontName="@string/custom_font"/>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textColorHint="@color/text_secondary">
+                    <com.NaTicket.n.custom.MyEdiText
+                        android:id="@+id/full_name4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/prompt_fullname"
+                        android:inputType="textPersonName"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                        android:maxLines="1"
+                        android:textSize="16sp"
+                        android:imeOptions="actionNext"
+                        customfontdemo:fontName="@string/custom_font"/>
+                </android.support.design.widget.TextInputLayout>
+
+
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColorHint="@color/text_secondary"
+                        >
+                        <com.NaTicket.n.custom.MyEdiText
+                            android:id="@+id/Age4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/prompt_age"
+                            android:inputType="number"
+                            android:maxLines="1"
+                            android:maxLength="2"
+                            android:textSize="14sp"
+                            android:width="100dp"
+                            android:imeOptions="actionNext"
+                            customfontdemo:fontName="@string/custom_font"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="6dp"
+                    android:id="@+id/group5">
+
+                        <com.NaTicket.n.custom.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Gender"
+                            customfontdemo:fontName="@string/custom_font"
+                            android:layout_marginRight="12dp"
+                            android:textSize="12sp"
+                            android:textColor="@color/text_primary"
+                            />
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Radio_male"
+                            android:textSize="12sp"
+                            android:checked="true"
+                            android:id="@+id/Male4"
+                            android:textColor="@color/text_secondary"
+
+                            />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Radio_femail"
+                            android:id="@+id/Female4"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp"/>
+
+
+</RadioGroup>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:id="@+id/Co_passenger5"
+            android:visibility="gone"
+            card_view:cardUseCompatPadding="true"
+            card_view:cardElevation="2dp"
+            card_view:cardCornerRadius="2dp">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp">
+
+                <com.NaTicket.n.custom.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Co-Passenger"
+                    android:textColor="@color/text_primary"
+                    android:layout_marginTop="10dp"
+                    android:textSize="14sp"
+                    customfontdemo:fontName="@string/custom_font"/>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textColorHint="@color/text_secondary">
+                    <com.NaTicket.n.custom.MyEdiText
+                        android:id="@+id/full_name5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/prompt_fullname"
+                        android:inputType="textPersonName"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                        android:maxLines="1"
+                        android:textSize="16sp"
+                        android:imeOptions="actionNext"
+                        customfontdemo:fontName="@string/custom_font"/>
+                </android.support.design.widget.TextInputLayout>
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColorHint="@color/text_secondary"
+                        >
+                        <com.NaTicket.n.custom.MyEdiText
+                            android:id="@+id/Age5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/prompt_age"
+                            android:inputType="number"
+                            android:maxLines="1"
+                            android:maxLength="2"
+                            android:textSize="16sp"
+                            android:width="100dp"
+                            android:imeOptions="actionNext"
+                            customfontdemo:fontName="@string/custom_font"/>
+                    </android.support.design.widget.TextInputLayout>
+
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="6dp"
+                            android:id="@+id/group6">
+                        <com.NaTicket.n.custom.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Gender"
+                            customfontdemo:fontName="@string/custom_font"
+                            android:layout_marginRight="12dp"
+                            android:textSize="12sp"
+                            android:textColor="@color/text_primary"
+                            />
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Radio_male"
+                            android:textSize="12sp"
+                            android:id="@+id/Male5"
+                            android:checked="true"
+                            android:textColor="@color/text_secondary"
+
+                            />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Radio_femail"
+                            android:id="@+id/Female5"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp"/>
+
+
+
+                 </RadioGroup>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <com.NaTicket.n.custom.MyTextViewBold
+            android:id="@+id/HavePromoTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/havePromo"
+            android:textSize="18sp"
+            android:elevation="5dp"
+            android:padding="10dp"
+            android:textColor="@color/colorPrimary"
+            customfontdemo:fontName="@string/custom_font"/>
+
+        
+        
+        <android.support.v7.widget.CardView
+
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="-30dp"
+            card_view:cardUseCompatPadding="true"
+            card_view:cardElevation="4dp"
+            card_view:cardCornerRadius="8dp"
+            android:visibility="gone"
+            android:id="@+id/PromoCodeCardView"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/promoCodeApplyLayout"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="0dp">
+
+
+                    <com.NaTicket.n.custom.MyEdiText
+                        android:id="@+id/Promocode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter promo code"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:imeOptions="actionNext"
+                        android:layout_weight="1"
+                        android:textSize="16sp"
+                        customfontdemo:fontName="@string/custom_font"/>
+
+                    <Button
+                        android:id="@+id/PromoCodeApplay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="Apply"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/button_background"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/promocodeAmountDetails"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:visibility="gone">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <com.NaTicket.n.custom.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="Total Pay "
+                            android:textSize="15sp"
+                            android:textColor="@color/colorBlock"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginStart="10dp"
+                            customfontdemo:fontName="@string/custom_font"/>
+                        <com.NaTicket.n.custom.MyTextView
+                            android:id="@+id/TotalPay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="Total Pay "
+                            android:textSize="15sp"
+                            android:gravity="right"
+                            android:layout_marginEnd="10dp"
+                            android:textColor="@color/colorBlock"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginStart="10dp"
+                            customfontdemo:fontName="@string/custom_font"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <com.NaTicket.n.custom.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text="Discount Amount"
+                            android:textSize="15sp"
+                            android:textColor="@color/colorBlock"
+                            android:layout_marginTop="10dp"/>
+                        <com.NaTicket.n.custom.MyTextView
+                            android:id="@+id/DiscountAmount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="Total Pay "
+                            android:textSize="15sp"
+                            android:gravity="right"
+                            android:layout_marginEnd="10dp"
+                            android:textColor="@color/colorBlock"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="10dp"
+                            customfontdemo:fontName="@string/custom_font"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <com.NaTicket.n.custom.MyTextViewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:textSize="15sp"
+                            android:text="You Pay"
+                            android:textColor="@color/colorBlock"
+                            android:layout_marginStart="10dp"
+                            customfontdemo:fontName="@string/custom_font"/>
+                        <com.NaTicket.n.custom.MyTextViewBold
+                            android:id="@+id/YouPay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="Total Pay "
+                            android:textSize="15sp"
+                            android:gravity="right"
+                            android:layout_marginEnd="10dp"
+                            android:textColor="@color/colorBlock"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="10dp"
+                            customfontdemo:fontName="@string/custom_font"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <com.NaTicket.n.custom.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="By proceeding, I agree to all the Terms and Conditions"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/text_primary"
+            android:textSize="11sp"
+            customfontdemo:fontName="@string/custom_font"
+            />
+
+
+        <com.NaTicket.n.custom.MyTextViewBold
+            android:id="@+id/Booking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Procced to pay R 21000"
+            android:padding="15dp"
+            android:gravity="center"
+            android:background="@drawable/button_background"
+            android:textColor="@android:color/white"
+            android:layout_margin="15dp"
+            android:textSize="17sp"
+            customfontdemo:fontName="@string/custom_font" />
+
+
+
+    </LinearLayout>
+    </RelativeLayout>
+</ScrollView>
+

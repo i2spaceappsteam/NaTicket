@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customfontdemo="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        >
+
+        <com.NaTicket.n.custom.MyTextViewBold
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Opertaor"
+            android:id="@+id/Operator"
+            android:layout_weight="1"
+            android:background="@color/text_primary"
+            android:textColor="@color/white"
+            customfontdemo:fontName="GothamRoundedBook_21018.ttf"
+            />
+
+        <View
+            android:layout_width="@dimen/flight"
+            android:layout_height="0dp"/>
+
+        <com.NaTicket.n.custom.MyTextViewBold
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Time"
+            android:id="@+id/Time"
+            android:layout_weight="1"
+            android:background="@color/text_primary"
+            android:textColor="@color/white"
+            customfontdemo:fontName="GothamRoundedBook_21018.ttf"/>
+
+        <View
+            android:layout_width="@dimen/flight"
+            android:layout_height="0dp"/>
+        <com.NaTicket.n.custom.MyTextViewBold
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Price"
+            android:id="@+id/Price"
+            android:layout_weight="1"
+            android:background="@color/text_primary"
+            android:textColor="@color/white"
+            customfontdemo:fontName="GothamRoundedBook_21018.ttf"/>
+    </LinearLayout>
+
+</LinearLayout>

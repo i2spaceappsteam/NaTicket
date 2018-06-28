@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customfontdemo="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/back_ground"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.NaTicket.n.hotels.Hotel_Booking_Details_Activity"
+    >
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.NoActionBar.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.NoActionBar.PopupOverlay">
+
+            <include layout="@layout/content_back_toolbar" />
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:customfontdemo="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/back_ground"
+        android:orientation="vertical">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            customfontdemo:cardCornerRadius="10dp">
+
+            <LinearLayout
+                android:id="@id/content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:weightSum="3">
+
+
+                <com.NaTicket.n.custom.MyTextViewBold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Confirmed!"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/white"
+                    android:textSize="25dp"
+                    customfontdemo:fontName="@string/custom_font" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/green_confirmed"
+                        android:alpha="0.3"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="2"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="315dp"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <com.NaTicket.n.custom.MyTextViewBold
+                                    android:id="@+id/tvHtlName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:ellipsize="end"
+                                    android:text=""
+                                    android:textAlignment="textStart"
+                                    android:textSize="20dp"
+                                    android:textColor="@color/colorAccent"
+                                    customfontdemo:fontName="@string/custom_font" />
+
+
+                                <com.NaTicket.n.custom.MyTextView
+                                    android:id="@+id/tvHtlAddress"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="15dp"
+                                    android:gravity="start"
+                                    android:text=""
+                                    android:ellipsize="end"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="14sp"
+                                    customfontdemo:fontName="@string/custom_font" />
+
+
+                                <com.NaTicket.n.custom.MyTextView
+                                    android:id="@+id/room_type"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:maxLines="1"
+                                    android:text=""
+                                    android:layout_marginTop="10dp"
+                                    android:textAlignment="textStart"
+                                    android:visibility="visible"
+                                    customfontdemo:fontName="@string/custom_font" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2"
+                                    android:layout_marginTop="10dp">
+
+
+
+                                    <com.NaTicket.n.custom.MyTextViewBold
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="20dp"
+                                        android:ellipsize="end"
+                                        android:maxLines="1"
+                                        android:text="Ref No."
+                                        android:textSize="18dp"
+                                        android:layout_weight="1"
+                                        customfontdemo:fontName="@string/custom_font" />
+
+
+                                    <com.NaTicket.n.custom.MyTextViewBold
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="20dp"
+                                        android:ellipsize="end"
+                                        android:maxLines="1"
+                                        android:text="Confirmation Id"
+                                        android:textSize="18dp"
+                                        android:layout_weight="1"
+                                        customfontdemo:fontName="@string/custom_font" />
+
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2"
+                                    android:layout_marginTop="20dp">
+
+
+                                    <com.NaTicket.n.custom.MyTextViewBold
+                                        android:id="@+id/tvRefNo"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:ellipsize="end"
+                                        android:layout_weight="1"
+                                        android:text=""
+                                        android:textColor="@color/colorAccent"
+                                        customfontdemo:fontName="@string/custom_font"
+                                        />
+                                    <com.NaTicket.n.custom.MyTextViewBold
+                                        android:id="@+id/tv_allocation_id"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:ellipsize="end"
+                                        android:text=""
+                                        android:textColor="@color/colorAccent"
+                                        android:layout_weight="1"
+                                        customfontdemo:fontName="@string/custom_font"
+                                        />
+                                </LinearLayout>
+
+                                <com.NaTicket.n.custom.MyTextViewBold
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:ellipsize="end"
+                                    android:maxLines="1"
+                                    android:text="Booked On"
+                                    android:visibility="gone"
+                                    android:textSize="18dp"
+                                    customfontdemo:fontName="@string/custom_font" />
+
+                                <com.NaTicket.n.custom.MyTextViewBold
+                                    android:id="@+id/BookedDate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:visibility="gone"
+                                    android:text=""
+                                    android:textColor="@color/colorAccent"
+                                    customfontdemo:fontName="@string/custom_font" />
+
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    >
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:weightSum="2"
+                                        android:layout_marginTop="20dp">
+
+                                        <com.NaTicket.n.custom.MyTextViewBold
+                                            android:layout_weight="1"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:ellipsize="end"
+                                            android:maxLines="1"
+                                            android:text="Check In"
+                                            android:textSize="18dp"
+                                            android:textColor="@color/colorAccent"
+                                            customfontdemo:fontName="@string/custom_font" />
+
+
+                                        <com.NaTicket.n.custom.MyTextViewBold
+                                            android:layout_weight="1"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:ellipsize="end"
+                                            android:maxLines="1"
+                                            android:text="Check Out"
+                                            android:textSize="18dp"
+                                            android:textColor="@color/colorAccent"
+                                            customfontdemo:fontName="@string/custom_font" />
+
+
+
+
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:weightSum="2"
+                                        android:layout_marginTop="5dp"
+                                        android:background="@color/Transparent">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:background="@color/Transparent"
+                                            >
+
+
+                                            <com.NaTicket.n.custom.MyTextView
+
+                                                android:id="@+id/tvCheckinDate"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="10dp"
+                                                android:drawableLeft="@drawable/ic_cal"
+                                                android:drawablePadding="5dp"
+                                                android:gravity="center"
+                                                android:text=""
+                                                android:textColor="@color/black"
+                                                android:textSize="15sp"
+                                                android:textStyle="bold"
+                                                customfontdemo:fontName="@string/custom_font" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:background="@color/Transparent"
+                                            >
+
+
+                                            <com.NaTicket.n.custom.MyTextView
+
+                                                android:id="@+id/tvCheckoutDate"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="10dp"
+                                                android:drawableLeft="@drawable/ic_cal"
+                                                android:drawablePadding="5dp"
+                                                android:gravity="center"
+                                                android:text=""
+                                                android:textColor="@color/black"
+                                                android:textSize="15sp"
+                                                android:textStyle="bold"
+                                                customfontdemo:fontName="@string/custom_font" />
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <!-- <LinearLayout
+                                 android:layout_width="0dp"
+                                 android:layout_height="match_parent"
+                                 android:layout_weight=".4"
+                                 android:gravity="top"
+                                 android:weightSum="1"
+                                 android:orientation="vertical">
+
+                                 <LinearLayout
+                                     android:layout_weight=".6"
+                                     android:layout_width="match_parent"
+                                     android:layout_height="0dp"
+                                     android:gravity="top"
+                                     >
+                                     <ImageView
+                                         android:layout_width="wrap_content"
+                                         android:layout_height="wrap_content"
+                                         android:src="@drawable/green_confirmed"
+                                         android:layout_gravity="top"
+
+
+                                         />
+                                 </LinearLayout>
+
+                             </LinearLayout>-->
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="4"
+                    android:gravity="center_vertical">
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/Colorgray" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="5dp">
+
+                        <com.NaTicket.n.custom.MyTextViewBold
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="Night(s)"
+                            android:textSize="18dp"
+                            android:gravity="center"
+                            android:textColor="@color/colorAccent"
+                            customfontdemo:fontName="@string/custom_font" />
+                        <com.NaTicket.n.custom.MyTextViewBold
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="Room(s)"
+                            android:textSize="18dp"
+                            android:gravity="center"
+                            android:textColor="@color/colorAccent"
+                            customfontdemo:fontName="@string/custom_font" />
+
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <com.NaTicket.n.custom.MyTextView
+                            android:id="@+id/tvNoOfDays"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text=""
+                            android:textSize="18dp"
+                            android:textColor="@color/colorAccent"
+                            android:gravity="center"
+                            customfontdemo:fontName="@string/custom_font" />
+                        <com.NaTicket.n.custom.MyTextView
+                            android:id="@+id/tvNoOfRoms"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:textColor="@color/colorAccent"
+                            android:text=""
+                            android:textSize="18dp"
+                            android:gravity="center"
+                            customfontdemo:fontName="@string/custom_font" />
+
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <com.NaTicket.n.custom.MyTextViewBold
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="Guest(s)"
+                            android:textSize="18dp"
+                            android:textColor="@color/colorAccent"
+                            android:gravity="center"
+                            customfontdemo:fontName="@string/custom_font" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:weightSum="1"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp">
+
+                        <com.NaTicket.n.custom.MyTextView
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text=""
+                            android:textSize="18dp"
+                            android:textColor="@color/colorAccent"
+                            android:gravity="center"
+                            android:id="@+id/passengers"
+                            customfontdemo:fontName="@string/custom_font" />
+
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="25dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:weightSum="1">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/Colorgray" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:weightSum="2"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp">
+
+                        <com.NaTicket.n.custom.MyTextViewBold
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="Total"
+                            android:textSize="18dp"
+                            android:textColor="@color/colorAccent"
+                            android:gravity="start"
+                            customfontdemo:fontName="@string/custom_font" />
+
+                        <com.NaTicket.n.custom.MyTextView
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text=""
+                            android:textSize="18dp"
+                            android:textColor="@color/colorAccent"
+                            android:gravity="end"
+                            android:id="@+id/rate"
+                            customfontdemo:fontName="@string/custom_font" />
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <com.NaTicket.n.custom.MyTextViewBold
+                    android:id="@+id/Cancel_Ticket_Report"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cancel"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:background="@drawable/button_background"
+                    android:textColor="@android:color/white"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:textSize="17sp"
+                    android:layout_below="@+id/ln1"
+                    customfontdemo:fontName="@string/custom_font"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customfontdemo="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/flights_layout"
+    android:background="@color/Transparent">
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        customfontdemo:cardCornerRadius="3dp"
+        customfontdemo:cardElevation="4dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp"
+            >
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <ImageView
+                    android:id="@+id/AirlineImage"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight=".2"
+                    android:padding="5dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_depart"/>
+
+                <com.NaTicket.n.custom.MyTextView
+                    android:id="@+id/Airline_Name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".8"
+                    android:textSize="16sp"
+                    android:text="Indigo "
+                    android:textColor="@color/colorAccent"
+                    customfontdemo:fontName="@string/custom_font"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey"
+                android:layout_margin="5dp"/>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:orientation="vertical"
+                    android:gravity="start"
+                    android:paddingStart="5dp">
+
+                    <com.NaTicket.n.custom.MyTextViewBold
+                        android:id="@+id/source"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:textSize="20sp"
+                        android:text="DEL 12:50 "
+                        android:textColor="@color/colorPrimary"
+                        customfontdemo:fontName="@string/custom_font" />
+
+
+
+                    <com.NaTicket.n.custom.MyTextViewBold
+                        android:id="@+id/flight_DepTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="14sp"
+                        android:text="DEL 12:50 "
+                        customfontdemo:fontName="@string/custom_font"/>
+
+                   <!-- <MyTextView
+                        android:id="@+id/flight_DepDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:textSize="12sp"
+                        android:text="DEL 12:50 "
+                        customfontdemo:fontName="@string/custom_font"/>-->
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/time_clock"
+                        android:layout_gravity="center"/>
+
+                    <com.NaTicket.n.custom.MyTextView
+                        android:id="@+id/Duration"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"
+                        android:text="05:15 hrs"
+                        android:textAlignment="center"
+                        android:layout_marginTop="5dp"
+                        customfontdemo:fontName="@string/custom_font" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:orientation="vertical"
+                    android:gravity="start">
+
+
+                    <com.NaTicket.n.custom.MyTextViewBold
+                        android:id="@+id/destination"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:textAlignment="textEnd"
+                        android:textSize="20sp"
+                        android:text="DEL 12:50 "
+                        android:textColor="@color/colorPrimary"
+                        customfontdemo:fontName="@string/custom_font" />
+
+
+                    <com.NaTicket.n.custom.MyTextViewBold
+                        android:id="@+id/flight_ArrTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:text="DEL 12:50 "
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="14sp"
+                        customfontdemo:fontName="@string/custom_font" />
+
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+            <com.NaTicket.n.custom.MyTextView
+                android:id="@+id/flight_Class"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:textAlignment="textStart"
+                android:textSize="12sp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:text="DEL 12:50 "
+                customfontdemo:fontName="@string/custom_font"/>
+            <com.NaTicket.n.custom.MyTextViewBold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:textAlignment="textStart"
+                android:textSize="12sp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:text="Baggage"
+                customfontdemo:fontName="@string/custom_font"/>
+
+            <com.NaTicket.n.custom.MyTextView
+                android:id="@+id/baggage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorAccent"
+                android:textSize="14sp"
+                android:layout_marginStart="5dp"
+                android:text="DEL 12:50 "
+                customfontdemo:fontName="@string/custom_font"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey"
+                android:layout_margin="5dp"
+                android:visibility="gone"/>
+
+
+
+
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>

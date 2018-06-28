@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customfontdemo="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:layout_margin="8dp"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:checked="false"
+            android:gravity="center"
+            android:text="" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <com.NaTicket.n.custom.MyTextView
+                android:id="@+id/roomType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RoomType"
+                android:padding="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="17sp"
+                android:layout_weight="1.0"
+                customfontdemo:fontName="@string/custom_font" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <com.NaTicket.n.custom.MyTextView
+                    android:id="@+id/inclusions"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Inclusions"
+                    android:padding="5dp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="13sp"
+                    android:layout_weight="1.0"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    customfontdemo:fontName="@string/custom_font" />
+
+                <com.NaTicket.n.custom.MyTextView
+                    android:id="@+id/roomTotal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Room Total"
+                    android:padding="5dp"
+                    android:textSize="15sp"
+                    android:layout_weight="1.0"
+                    android:gravity="end"
+                    customfontdemo:fontName="@string/custom_font" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.NaTicket.n.custom.MyTextView
+                    android:id="@+id/refundRule"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Room Policy"
+                    android:padding="5dp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="13sp"
+                    android:layout_weight="1.0"
+                    customfontdemo:fontName="@string/custom_font" />
+
+                <com.NaTicket.n.custom.MyTextView
+                    android:id="@+id/cancellationTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cancellation Policy"
+                    android:padding="6dp"
+                    android:gravity="center"
+                    android:background="@color/colorAccent"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    customfontdemo:fontName="@string/custom_font" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
