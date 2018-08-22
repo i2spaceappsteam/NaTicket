@@ -43,7 +43,7 @@ import java.text.ParseException;
 
 public class International_Flight_Review extends BackActivity implements View.OnClickListener {
 
-    Flights_Avalability_DTO flights_main_dto;
+   // Flights_Avalability_DTO flights_main_dto;
     SelectedFlightDetailsDTO selDetails;
     InternationalFlightsDTO SelFlight;
     android.widget.ScrollView ScrollView;
@@ -68,7 +68,7 @@ public class International_Flight_Review extends BackActivity implements View.On
         initViews();
         getLoginPreferences();
 
-        flights_main_dto= (Flights_Avalability_DTO) getIntent().getSerializableExtra("Flights_Main_DTO");
+       // flights_main_dto= (Flights_Avalability_DTO) getIntent().getSerializableExtra("Flights_Main_DTO");
         SelFlight= (InternationalFlightsDTO) getIntent().getSerializableExtra("SelFlight");
         selDetails= (SelectedFlightDetailsDTO) getIntent().getSerializableExtra("selDetails");
 

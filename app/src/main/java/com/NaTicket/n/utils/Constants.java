@@ -13,7 +13,7 @@ public class Constants {
 
 
     //Live
-    public  static  final  String BASEURL          = "http://35.154.194.198:86/";
+    public  static  final  String BASEURL          = "https://webapi.etravos.com/";
     public  static  final  String ConsumerKey       = "F24D04138C7C2CCB345468B5A5599FCCC699F624";
     public  static  final  String ConsumerSecret    = "B7CD40E69B7602937B272105329DD2D8";
 

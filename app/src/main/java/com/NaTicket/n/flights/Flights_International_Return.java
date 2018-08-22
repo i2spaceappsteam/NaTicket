@@ -784,7 +784,7 @@ public class Flights_International_Return extends BackActivity {
         Intent ip = new Intent(Flights_International_Return.this, International_Flight_Review.class);
         ip.putExtra("selDetails",selDetails);
         ip.putExtra("SelFlight",SelFlight);
-        ip.putExtra("Flights_Main_DTO",flights_main_dto);
+       // ip.putExtra("Flights_Main_DTO",flights_main_dto);
         startActivity(ip);
 }
 

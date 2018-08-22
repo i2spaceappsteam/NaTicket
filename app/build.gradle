@@ -23,8 +23,8 @@ android {
         applicationId "com.NaTicket.n"
         minSdkVersion 19
         targetSdkVersion 27
-        versionCode 5
-        versionName "1.4"
+        versionCode 7
+        versionName "1.6"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
     }
