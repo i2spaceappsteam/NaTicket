@@ -15,6 +15,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import com.NaTicket.n.common.activities.ResultIPC;
 import com.NaTicket.n.flights.adpaters.International_Return_Adapter;
 import com.NaTicket.n.flights.pojo.FareDetailsDTO;
 import com.NaTicket.n.flights.pojo.Flight_Filters_DTO;
@@ -163,6 +164,7 @@ public class Flights_International_Return extends BackActivity {
 
     public void getFlightData(InternationalFlightsDTO Flights_DTO,double total) {
         GrandTotal=total;
+        selDetails.setGSTMandatory(Flights_DTO.getFareDetails().isGSTMandatory());
         SelFlight=Flights_DTO;
         callTaxDetails();
     }
@@ -333,7 +335,8 @@ public class Flights_International_Return extends BackActivity {
                 Intent nextActivity = new Intent(Flights_International_Return.this, Int_Onward_Flight_Filters_Activity.class);
                 if (!FilterTrue) {
                     Tags=null;
-                    nextActivity.putExtra("Int_Onward_list", flights_main_dto.getInternationalFlights());
+                    int sync = ResultIPC.get().setIntLargeData(flights_main_dto.getInternationalFlights());
+                    nextActivity.putExtra("Int_Onward_list", sync);
                     nextActivity.putExtra("Filteredlist",filter_details);
                 }
                 startActivityForResult(nextActivity,1);
@@ -616,7 +619,8 @@ public class Flights_International_Return extends BackActivity {
         alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
                 Intent nextActivity = new Intent(Flights_International_Return.this, Int_Onward_Flight_Filters_Activity.class);
-                nextActivity.putExtra("Int_Onward_list",flights_main_dto.getInternationalFlights());
+                int sync = ResultIPC.get().setIntLargeData(flights_main_dto.getInternationalFlights());
+                nextActivity.putExtra("Int_Onward_list", sync);
                 nextActivity.putExtra("Filteredlist", filter_details);
                 startActivityForResult(nextActivity,1);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);

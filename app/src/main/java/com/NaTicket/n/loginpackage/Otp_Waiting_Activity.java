@@ -49,7 +49,7 @@ public class Otp_Waiting_Activity extends AppCompatActivity implements View.OnCl
 
 
     ProgressDialog mProgressDialog;
-    String FirstName,LastName,Email,Mobile,VerificationKey, OTP, MethodState;
+    String FirstName,LastName,Email,Mobile,VerificationKey, OTP, MethodState,Dailingcode;
     EditText otp_digitone;
     EditText otp_digittwo;
     EditText otp_digitthree;
@@ -94,10 +94,10 @@ public class Otp_Waiting_Activity extends AppCompatActivity implements View.OnCl
 
 
         MoveRight = AnimationUtils.loadAnimation(this, R.anim.move_right);
-        Otp_waiting_layout = (LinearLayout) findViewById(R.id.Otp_waiting_layout);
-        passwordSent_layout = (LinearLayout) findViewById(R.id.passwordSent_layout);
-        sentMailOK = (TextView) findViewById(R.id.sentMailOK);
-        registeredEmail = (TextView) findViewById(R.id.registeredEmail);
+        Otp_waiting_layout =  findViewById(R.id.Otp_waiting_layout);
+        passwordSent_layout =  findViewById(R.id.passwordSent_layout);
+        sentMailOK =  findViewById(R.id.sentMailOK);
+        registeredEmail =  findViewById(R.id.registeredEmail);
         MethodState = getIntent().getStringExtra("MethodState");
 
         if (MethodState.equals("Forgot")) {
@@ -114,19 +114,19 @@ public class Otp_Waiting_Activity extends AppCompatActivity implements View.OnCl
             sRole=getIntent().getStringExtra("Role");
         }
 
-        otp_waiting_TV = (TextView) findViewById(R.id.otp_waiting_TV);
+        otp_waiting_TV =  findViewById(R.id.otp_waiting_TV);
 
-        otp_digitone = (EditText) findViewById(R.id.otp_digitone);
-        otp_digittwo = (EditText) findViewById(R.id.otp_digittwo);
-        otp_digitthree = (EditText) findViewById(R.id.otp_digitthree);
-        otp_digitfour = (EditText) findViewById(R.id.otp_digitfour);
-        otp_digitfive = (EditText) findViewById(R.id.otp_digitfive);
-        otp_digitsix = (EditText) findViewById(R.id.otp_digitsix);
+        otp_digitone =  findViewById(R.id.otp_digitone);
+        otp_digittwo =  findViewById(R.id.otp_digittwo);
+        otp_digitthree =  findViewById(R.id.otp_digitthree);
+        otp_digitfour =  findViewById(R.id.otp_digitfour);
+        otp_digitfive =  findViewById(R.id.otp_digitfive);
+        otp_digitsix =  findViewById(R.id.otp_digitsix);
 
-        wrong_number = (TextView) findViewById(R.id.wrong_number);
-        Resend_otp = (TextView) findViewById(R.id.Resend_otp);
+        wrong_number =  findViewById(R.id.wrong_number);
+        Resend_otp =  findViewById(R.id.Resend_otp);
 
-        Otp_next_arrow = (ImageView) findViewById(R.id.otp_next_arrow);
+        Otp_next_arrow =  findViewById(R.id.otp_next_arrow);
 
 
         otp_waiting_TV.setText("OTP has been sent to " + Mobile);
@@ -137,8 +137,8 @@ public class Otp_Waiting_Activity extends AppCompatActivity implements View.OnCl
         Resend_otp.setOnClickListener(this);
         sentMailOK.setOnClickListener(this);
 
-        progressBar= (ProgressBar) findViewById(R.id.progress_bar);
-        textCounter= (TextView) findViewById(R.id.tv_counter);
+        progressBar=  findViewById(R.id.progress_bar);
+        textCounter=  findViewById(R.id.tv_counter);
         Resend_otp.setVisibility(View.GONE);
         myCountDownTimer = new MyCountDownTimer(30000, 1);
         myCountDownTimer.start();
@@ -303,16 +303,9 @@ public class Otp_Waiting_Activity extends AppCompatActivity implements View.OnCl
     public void getVERIFYOTPResponse(String response) {
         hideProgressDialog();
         if (response != null) {
-
             message = Util.getResponseMessage(response);
-
-
-
-
-
             if (message.equals("Success")) {
                 otp_digitsix.removeTextChangedListener(Sixth_OTP_digit_T_Watcher);
-
                 if (MethodState.equals("Forgot")) {
                     callChangePassword();
                 } else if (MethodState.equals("Register")) {
@@ -340,9 +333,7 @@ public class Otp_Waiting_Activity extends AppCompatActivity implements View.OnCl
             if(sRole.equals("6")) {
                 ServiceClasses.postUserRegistration(Otp_Waiting_Activity.this, Constants.USERREGISTRATION, preparePayload());
             }else{
-
                 new Getparentid().execute();
-
             }
         }else{
             Util.showMessage(this,Constants.NO_INT_MSG);
@@ -374,6 +365,7 @@ public class Otp_Waiting_Activity extends AppCompatActivity implements View.OnCl
             jsonBody.put("Pincode", "");
             jsonBody.put("Status", "1");
             jsonBody.put("ActivationCode", "");
+            jsonBody.put("DailingCode",Dailingcode);
             jsonBody.put("DeviceModel", Constants.DeviceModel);
             jsonBody.put("DeviceOS", Constants.DeviceOs);
             jsonBody.put("DeviceOSVersion",Constants.DeviceOsversion);
@@ -384,6 +376,7 @@ public class Otp_Waiting_Activity extends AppCompatActivity implements View.OnCl
                 jsonBody.put("ParentId", parentid);
                 jsonBody.put("IsAgent", "1");
                 jsonBody.put("CompanyName", "Unknown");
+                jsonBody.put("Currency","INR");
             }
 
         } catch (JSONException e) {

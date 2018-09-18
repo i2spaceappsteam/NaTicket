@@ -25,6 +25,7 @@ import com.NaTicket.n.common.pojo.Version_DTO;
 import com.NaTicket.n.flights.Flights_Search_Activity;
 import com.NaTicket.n.holidays.HolidaySearchActivity;
 import com.NaTicket.n.hotels.HotelSearchActivity;
+import com.NaTicket.n.loginpackage.pojo.Country_Codes_DTO;
 import com.NaTicket.n.loginpackage.pojo.Login_utils;
 import com.NaTicket.n.recharges.Recharge_MainActivity;
 import com.NaTicket.n.serviceclasses.ServiceClasses;
@@ -48,74 +49,59 @@ import java.util.Locale;
 public class MainActivity extends BaseActivity {
 
     private GridView featuresgridView;
-    private ArrayList<Integer> featuresList=new ArrayList<>();
+    private ArrayList<Integer> featuresList = new ArrayList<>();
     Login_utils login_utils;
     String User_Role;
-    Boolean doubleBackToExitPressedOnce=false;
-
+    Boolean doubleBackToExitPressedOnce = false;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        login_utils=new Login_utils(this);
+        login_utils = new Login_utils(this);
         getLoginPreefernces();
         setcurrency();
         getDynamicPageContent();
 
-
-
-
-        featuresgridView= (GridView) findViewById(R.id.featuresgridView);
+        featuresgridView =  findViewById(R.id.featuresgridView);
         featuresList.add(1);
         featuresList.add(2);
         featuresList.add(3);
         featuresList.add(4);
         featuresList.add(5);
 
-
         setDataAdapters();
 
-
-
-
-
-
-
-
     }
+
     public void getLoginPreefernces() {
-    if(login_utils.getUserDetails(Constants.USERTYPE).equals("6")){
-        User_Role=login_utils.getUserDetails(Constants.USERTYPE);
-    }else {
-        User_Role="5";
+        if (login_utils.getUserDetails(Constants.USERTYPE).equals("6")) {
+            User_Role = login_utils.getUserDetails(Constants.USERTYPE);
+        } else {
+            User_Role = "5";
+        }
     }
-    }
-
-
 
     private void setDataAdapters() {
         FeatureGridAdapter featureGridAdapter = new FeatureGridAdapter(this, featuresList);
         featuresgridView.setAdapter(featureGridAdapter);
         //setDynamicHeight(featuresgridView);
 
-
-
         featuresgridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
-                String feature = ((TextView) v.findViewById( R.id.featureName)).getText().toString();
+                String feature = ((TextView) v.findViewById(R.id.featureName)).getText().toString();
                 if (feature.matches("Flights"))
                     startActivity(new Intent(MainActivity.this, Flights_Search_Activity.class));
-                if(feature.matches("Hotels"))
+                if (feature.matches("Hotels"))
                     startActivity(new Intent(MainActivity.this, HotelSearchActivity.class));
-                if(feature.matches("Buses"))
+                if (feature.matches("Buses"))
                     startActivity(new Intent(MainActivity.this, Buses_MainActivity.class));
-                if(feature.matches("Recharges"))
+                if (feature.matches("Recharges"))
                     startActivity(new Intent(MainActivity.this, Recharge_MainActivity.class));
-                if(feature.matches("Holidays"))
+                if (feature.matches("Holidays"))
                     startActivity(new Intent(MainActivity.this, HolidaySearchActivity.class));
 
 
@@ -123,30 +109,26 @@ public class MainActivity extends BaseActivity {
         });
     }
 
-    public void setcurrency(){
-        Currency_Utils currency_utils=new Currency_Utils(MainActivity.this);
-        currency_utils.addCurrency("INR","1","₹ ");
+    public void setcurrency() {
+        Currency_Utils currency_utils = new Currency_Utils(MainActivity.this);
+        currency_utils.addCurrency("INR", "1", "₹ ");
     }
 
 
-    public void getDynamicPageContent(){
-        if (Util.isNetworkAvailable(this)){
+    public void getDynamicPageContent() {
+        if (Util.isNetworkAvailable(this)) {
             ServiceClasses.DYNAMICCONTENT(this, Constants.DYNAMICPAGECONTENT);
-        }else {
+        } else {
             Util.showMessage(this, Constants.NO_INT_MSG);
         }
     }
 
     public void getDynamicresponse(String response) {
-        if (response!=null){
+        if (response != null) {
             login_utils.setDynamicData(response);
         }
 
     }
-
-
-
-
 
 
     @Override
@@ -163,14 +145,17 @@ public class MainActivity extends BaseActivity {
         }
 
         this.doubleBackToExitPressedOnce = true;
-        Toast.makeText(this, "Press again to close "+getResources().getString(R.string.app_name), Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Press again to close " + getResources().getString(R.string.app_name), Toast.LENGTH_SHORT).show();
 
         new Handler().postDelayed(new Runnable() {
 
             @Override
             public void run() {
-                doubleBackToExitPressedOnce=false;
+                doubleBackToExitPressedOnce = false;
             }
         }, 5000);
+    }
+
+    public void errorresponse(String message) {
     }
 }

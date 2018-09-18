@@ -4,6 +4,7 @@ import com.NaTicket.n.common.BaseActivity;
 import com.NaTicket.n.loginpackage.Forgot_Password_Activity;
 import com.NaTicket.n.loginpackage.Otp_Waiting_Activity;
 import com.android.volley.AuthFailureError;
+import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -339,6 +340,10 @@ public class Service_Login_Package {
                 return headers;
             }
         };
+        jsonObjRequest.setRetryPolicy(new DefaultRetryPolicy(
+                180000,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
         VolleySingleton.getInstance(activity).getRequestQueue().add(jsonObjRequest);
     }
 

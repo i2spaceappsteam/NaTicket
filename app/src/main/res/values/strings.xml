@@ -60,6 +60,7 @@
     <string name="title_activity_review">ReviewActivity</string>
     <string name="title_activity_holiday_detail">HolidayDetailActivity</string>
     <string name="title_activity_holiday_search">HolidaySearchActivity</string>
+    <string name="country_dialling_code">91</string>
 
     <!-- Atom Payment Details-->
 

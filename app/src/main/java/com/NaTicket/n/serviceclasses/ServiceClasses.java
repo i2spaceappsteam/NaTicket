@@ -75,6 +75,7 @@ public class ServiceClasses {
             public String getBodyContentType() {
                 return "application/x-www-form-urlencoded; charset=UTF-8";
             }
+
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 HashMap<String, String> headers = new HashMap<String, String>();
@@ -113,6 +114,7 @@ public class ServiceClasses {
             public String getBodyContentType() {
                 return "application/x-www-form-urlencoded; charset=UTF-8";
             }
+
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 HashMap<String, String> headers = new HashMap<String, String>();
@@ -150,6 +152,7 @@ public class ServiceClasses {
             public String getBodyContentType() {
                 return "application/x-www-form-urlencoded; charset=UTF-8";
             }
+
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 HashMap<String, String> headers = new HashMap<String, String>();
@@ -191,10 +194,12 @@ public class ServiceClasses {
                     return null;
                 }
             }
+
             @Override
             public String getBodyContentType() {
                 return "application/json";
             }
+
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 HashMap<String, String> headers = new HashMap<String, String>();
@@ -208,6 +213,7 @@ public class ServiceClasses {
     }
 
     public static void postUserRegistration(final Otp_Waiting_Activity activity, String URL, final String requestBody) {
+
         String url = URL;
         StringRequest jsonObjRequest = new StringRequest(Request.Method.POST, url,
                 new Response.Listener<String>() {
@@ -223,6 +229,7 @@ public class ServiceClasses {
                 VolleyLog.d("volley", "Error: " + error.getMessage());
                 error.printStackTrace();
             }
+
         }) {
             @Override
             public byte[] getBody() throws AuthFailureError {
@@ -233,10 +240,12 @@ public class ServiceClasses {
                     return null;
                 }
             }
+
             @Override
             public String getBodyContentType() {
                 return "application/json";
             }
+
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 HashMap<String, String> headers = new HashMap<String, String>();
@@ -246,6 +255,10 @@ public class ServiceClasses {
                 return headers;
             }
         };
+        jsonObjRequest.setRetryPolicy(new DefaultRetryPolicy(
+                0,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
         VolleySingleton.getInstance(activity).getRequestQueue().add(jsonObjRequest);
     }
 
@@ -271,6 +284,7 @@ public class ServiceClasses {
             public String getBodyContentType() {
                 return "application/x-www-form-urlencoded; charset=UTF-8";
             }
+
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 HashMap<String, String> headers = new HashMap<String, String>();
@@ -312,10 +326,12 @@ public class ServiceClasses {
                     return null;
                 }
             }
+
             @Override
             public String getBodyContentType() {
                 return "application/json";
             }
+
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 HashMap<String, String> headers = new HashMap<String, String>();
@@ -351,6 +367,7 @@ public class ServiceClasses {
             public String getBodyContentType() {
                 return "application/x-www-form-urlencoded; charset=UTF-8";
             }
+
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 HashMap<String, String> headers = new HashMap<String, String>();
@@ -387,6 +404,7 @@ public class ServiceClasses {
             public String getBodyContentType() {
                 return "application/x-www-form-urlencoded; charset=UTF-8";
             }
+
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 HashMap<String, String> headers = new HashMap<String, String>();
@@ -408,7 +426,7 @@ public class ServiceClasses {
                     public void onResponse(String response) {
                         if (response != null) {
 
-                                activity.getHotelsResponse(response);
+                            activity.getHotelsResponse(response);
                         }
                     }
                 }, new Response.ErrorListener() {
@@ -424,6 +442,7 @@ public class ServiceClasses {
             public String getBodyContentType() {
                 return "application/json";
             }
+
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 HashMap<String, String> headers = new HashMap<String, String>();
@@ -441,10 +460,6 @@ public class ServiceClasses {
                 DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
         VolleySingleton.getInstance(activity).getRequestQueue().add(jsonObjRequest);
     }
-
-
-
-
 
 
     public static void getHotelDeatils(final HotelDetailActivity activity, String url) {
@@ -469,6 +484,7 @@ public class ServiceClasses {
             public String getBodyContentType() {
                 return "application/json";
             }
+
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 HashMap<String, String> headers = new HashMap<String, String>();
@@ -486,7 +502,6 @@ public class ServiceClasses {
                 DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
         VolleySingleton.getInstance(activity).getRequestQueue().add(jsonObjRequest);
     }
-
 
 
     public static void getBusesCity(final SearchCityBus activity, String url) {
@@ -512,6 +527,7 @@ public class ServiceClasses {
             public String getBodyContentType() {
                 return "application/json";
             }
+
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 HashMap<String, String> headers = new HashMap<String, String>();
@@ -529,7 +545,6 @@ public class ServiceClasses {
                 DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
         VolleySingleton.getInstance(activity).getRequestQueue().add(jsonObjRequest);
     }
-
 
 
     public static void postBlockHotel(final ReviewActivity activity, String url, final String requestBody) {
@@ -564,10 +579,12 @@ public class ServiceClasses {
                     return null;
                 }
             }
+
             @Override
             public String getBodyContentType() {
                 return "application/json";
             }
+
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 HashMap<String, String> headers = new HashMap<String, String>();
@@ -583,7 +600,6 @@ public class ServiceClasses {
                 DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
         VolleySingleton.getInstance(activity).getRequestQueue().add(jsonObjRequest);
     }
-
 
 
     public static void getPromocodes(final ReviewActivity activity, String URL) {
@@ -608,6 +624,7 @@ public class ServiceClasses {
             public String getBodyContentType() {
                 return "application/x-www-form-urlencoded; charset=UTF-8";
             }
+
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 HashMap<String, String> headers = new HashMap<String, String>();
@@ -644,6 +661,7 @@ public class ServiceClasses {
             public String getBodyContentType() {
                 return "application/x-www-form-urlencoded; charset=UTF-8";
             }
+
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 HashMap<String, String> headers = new HashMap<String, String>();
@@ -657,10 +675,6 @@ public class ServiceClasses {
         };
         VolleySingleton.getInstance(activity).getRequestQueue().add(jsonObjRequest);
     }
-
-
-
-
 
 
     public static void getFlightCities(final Flights_City_Search_Activity activity, String URL) {
@@ -685,6 +699,7 @@ public class ServiceClasses {
             public String getBodyContentType() {
                 return "application/x-www-form-urlencoded; charset=UTF-8";
             }
+
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 HashMap<String, String> headers = new HashMap<String, String>();
@@ -720,6 +735,7 @@ public class ServiceClasses {
             public String getBodyContentType() {
                 return "application/x-www-form-urlencoded; charset=UTF-8";
             }
+
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 HashMap<String, String> headers = new HashMap<String, String>();
@@ -759,6 +775,7 @@ public class ServiceClasses {
             public String getBodyContentType() {
                 return "application/x-www-form-urlencoded; charset=UTF-8";
             }
+
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 HashMap<String, String> headers = new HashMap<String, String>();
@@ -798,6 +815,7 @@ public class ServiceClasses {
             public String getBodyContentType() {
                 return "application/x-www-form-urlencoded; charset=UTF-8";
             }
+
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 HashMap<String, String> headers = new HashMap<String, String>();
@@ -845,10 +863,12 @@ public class ServiceClasses {
                     return null;
                 }
             }
+
             @Override
             public String getBodyContentType() {
                 return "application/json";
             }
+
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 HashMap<String, String> headers = new HashMap<String, String>();
@@ -893,10 +913,12 @@ public class ServiceClasses {
                     return null;
                 }
             }
+
             @Override
             public String getBodyContentType() {
                 return "application/json";
             }
+
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 HashMap<String, String> headers = new HashMap<String, String>();
@@ -942,10 +964,12 @@ public class ServiceClasses {
                     return null;
                 }
             }
+
             @Override
             public String getBodyContentType() {
                 return "application/json";
             }
+
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 HashMap<String, String> headers = new HashMap<String, String>();
@@ -991,10 +1015,12 @@ public class ServiceClasses {
                     return null;
                 }
             }
+
             @Override
             public String getBodyContentType() {
                 return "application/json";
             }
+
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 HashMap<String, String> headers = new HashMap<String, String>();
@@ -1032,6 +1058,7 @@ public class ServiceClasses {
             public String getBodyContentType() {
                 return "application/x-www-form-urlencoded; charset=UTF-8";
             }
+
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 HashMap<String, String> headers = new HashMap<String, String>();
@@ -1072,6 +1099,7 @@ public class ServiceClasses {
             public String getBodyContentType() {
                 return "application/x-www-form-urlencoded; charset=UTF-8";
             }
+
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 HashMap<String, String> headers = new HashMap<String, String>();
@@ -1118,10 +1146,12 @@ public class ServiceClasses {
                     return null;
                 }
             }
+
             @Override
             public String getBodyContentType() {
                 return "application/json";
             }
+
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 HashMap<String, String> headers = new HashMap<String, String>();
@@ -1160,6 +1190,7 @@ public class ServiceClasses {
             public String getBodyContentType() {
                 return "application/x-www-form-urlencoded; charset=UTF-8";
             }
+
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 HashMap<String, String> headers = new HashMap<String, String>();
@@ -1200,6 +1231,7 @@ public class ServiceClasses {
             public String getBodyContentType() {
                 return "application/x-www-form-urlencoded; charset=UTF-8";
             }
+
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 HashMap<String, String> headers = new HashMap<String, String>();
@@ -1259,7 +1291,6 @@ public class ServiceClasses {
     }*/
 
 
-
     public static void getOperatorsrecharge(final Operator_list_activity_rec activity, String URL) {
         StringRequest jsonObjRequest = new StringRequest(Request.Method.GET, URL,
                 new Response.Listener<String>() {
@@ -1281,6 +1312,7 @@ public class ServiceClasses {
             public String getBodyContentType() {
                 return "application/x-www-form-urlencoded; charset=UTF-8";
             }
+
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 HashMap<String, String> headers = new HashMap<String, String>();
@@ -1294,10 +1326,6 @@ public class ServiceClasses {
         };
         VolleySingleton.getInstance(activity).getRequestQueue().add(jsonObjRequest);
     }
-
-
-
-
 
 
     public static void Recharge(final RechargeResponseActivity activity, String URL) {
@@ -1325,6 +1353,7 @@ public class ServiceClasses {
             public String getBodyContentType() {
                 return "application/x-www-form-urlencoded; charset=UTF-8";
             }
+
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 HashMap<String, String> headers = new HashMap<String, String>();
@@ -1369,6 +1398,7 @@ public class ServiceClasses {
             public String getBodyContentType() {
                 return "application/x-www-form-urlencoded; charset=UTF-8";
             }
+
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 HashMap<String, String> headers = new HashMap<String, String>();
@@ -1414,6 +1444,7 @@ public class ServiceClasses {
             public String getBodyContentType() {
                 return "application/x-www-form-urlencoded; charset=UTF-8";
             }
+
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 HashMap<String, String> headers = new HashMap<String, String>();
@@ -1455,6 +1486,7 @@ public class ServiceClasses {
             public String getBodyContentType() {
                 return "application/json";
             }
+
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 HashMap<String, String> headers = new HashMap<String, String>();
@@ -1473,6 +1505,7 @@ public class ServiceClasses {
 
         VolleySingleton.getInstance(activity).getRequestQueue().add(jsonObjRequest);
     }
+
     public static void getCategoriesDeails(final HolidaySearchActivity activity, String URL) {
         StringRequest jsonObjRequest = new StringRequest(Request.Method.GET, URL,
                 new Response.Listener<String>() {
@@ -1494,6 +1527,7 @@ public class ServiceClasses {
             public String getBodyContentType() {
                 return "application/x-www-form-urlencoded; charset=UTF-8";
             }
+
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 HashMap<String, String> headers = new HashMap<String, String>();
@@ -1530,6 +1564,7 @@ public class ServiceClasses {
             public String getBodyContentType() {
                 return "application/x-www-form-urlencoded; charset=UTF-8";
             }
+
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 HashMap<String, String> headers = new HashMap<String, String>();
@@ -1569,6 +1604,7 @@ public class ServiceClasses {
             public String getBodyContentType() {
                 return "application/x-www-form-urlencoded; charset=UTF-8";
             }
+
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 HashMap<String, String> headers = new HashMap<String, String>();
@@ -1619,10 +1655,12 @@ public class ServiceClasses {
                     return null;
                 }
             }
+
             @Override
             public String getBodyContentType() {
                 return "application/json";
             }
+
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 HashMap<String, String> headers = new HashMap<String, String>();
@@ -1634,7 +1672,6 @@ public class ServiceClasses {
         };
         VolleySingleton.getInstance(activity).getRequestQueue().add(jsonObjRequest);
     }
-
 
 
     public static void getHotelCities(final CitySearchActivity activity, String URL) {
@@ -1658,6 +1695,7 @@ public class ServiceClasses {
             public String getBodyContentType() {
                 return "application/x-www-form-urlencoded; charset=UTF-8";
             }
+
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 HashMap<String, String> headers = new HashMap<String, String>();
@@ -1699,12 +1737,13 @@ public class ServiceClasses {
             public String getBodyContentType() {
                 return "application/x-www-form-urlencoded; charset=UTF-8";
             }
+
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 HashMap<String, String> headers = new HashMap<String, String>();
                 headers.put("Content-Type", "application/json");
                 headers.put("ConsumerKey", "AEBB856E87A0B01562197ABA066BF28C8E9E6C6C");
-                headers.put("ConsumerSecret","04DAF1E2C80A758DCC6BCEBE436D25BC");
+                headers.put("ConsumerSecret", "04DAF1E2C80A758DCC6BCEBE436D25BC");
                 return headers;
             }
         };
@@ -1733,6 +1772,7 @@ public class ServiceClasses {
             public String getBodyContentType() {
                 return "application/x-www-form-urlencoded; charset=UTF-8";
             }
+
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 HashMap<String, String> headers = new HashMap<String, String>();
@@ -1773,6 +1813,7 @@ public class ServiceClasses {
             public String getBodyContentType() {
                 return "application/x-www-form-urlencoded; charset=UTF-8";
             }
+
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 HashMap<String, String> headers = new HashMap<String, String>();
@@ -1812,6 +1853,7 @@ public class ServiceClasses {
             public String getBodyContentType() {
                 return "application/x-www-form-urlencoded; charset=UTF-8";
             }
+
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 HashMap<String, String> headers = new HashMap<String, String>();
@@ -1852,6 +1894,7 @@ public class ServiceClasses {
             public String getBodyContentType() {
                 return "application/x-www-form-urlencoded; charset=UTF-8";
             }
+
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 HashMap<String, String> headers = new HashMap<String, String>();
@@ -1892,6 +1935,7 @@ public class ServiceClasses {
             public String getBodyContentType() {
                 return "application/x-www-form-urlencoded; charset=UTF-8";
             }
+
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 HashMap<String, String> headers = new HashMap<String, String>();
@@ -1909,5 +1953,44 @@ public class ServiceClasses {
                 DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
         VolleySingleton.getInstance(activity).getRequestQueue().add(jsonObjRequest);
     }
+
+    public static void getDailingcodes(final Splash_Activity activity, String URL) {
+        String url = URL;
+        StringRequest jsonObjRequest = new StringRequest(Request.Method.GET, url,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        if (response != null) {
+                            activity.getdialingcodesresponse(response);
+                        }
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                VolleyLog.d("volley", "Error: " + error.getMessage());
+                activity.errorresponse(error.getMessage());
+                error.printStackTrace();
+            }
+        }) {
+
+            @Override
+            public String getBodyContentType() {
+                return "application/x-www-form-urlencoded; charset=UTF-8";
+            }
+
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                HashMap<String, String> headers = new HashMap<String, String>();
+                headers.put("Content-Type", "application/json");
+                headers.put("ConsumerKey", Constants.ConsumerKey);
+                headers.put("ConsumerSecret", Constants.ConsumerSecret);
+                return headers;
+            }
+
+
+        };
+        VolleySingleton.getInstance(activity).getRequestQueue().add(jsonObjRequest);
+    }
+
 
 }

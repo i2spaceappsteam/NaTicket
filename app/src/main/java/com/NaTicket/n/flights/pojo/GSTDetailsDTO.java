@@ -9,11 +9,11 @@ import java.io.Serializable;
 public class GSTDetailsDTO implements Serializable {
 
 
-   private String GSTCompanyAddress;
-    private  String GSTCompanyContactNumber;
+    private String GSTCompanyAddress;
+    private String GSTCompanyContactNumber;
     private String GSTCompanyName;
     private String GSTNumber;
-    private String  GSTCompanyEmail;
+    private String GSTCompanyEmail;
 
     public String getGSTCompanyAddress() {
         return GSTCompanyAddress;

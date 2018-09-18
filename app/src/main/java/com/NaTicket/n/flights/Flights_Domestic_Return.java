@@ -13,6 +13,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 
+import com.NaTicket.n.common.activities.ResultIPC;
 import com.NaTicket.n.flights.pojo.DomesticReturnFlightDTO;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -266,7 +267,8 @@ public class Flights_Domestic_Return extends BackActivity {
                 Intent nextActivity = new Intent(Flights_Domestic_Return.this, Dom_Return_Flight_Filters_Activity.class);
                 if (!FilterTrue) {
                     Tags=null;
-                    nextActivity.putExtra("Domestic_Return_list", flights_main_dto.getDomesticReturnFlights());
+                    int sync = ResultIPC.get().setDom_RetLargeData(flights_main_dto.getDomesticReturnFlights());
+                    nextActivity.putExtra("Domestic_Return_list", sync);
                     nextActivity.putExtra("Filteredlist",filter_details);
                 }
                 startActivityForResult(nextActivity,1);
@@ -551,7 +553,8 @@ public class Flights_Domestic_Return extends BackActivity {
         alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
                 Intent nextActivity = new Intent(Flights_Domestic_Return.this, Dom_Return_Flight_Filters_Activity.class);
-                nextActivity.putExtra("Domestic_Return_list",flights_main_dto.getDomesticReturnFlights());
+                int sync = ResultIPC.get().setDom_RetLargeData(flights_main_dto.getDomesticReturnFlights());
+                nextActivity.putExtra("Domestic_Return_list", sync);
                 nextActivity.putExtra("Filteredlist", filter_details);
                 startActivityForResult(nextActivity,1);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
@@ -581,6 +584,7 @@ public class Flights_Domestic_Return extends BackActivity {
     public void getFlightData(DomesticReturnFlightDTO Flights_DTO,double total) {
         GrandTotal=total;
         SelReturnFlight=Flights_DTO;
+        selDetails.setGSTMandatory(Flights_DTO.getFareDetails().isGSTMandatory());
         callTaxDetails();
     }
 

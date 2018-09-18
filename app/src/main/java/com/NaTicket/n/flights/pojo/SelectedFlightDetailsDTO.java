@@ -161,6 +161,14 @@ public class SelectedFlightDetailsDTO implements Serializable {
         this.class_type_value = class_type_value;
     }
 
+    private boolean IsGSTMandatory;
 
+    public boolean isGSTMandatory() {
+        return IsGSTMandatory;
+    }
+
+    public void setGSTMandatory(boolean GSTMandatory) {
+        IsGSTMandatory = GSTMandatory;
+    }
 
 }

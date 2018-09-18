@@ -55,4 +55,14 @@ public class FareDetailsDTO implements Serializable {
     public String getMessage() { return this.Message; }
 
     public void setMessage(String Message) { this.Message = Message; }
+
+    private boolean IsGSTMandatory;
+
+    public boolean isGSTMandatory() {
+        return IsGSTMandatory;
+    }
+
+    public void setGSTMandatory(boolean GSTMandatory) {
+        IsGSTMandatory = GSTMandatory;
+    }
 }

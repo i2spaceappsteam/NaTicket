@@ -10,6 +10,7 @@
     android:orientation="vertical"
     android:background="@android:color/white"
     tools:showIn="@layout/activity_review_holiday"
+    android:id="@+id/parentLayout"
     android:descendantFocusability="beforeDescendants"
     android:focusableInTouchMode="true">
 
@@ -487,18 +488,52 @@
                     android:textSize="15sp"
                     customfontdemo:fontName="@string/custom_font" />
 
-                <com.NaTicket.n.custom.MyEdiText
-                    android:id="@+id/phone"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:orientation="horizontal"
                     android:layout_marginTop="10dp"
-                    android:background="@drawable/backgroundforrg"
-                    android:hint="Mobile No."
-                    android:inputType="phone"
-                    android:padding="8dp"
-                    android:textSize="15sp"
-                    android:maxLength="10"
-                    customfontdemo:fontName="@string/custom_font" />
+                    android:layout_marginBottom="10dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="0.6"
+                        android:background="@drawable/backgroundforrg">
+
+                        <com.NaTicket.n.custom.MyTextView
+                            android:id="@+id/dail_code"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:text="@string/country_dialling_code"
+                            android:textSize="12sp"
+                            android:layout_marginLeft="5dp"
+                            android:ellipsize="end"
+                            android:textAlignment="center"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:textColor="@android:color/black"
+                            android:drawableEnd="@drawable/ic_arrow_drop_down_black_18dp"
+                            customfontdemo:fontName="@string/custom_font"
+                            />
+                    </LinearLayout>
+                    <com.NaTicket.n.custom.MyEdiText
+                        android:id="@+id/phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_weight="0.4"
+                        android:hint="Mobile No."
+                        android:padding="7dp"
+                        android:textSize="15sp"
+                        android:inputType="phone"
+                        android:maxLength="10"
+                        android:background="@drawable/backgroundforrg"
+                        customfontdemo:fontName="@string/custom_font"/>
+
+                </LinearLayout>
 
             </LinearLayout>
 

@@ -15,22 +15,23 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import com.NaTicket.n.R;
+import com.NaTicket.n.common.activities.ResultIPC;
+import com.NaTicket.n.common.pojo.Currency_Utils;
+import com.NaTicket.n.flights.adpaters.Domestic_Onward_Adapter;
 import com.NaTicket.n.flights.pojo.DomesticOnwardFlightDTO;
 import com.NaTicket.n.flights.pojo.FareDetailsDTO;
 import com.NaTicket.n.flights.pojo.Flight_Filters_DTO;
 import com.NaTicket.n.flights.pojo.Flight_Utils;
 import com.NaTicket.n.flights.pojo.Flights_Avalability_DTO;
+import com.NaTicket.n.flights.pojo.SelectedFlightDetailsDTO;
 import com.NaTicket.n.loginpackage.pojo.Login_utils;
+import com.NaTicket.n.serviceclasses.ServiceClasses;
 import com.NaTicket.n.utils.BackActivity;
 import com.NaTicket.n.utils.Constants;
+import com.NaTicket.n.utils.Util;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.NaTicket.n.R;
-import com.NaTicket.n.common.pojo.Currency_Utils;
-import com.NaTicket.n.flights.adpaters.Domestic_Onward_Adapter;
-import com.NaTicket.n.flights.pojo.SelectedFlightDetailsDTO;
-import com.NaTicket.n.serviceclasses.ServiceClasses;
-import com.NaTicket.n.utils.Util;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -62,62 +63,59 @@ public class Flights_Domestic_Onward extends BackActivity {
     Domestic_Onward_Adapter domesticOnward_adapter;
     DomesticOnwardFlightDTO SelOnwardFlight;
     double GrandTotal;
-    TextView hotels,price,star_rating;
+    TextView hotels, price, star_rating;
     String Tags;
-    boolean FilterTrue=false;
+    boolean FilterTrue = false;
     Flight_Filters_DTO filter_details;
-    Boolean Isvalid=false;
+    Boolean Isvalid = false;
 
     Currency_Utils currency_utils;
     String Currency_Symbol;
     double Curr_Value;
     Login_utils login_utils;
 
-    Boolean SortingApplied = false, ArrowUP = false;
-    String Sorting = "";
     Typeface font;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_flights_onward);
-        login_utils=new Login_utils(this);
+        login_utils = new Login_utils(this);
         selDetails = (SelectedFlightDetailsDTO) getIntent().getSerializableExtra("selDetails");
 
-        currency_utils=new Currency_Utils(this);
-        Curr_Value= Double.parseDouble(currency_utils.getCurrencyValue("Currency_Value"));
-        Currency_Symbol=currency_utils.getCurrencyValue("Currency_Symbol");
+        currency_utils = new Currency_Utils(this);
+        Curr_Value = Double.parseDouble(currency_utils.getCurrencyValue("Currency_Value"));
+        Currency_Symbol = currency_utils.getCurrencyValue("Currency_Symbol");
 
 
         font = Typeface.createFromAsset(
-                this.getAssets(),"fonts/OpenSans_Regular.ttf");
-
+                this.getAssets(), "fonts/OpenSans_Regular.ttf");
 
         inittoolbar();
         initviews();
         sortfilter();
-        TextView toolbartitle = (TextView) findViewById(R.id.toolbartitle);
-        toolbartitle.setText(selDetails.getFrom_City_ID()+" -> "+selDetails.getTo_City_ID());
+        TextView toolbartitle =  findViewById(R.id.toolbartitle);
+        toolbartitle.setText(selDetails.getFrom_City_ID() + " -> " + selDetails.getTo_City_ID());
         getLoginPreferences();
     }
 
     private void initviews() {
-        flights_View = (RecyclerView) findViewById(R.id.flightsview);
-        sort = (TextView) findViewById(R.id.sort);
-        filter = (TextView) findViewById(R.id.filter);
+        flights_View =  findViewById(R.id.flightsview);
+        sort =  findViewById(R.id.sort);
+        filter =  findViewById(R.id.filter);
     }
 
     private void getLoginPreferences() {
         if (login_utils.getUserDetails(Constants.USERTYPE).equals("6")) {
             UserId = "6";
             UserType = "User";
-            User_agentid =login_utils.getUserDetails(Constants.USERID);
+            User_agentid = login_utils.getUserDetails(Constants.USERID);
             callFlightsData();
 
         } else if (login_utils.getUserDetails(Constants.USERTYPE).equals("4")) {
             UserId = "4";
             UserType = "Agent";
-            User_agentid =login_utils.getUserDetails(Constants.USERID);
+            User_agentid = login_utils.getUserDetails(Constants.USERID);
             callFlightsData();
         } else {
             UserId = "5";
@@ -173,7 +171,6 @@ public class Flights_Domestic_Onward extends BackActivity {
             Gson gson = new Gson();
             Reader reader = new InputStreamReader(stream);
             flights_main_dto = gson.fromJson(reader, Flights_Avalability_DTO.class);
-            //  Util.showMessage(this,hotelsMainDTO.getAvailableHotels().get(0).getHotelName());
             if (flights_main_dto != null && flights_main_dto.getDomesticOnwardFlights() != null) {
                 if (flights_main_dto.getDomesticOnwardFlights().size() > 0) {
                     setFlightsData(flights_main_dto.getDomesticOnwardFlights());
@@ -193,9 +190,10 @@ public class Flights_Domestic_Onward extends BackActivity {
         flights_View.setAdapter(domesticOnward_adapter);
     }
 
-    public void getFlightData(double toalfare,DomesticOnwardFlightDTO Flights_DTO) {
-        GrandTotal=toalfare;
-        SelOnwardFlight=Flights_DTO;
+    public void getFlightData(double toalfare, DomesticOnwardFlightDTO Flights_DTO) {
+        GrandTotal = toalfare;
+        SelOnwardFlight = Flights_DTO;
+        selDetails.setGSTMandatory(Flights_DTO.getFareDetails().isGSTMandatory());
         callTaxDetails();
     }
 
@@ -213,17 +211,17 @@ public class Flights_Domestic_Onward extends BackActivity {
     }
 
 
-    private void sortfilter(){
+    private void sortfilter() {
         sort.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                BottomSheetDialog dialog=new BottomSheetDialog(Flights_Domestic_Onward.this);
+                BottomSheetDialog dialog = new BottomSheetDialog(Flights_Domestic_Onward.this);
                 dialog.setContentView(R.layout.hotel_search_sorting);
 
-                hotels= (TextView) dialog.findViewById(R.id.hotels);
-                star_rating= (TextView) dialog.findViewById(R.id.star_rating);
-                price= (TextView) dialog.findViewById(R.id.price);
+                hotels = dialog.findViewById(R.id.hotels);
+                star_rating = dialog.findViewById(R.id.star_rating);
+                price = dialog.findViewById(R.id.price);
 
                 hotels.setText("Airline");
                 star_rating.setText("Time");
@@ -233,27 +231,27 @@ public class Flights_Domestic_Onward extends BackActivity {
                 star_rating.setTag("Asc");
                 price.setTag("Asc");
 
-                if (Tags!=null){
-                    if (Tags.equals("TitleASC")){
+                if (Tags != null) {
+                    if (Tags.equals("TitleASC")) {
                         sortAirlineColor();
                         hotels.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.arrow_down, 0);
-                    }else if (Tags.equals("TitleDSC")){
+                    } else if (Tags.equals("TitleDSC")) {
                         sortAirlineColor();
                         hotels.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.arrow_up, 0);
                     }
 
-                    if (Tags.equals("DURASC")){
+                    if (Tags.equals("DURASC")) {
                         sortTimeColor();
                         star_rating.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.arrow_down, 0);
-                    }else if (Tags.equals("DURDSC")){
+                    } else if (Tags.equals("DURDSC")) {
                         sortTimeColor();
                         star_rating.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.arrow_up, 0);
                     }
 
-                    if (Tags.equals("FareASC")){
+                    if (Tags.equals("FareASC")) {
                         sortPriceColor();
                         price.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.arrow_down, 0);
-                    }else if (Tags.equals("FareDSC")){
+                    } else if (Tags.equals("FareDSC")) {
                         sortPriceColor();
                         price.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.arrow_up, 0);
                     }
@@ -261,21 +259,21 @@ public class Flights_Domestic_Onward extends BackActivity {
                 hotels.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        hotels.setTypeface(font,Typeface.BOLD);
+                        hotels.setTypeface(font, Typeface.BOLD);
                         sortAirlineColor();
                         hotels.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
-                        star_rating.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0);
-                        price.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0);
-                        if (hotels.getTag().toString().equals("Asc")){
+                        star_rating.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+                        price.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+                        if (hotels.getTag().toString().equals("Asc")) {
                             hotels.setTag("Desc");
-                            Tags="TitleASC";
-                            ArrayList<DomesticOnwardFlightDTO> H=domesticOnward_adapter.sortByNameAsc();
+                            Tags = "TitleASC";
+                            ArrayList<DomesticOnwardFlightDTO> H = domesticOnward_adapter.sortByNameAsc();
                             domesticOnward_adapter.refreshList(H);
                             hotels.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.arrow_down, 0);
-                        }else {
+                        } else {
                             hotels.setTag("Asc");
-                            Tags="TitleDSC";
-                            ArrayList<DomesticOnwardFlightDTO> h=domesticOnward_adapter.sortByNameDesc();
+                            Tags = "TitleDSC";
+                            ArrayList<DomesticOnwardFlightDTO> h = domesticOnward_adapter.sortByNameDesc();
                             domesticOnward_adapter.refreshList(h);
                             hotels.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.arrow_up, 0);
                         }
@@ -285,23 +283,23 @@ public class Flights_Domestic_Onward extends BackActivity {
                 star_rating.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        star_rating.setTypeface(font,Typeface.BOLD);
+                        star_rating.setTypeface(font, Typeface.BOLD);
                         sortTimeColor();
                         hotels.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
-                        star_rating.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0);
-                        price.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0);
-                        if (star_rating.getTag().equals("Asc")){
+                        star_rating.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+                        price.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+                        if (star_rating.getTag().equals("Asc")) {
                             star_rating.setTag("Desc");
-                            Tags="DURASC";
-                            ArrayList<DomesticOnwardFlightDTO> h=domesticOnward_adapter.sortByTimeAsc();
+                            Tags = "DURASC";
+                            ArrayList<DomesticOnwardFlightDTO> h = domesticOnward_adapter.sortByTimeAsc();
                             domesticOnward_adapter.refreshList(h);
-                            star_rating.setCompoundDrawablesWithIntrinsicBounds(0,0,R.drawable.arrow_down,0);
-                        }else{
+                            star_rating.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.arrow_down, 0);
+                        } else {
                             star_rating.setTag("Asc");
-                            Tags="DURDSC";
-                            ArrayList<DomesticOnwardFlightDTO> h=domesticOnward_adapter.sortByTimeDesc();
+                            Tags = "DURDSC";
+                            ArrayList<DomesticOnwardFlightDTO> h = domesticOnward_adapter.sortByTimeDesc();
                             domesticOnward_adapter.refreshList(h);
-                            star_rating.setCompoundDrawablesWithIntrinsicBounds(0,0,R.drawable.arrow_up,0);
+                            star_rating.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.arrow_up, 0);
                         }
                     }
                 });
@@ -311,23 +309,23 @@ public class Flights_Domestic_Onward extends BackActivity {
                     @Override
                     public void onClick(View view) {
 
-                        price.setTypeface(font,Typeface.BOLD);
+                        price.setTypeface(font, Typeface.BOLD);
                         sortPriceColor();
                         hotels.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
-                        star_rating.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0);
-                        price.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0);
-                        if (price.getTag().toString().equals("Asc")){
+                        star_rating.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+                        price.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+                        if (price.getTag().toString().equals("Asc")) {
                             price.setTag("Desc");
-                            Tags="FareASC";
-                            ArrayList<DomesticOnwardFlightDTO> h=domesticOnward_adapter.sortByPriceAsc();
+                            Tags = "FareASC";
+                            ArrayList<DomesticOnwardFlightDTO> h = domesticOnward_adapter.sortByPriceAsc();
                             domesticOnward_adapter.refreshList(h);
-                            price.setCompoundDrawablesWithIntrinsicBounds(0,0,R.drawable.arrow_down,0);
-                        }else {
+                            price.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.arrow_down, 0);
+                        } else {
                             price.setTag("Asc");
-                            Tags="FareDSC";
-                            ArrayList<DomesticOnwardFlightDTO> h=domesticOnward_adapter.sortByPriceDesc();
+                            Tags = "FareDSC";
+                            ArrayList<DomesticOnwardFlightDTO> h = domesticOnward_adapter.sortByPriceDesc();
                             domesticOnward_adapter.refreshList(h);
-                            price.setCompoundDrawablesWithIntrinsicBounds(0,0,R.drawable.arrow_up,0);
+                            price.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.arrow_up, 0);
                         }
                     }
                 });
@@ -340,28 +338,31 @@ public class Flights_Domestic_Onward extends BackActivity {
             public void onClick(View view) {
                 Intent nextActivity = new Intent(Flights_Domestic_Onward.this, Dom_Onward_Flight_Filters_Activity.class);
                 if (!FilterTrue) {
-                    Tags=null;
-                    nextActivity.putExtra("Domestic_Onward_list", flights_main_dto.getDomesticOnwardFlights());
-                    nextActivity.putExtra("Filteredlist",filter_details);
+                    Tags = null;
+                    int sync = ResultIPC.get().setDomLargeData(flights_main_dto.getDomesticOnwardFlights());
+                    nextActivity.putExtra("Domestic_Onward_list", sync);
+                    nextActivity.putExtra("Filteredlist", filter_details);
                 }
-                startActivityForResult(nextActivity,1);
+                startActivityForResult(nextActivity, 1);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
         });
     }
 
 
-    public void sortAirlineColor(){
+    public void sortAirlineColor() {
         hotels.setTextColor(getResources().getColor(R.color.colorAccent));
         star_rating.setTextColor(getResources().getColor(R.color.white));
         price.setTextColor(getResources().getColor(R.color.white));
     }
-    public void sortTimeColor(){
+
+    public void sortTimeColor() {
         hotels.setTextColor(getResources().getColor(R.color.white));
         star_rating.setTextColor(getResources().getColor(R.color.colorAccent));
         price.setTextColor(getResources().getColor(R.color.white));
     }
-    public void sortPriceColor(){
+
+    public void sortPriceColor() {
         hotels.setTextColor(getResources().getColor(R.color.white));
         star_rating.setTextColor(getResources().getColor(R.color.white));
         price.setTextColor(getResources().getColor(R.color.colorAccent));
@@ -371,31 +372,31 @@ public class Flights_Domestic_Onward extends BackActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode==1){
-            if (data!=null){
-                Boolean Filter=data.getBooleanExtra("Filter",false);
-                if (Filter){
-                    Tags=null;
-                    filter_details= (Flight_Filters_DTO) data.getSerializableExtra("Filteredlist");
+        if (requestCode == 1) {
+            if (data != null) {
+                Boolean Filter = data.getBooleanExtra("Filter", false);
+                if (Filter) {
+                    Tags = null;
+                    filter_details = (Flight_Filters_DTO) data.getSerializableExtra("Filteredlist");
                     FilterMethod();
-                }else {
+                } else {
                     callFlightsData();
-                    filter_details=null;
+                    filter_details = null;
                 }
 
             }
         }
     }
 
-    public void FilterMethod(){
-        ArrayList<DomesticOnwardFlightDTO> available_flights=new ArrayList<>();
-        available_flights=flights_main_dto.getDomesticOnwardFlights();
-        ArrayList<DomesticOnwardFlightDTO> Filteredlist=new ArrayList<>();
+    public void FilterMethod() {
+        ArrayList<DomesticOnwardFlightDTO> available_flights = new ArrayList<>();
+        available_flights = flights_main_dto.getDomesticOnwardFlights();
+        ArrayList<DomesticOnwardFlightDTO> Filteredlist = new ArrayList<>();
 
-        ArrayList<HashMap<String,String>> Selecteditems=new ArrayList<>();
-        Selecteditems=filter_details.getFilter_Array();
+        ArrayList<HashMap<String, String>> Selecteditems = new ArrayList<>();
+        Selecteditems = filter_details.getFilter_Array();
 
-        for (int m=0;m<available_flights.size();m++) {
+        for (int m = 0; m < available_flights.size(); m++) {
 
             double d = Double.parseDouble(String.valueOf(available_flights.get(m).getFareDetails().getChargeableFares().getActualBaseFare()));
             double Servicecharge = Double.parseDouble(String.valueOf(available_flights.get(m).getFareDetails().getChargeableFares().getTax()));
@@ -404,7 +405,7 @@ public class Flights_Domestic_Onward extends BackActivity {
 
             final double TotalFare = d + Servicecharge + Operatercharge + Markepcharge;
             if (Util.getprice2(TotalFare) >= filter_details.getMin_Rate() && Util.getprice2(TotalFare) <= filter_details.getMax_Rate()) {
-                Isvalid=true;
+                Isvalid = true;
                 for (int k = 0; k < Selecteditems.size(); k++) {
                     if (filter_details.getAirlines() != null && filter_details.getAirlines().size() != 0) {
                         if (filter_details.getAirlines().contains(available_flights.get(m).getFlightSegments().get(0).getAirLineName())) {
@@ -608,8 +609,8 @@ public class Flights_Domestic_Onward extends BackActivity {
         }
 
         setFlightsData(Filteredlist);
-        Util.showMessage(this, String.valueOf(Filteredlist.size()+" Flights Found"));
-        if (Filteredlist.size()==0){
+        Util.showMessage(this, String.valueOf(Filteredlist.size() + " Flights Found"));
+        if (Filteredlist.size() == 0) {
             showAlertDialog2("No Flights Available for Selected Filter");
         }
 
@@ -624,18 +625,20 @@ public class Flights_Domestic_Onward extends BackActivity {
         alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
                 Intent nextActivity = new Intent(Flights_Domestic_Onward.this, Dom_Onward_Flight_Filters_Activity.class);
-                nextActivity.putExtra("Domestic_Onward_list",flights_main_dto.getDomesticOnwardFlights());
+                int sync = ResultIPC.get().setDomLargeData(flights_main_dto.getDomesticOnwardFlights());
+                nextActivity.putExtra("Domestic_Onward_list", sync);
                 nextActivity.putExtra("Filteredlist", filter_details);
-                startActivityForResult(nextActivity,1);
+                startActivityForResult(nextActivity, 1);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
         });
         alertDialog.show();
     }
-    private void callTaxDetails(){
+
+    private void callTaxDetails() {
         showProgressDialog("Fetching Tax Details", this);
         if (Util.isNetworkAvailable(getApplicationContext())) {
-            ServiceClasses.getTaxDetails(Flights_Domestic_Onward.this,Constants.GetTaxDetails,prepayload());
+            ServiceClasses.getTaxDetails(Flights_Domestic_Onward.this, Constants.GetTaxDetails, prepayload());
         } else {
             Util.showMessage(this, Constants.NO_INT_MSG);
         }
@@ -646,7 +649,7 @@ public class Flights_Domestic_Onward extends BackActivity {
         JSONArray array = new JSONArray();
         Gson gson = new GsonBuilder().enableComplexMapKeySerialization().create();
         try {
-            for(int i=0;i<SelOnwardFlight.getFlightSegments().size();i++) {
+            for (int i = 0; i < SelOnwardFlight.getFlightSegments().size(); i++) {
                 array.put(new JSONObject(gson.toJson(SelOnwardFlight.getFlightSegments().get(i))));
             }
         } catch (Exception e) {
@@ -684,7 +687,7 @@ public class Flights_Domestic_Onward extends BackActivity {
             bcparam.put("keyRet", "");
             bcparam.put("FlightId", "");
             bcparam.put("FlightIdRet", "");
-            bcparam.put("OnwardFlightSegments",array);
+            bcparam.put("OnwardFlightSegments", array);
             bcparam.put("FareDetails", new JSONObject(gson.toJson(SelOnwardFlight.getFareDetails())));
             bcparam.put("BookingDate", "0001-01-01T00:00:00");
             bcparam.put("PromoCode", "");
@@ -711,9 +714,9 @@ public class Flights_Domestic_Onward extends BackActivity {
             bcparam.put("TChargeRet", "0");
             bcparam.put("TMarkupRet", "0");
             bcparam.put("Source", selDetails.getFrom_City_ID());
-            bcparam.put("SourceName",selDetails.getFrom_City_Name()+", "+selDetails.getFrom_City_ID());
+            bcparam.put("SourceName", selDetails.getFrom_City_Name() + ", " + selDetails.getFrom_City_ID());
             bcparam.put("Destination", selDetails.getTo_City_ID());
-            bcparam.put("DestinationName",selDetails.getTo_City_Name()+", "+selDetails.getTo_City_ID());
+            bcparam.put("DestinationName", selDetails.getTo_City_Name() + ", " + selDetails.getTo_City_ID());
             bcparam.put("JourneyDate", selDetails.getOnward_date());
             bcparam.put("ReturnDate", "");
             bcparam.put("TripType", "1");
@@ -730,15 +733,15 @@ public class Flights_Domestic_Onward extends BackActivity {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        System.out.println("TaxDetails request: "+ bcparam.toString());
+        System.out.println("TaxDetails request: " + bcparam.toString());
         return bcparam.toString();
     }
 
 
     public void postTaxDetailsResponse(String response) {
         hideProgressDialog();
-        System.out.println("TaxDetails Response: "+response);
-        if (response!=null) {
+        System.out.println("TaxDetails Response: " + response);
+        if (response != null) {
             InputStream stream = new ByteArrayInputStream(response.getBytes());
             Gson gson = new Gson();
             Reader reader = new InputStreamReader(stream);
@@ -754,8 +757,7 @@ public class Flights_Domestic_Onward extends BackActivity {
                     send_to_nextactivity();
                 } else {
                     AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
-                    ////alertDialog.setTitle("Alert!");
-                    alertDialog.setMessage(getResources().getString(R.string.fare_changed_1)  +" "+Currency_Symbol+Util.getprice(TotalFare*Curr_Value) + getResources().getString(R.string.fare_changed_2));
+                    alertDialog.setMessage(getResources().getString(R.string.fare_changed_1) + " " + Currency_Symbol + Util.getprice(TotalFare * Curr_Value) + getResources().getString(R.string.fare_changed_2));
                     alertDialog.setCancelable(false);
                     alertDialog.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
@@ -771,13 +773,13 @@ public class Flights_Domestic_Onward extends BackActivity {
 
                     alertDialog.show();
                 }
-            }else {
-                Util.alertDialogShow(this,getResources().getString(R.string.error_msg));
+            } else {
+                Util.alertDialogShow(this, getResources().getString(R.string.error_msg));
             }
         }
     }
 
-    private void send_to_nextactivity(){
+    private void send_to_nextactivity() {
         if (flights_main_dto.getDomesticReturnFlights().size() != 0 && flights_main_dto.getDomesticReturnFlights() != null) {
             Intent ip = new Intent(Flights_Domestic_Onward.this, Flights_Domestic_Return.class);
             ip.putExtra("selDetails", selDetails);
@@ -788,13 +790,13 @@ public class Flights_Domestic_Onward extends BackActivity {
             Intent ip = new Intent(Flights_Domestic_Onward.this, Domestic_Flight_Review.class);
             ip.putExtra("selDetails", selDetails);
             ip.putExtra("SelOnwardFlight", SelOnwardFlight);
-            ip.putExtra("Flights_Main_DTO",flights_main_dto);
+            ip.putExtra("Flights_Main_DTO", flights_main_dto);
             startActivity(ip);
         }
     }
 
 
-    public void errorresponse (String response){
+    public void errorresponse(String response) {
         hideProgressDialog();
         showAlertDialogforError("Timed out! \nTry again");
     }
@@ -806,8 +808,8 @@ public class Flights_Domestic_Onward extends BackActivity {
         alertDialog.setMessage(s);
         alertDialog.setCancelable(false);
         alertDialog.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog,int which) {
-              callTaxDetails();
+            public void onClick(DialogInterface dialog, int which) {
+                callTaxDetails();
             }
         });
         alertDialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {

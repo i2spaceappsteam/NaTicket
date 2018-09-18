@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:customfontdemo="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_ground"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+
+
+        <com.NaTicket.n.custom.MyTextViewBold
+            android:id="@+id/BSDTittle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Select "
+            android:textSize="18dp"
+            android:layout_weight="1.0"
+            android:textAlignment="center"
+            customfontdemo:fontName="@string/custom_font"/>
+
+
+        <ImageView
+            android:id="@+id/closePopup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_close"
+            android:padding="5dp"
+            android:layout_gravity="end"
+            android:tint="@color/colorBlack"/>
+
+    </LinearLayout>
+
+
+    <SearchView
+        android:id="@+id/searchcountryView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:queryHint="Search City"
+        android:background="@color/white"
+        android:iconifiedByDefault="true"
+        android:layout_margin="20dp">
+
+    </SearchView>
+
+
+    <ListView
+        android:id="@+id/select_city_pilg_bs"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_margin="20dp"
+        android:background="@color/white"/>
+
+
+</LinearLayout>

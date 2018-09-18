@@ -8,6 +8,7 @@ import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.NaTicket.n.common.activities.ResultIPC;
 import com.NaTicket.n.common.pojo.Currency_Utils;
 import com.NaTicket.n.custom.FontTypeface;
 import com.NaTicket.n.flights.pojo.DomesticReturnFlightDTO;
@@ -61,7 +62,8 @@ public class Dom_Return_Flight_Filters_Activity  extends BackActivity implements
         TextView toolbartitle = (TextView) findViewById(R.id.toolbartitle);
         toolbartitle.setText("Filters");
         initviews();
-        dom_onward_list= (ArrayList<DomesticReturnFlightDTO>) getIntent().getSerializableExtra("Domestic_Return_list");
+        int sync = getIntent().getIntExtra("Domestic_Return_list",-1);
+        dom_onward_list= ResultIPC.get().getDom_RetLargeData(sync);
         filterdeatils= (Flight_Filters_DTO) getIntent().getSerializableExtra("Filteredlist");
 
         Price_Range_SeekBar.setOnRangeSeekbarChangeListener(new OnRangeSeekbarChangeListener() {

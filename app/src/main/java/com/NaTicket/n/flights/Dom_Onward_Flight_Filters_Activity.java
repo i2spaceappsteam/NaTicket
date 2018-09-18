@@ -8,16 +8,17 @@ import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.NaTicket.n.flights.pojo.DomesticOnwardFlightDTO;
-import com.NaTicket.n.flights.pojo.Flight_Filters_DTO;
-import com.crystal.crystalrangeseekbar.interfaces.OnRangeSeekbarChangeListener;
-import com.crystal.crystalrangeseekbar.widgets.CrystalRangeSeekbar;
 import com.NaTicket.n.R;
+import com.NaTicket.n.common.activities.ResultIPC;
 import com.NaTicket.n.common.pojo.Currency_Utils;
 import com.NaTicket.n.custom.FontTypeface;
+import com.NaTicket.n.flights.pojo.DomesticOnwardFlightDTO;
+import com.NaTicket.n.flights.pojo.Flight_Filters_DTO;
 import com.NaTicket.n.flights.pojo.Flight_Utils;
 import com.NaTicket.n.utils.BackActivity;
 import com.NaTicket.n.utils.Util;
+import com.crystal.crystalrangeseekbar.interfaces.OnRangeSeekbarChangeListener;
+import com.crystal.crystalrangeseekbar.widgets.CrystalRangeSeekbar;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -59,10 +60,12 @@ public class Dom_Onward_Flight_Filters_Activity extends BackActivity implements 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.flight_filters_activity);
         inittoolbar();
-        TextView toolbartitle = (TextView) findViewById(R.id.toolbartitle);
+        TextView toolbartitle =  findViewById(R.id.toolbartitle);
         toolbartitle.setText("Filters");
         initviews();
-        dom_onward_list= (ArrayList<DomesticOnwardFlightDTO>) getIntent().getSerializableExtra("Domestic_Onward_list");
+
+        int sync = getIntent().getIntExtra("Domestic_Onward_list",-1);
+        dom_onward_list= ResultIPC.get().getDomLargeData(sync);
         filterdeatils= (Flight_Filters_DTO) getIntent().getSerializableExtra("Filteredlist");
 
         Price_Range_SeekBar.setOnRangeSeekbarChangeListener(new OnRangeSeekbarChangeListener() {

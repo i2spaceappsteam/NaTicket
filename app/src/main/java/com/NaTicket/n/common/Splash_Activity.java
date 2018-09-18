@@ -48,12 +48,14 @@ public class Splash_Activity extends AppCompatActivity {
     String currentVersion;
     String online_version = null;
     Boolean NewUpdateAvailable=false;
+    Login_utils login_utils;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Fabric.with(this, new Crashlytics());
         setContentView(R.layout.splash_screen);
         parentLinear = (RelativeLayout) findViewById(R.id.parentLinear);
+        login_utils=new Login_utils(this);
 
         getWindow().getDecorView().setSystemUiVisibility(
                 View.SYSTEM_UI_FLAG_LAYOUT_STABLE
@@ -67,8 +69,24 @@ public class Splash_Activity extends AppCompatActivity {
         prefManager = new PrefManager(this);
 
         callVersionCodeCheck();
+        callcountrycodes();
         callClientDetails();
 
+
+    }
+
+    private void callcountrycodes() {
+        if(Util.isNetworkAvailable(getApplicationContext())) {
+            ServiceClasses.getDailingcodes(Splash_Activity.this, Constants.COUNTRY_DAILING_CODES);
+        }else{
+            Util.showMessage(this,Constants.NO_INT_MSG);
+        }
+    }
+
+    public void getdialingcodesresponse(String response) {
+        if (response!=null){
+            login_utils.setDailindcodesresponse(response);
+        }
     }
 
     private void callClientDetails() {

@@ -5,14 +5,6 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Canvas;
-import android.graphics.Matrix;
-import android.graphics.Paint;
-import android.graphics.Path;
-import android.graphics.Rect;
-import android.graphics.RectF;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Build;
@@ -26,20 +18,23 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.NaTicket.n.common.MainActivity;
-import com.NaTicket.n.R;
+import com.NaTicket.n.loginpackage.pojo.Country_Codes_DTO;
+import com.google.gson.Gson;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
 import java.text.DateFormat;
 import java.text.DecimalFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Date;
 import java.util.Locale;
-import java.util.StringTokenizer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -191,6 +186,15 @@ public class Util {
         }
     }
 
+    public static boolean validateGSTNumber(EditText et) {
+        if (et.getText().toString().trim().length() > 0 && et.getText().toString().trim().length() == 15) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
 
     public static int getResponseCode(String response) {
         int statusCode = 0;
@@ -273,17 +277,15 @@ public class Util {
     }
 
 
-
     public static String getReverseDate(String date) throws ParseException {
         DateFormat inputFormat = new SimpleDateFormat("yyyy-MM-dd");
         DateFormat outputFormat = new SimpleDateFormat("EEE, dd MMM yy");
-        String inputDateStr=date;
+        String inputDateStr = date;
         Date dateR = inputFormat.parse(inputDateStr);
         String outputDateStr = outputFormat.format(dateR);
 
         return outputDateStr;
     }
-
 
 
     public static String getTime(String date) {
@@ -377,7 +379,7 @@ public class Util {
     }
 
 
-    public static String getDeviceTocken(Context contex){
+    public static String getDeviceTocken(Context contex) {
 
         return Settings.Secure.getString(contex.getContentResolver(), Settings.Secure.ANDROID_ID);
     }
@@ -406,7 +408,14 @@ public class Util {
     }
 
 
-
+    public static String getcountryIndex(Country_Codes_DTO[] country_dail_code, String myString) {
+        String index = null;
+        for (int i = 0; i < country_dail_code.length; i++) {
+            if (myString.equals(country_dail_code[i].getTitle()))
+                index = country_dail_code[i].getCode();
+        }
+        return index;
+    }
 
 
     public static boolean validateMobilenumber(String s) {
@@ -416,6 +425,34 @@ public class Util {
         if (matcher.matches()) {
             return true;
         } else return false;
+    }
+
+    public static ArrayList<String> getdialingcodesresponse(String response) {
+        ArrayList<String> country_dailling_codes = new ArrayList<>();
+        if (response != null) {
+            InputStream stream = new ByteArrayInputStream(response.getBytes());
+            Gson gson = new Gson();
+            Reader reader = new InputStreamReader(stream);
+            Country_Codes_DTO[] country_dail_code = gson.fromJson(reader, Country_Codes_DTO[].class);
+            if (country_dail_code != null && country_dail_code.length > 0) {
+                for (Country_Codes_DTO aCountry_dail_code : country_dail_code) {
+                    country_dailling_codes.add(aCountry_dail_code.getTitle());
+                }
+            }
+        }
+        return country_dailling_codes;
+    }
+
+    public static Country_Codes_DTO[] getdailingcodes_array(String response) {
+        Country_Codes_DTO[] country_dail_code = new Country_Codes_DTO[0];
+        if (response != null) {
+            InputStream stream = new ByteArrayInputStream(response.getBytes());
+            Gson gson = new Gson();
+            Reader reader = new InputStreamReader(stream);
+            country_dail_code = gson.fromJson(reader, Country_Codes_DTO[].class);
+
+        }
+        return country_dail_code;
     }
 
 }

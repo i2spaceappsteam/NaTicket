@@ -14,6 +14,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import com.NaTicket.n.common.activities.ResultIPC;
 import com.NaTicket.n.flights.pojo.FareDetailsDTO;
 import com.NaTicket.n.flights.pojo.Flight_Filters_DTO;
 import com.NaTicket.n.loginpackage.pojo.Login_utils;
@@ -260,7 +261,8 @@ public class Flights_International_Onward extends BackActivity {
                 Intent nextActivity = new Intent(Flights_International_Onward.this, Int_Onward_Flight_Filters_Activity.class);
                 if (!FilterTrue) {
                     Tags=null;
-                    nextActivity.putExtra("Int_Onward_list", flights_main_dto.getInternationalFlights());
+                    int sync = ResultIPC.get().setIntLargeData(flights_main_dto.getInternationalFlights());
+                    nextActivity.putExtra("Int_Onward_list", sync);
                     nextActivity.putExtra("Filteredlist",filter_details);
                 }
                 startActivityForResult(nextActivity,1);
@@ -540,7 +542,8 @@ public class Flights_International_Onward extends BackActivity {
         alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
                 Intent nextActivity = new Intent(Flights_International_Onward.this, Int_Onward_Flight_Filters_Activity.class);
-                nextActivity.putExtra("Int_Onward_list",flights_main_dto.getInternationalFlights());
+                int sync = ResultIPC.get().setIntLargeData(flights_main_dto.getInternationalFlights());
+                nextActivity.putExtra("Int_Onward_list", sync);
                 nextActivity.putExtra("Filteredlist", filter_details);
                 startActivityForResult(nextActivity,1);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
@@ -588,6 +591,7 @@ public class Flights_International_Onward extends BackActivity {
 
     public void getFlightData(InternationalFlightsDTO Flights_DTO,double total) {
         SelOnwardFlight=Flights_DTO;
+        selDetails.setGSTMandatory(Flights_DTO.getFareDetails().isGSTMandatory());
         GrandTotal=total;
         callTaxDetails();
     }
@@ -765,7 +769,7 @@ public class Flights_International_Onward extends BackActivity {
         Intent ip = new Intent(Flights_International_Onward.this, International_Flight_Review.class);
         ip.putExtra("selDetails",selDetails);
         ip.putExtra("SelFlight",SelOnwardFlight);
-        ip.putExtra("Flights_Main_DTO",flights_main_dto);
+        //ip.putExtra("Flights_Main_DTO",flights_main_dto);
         startActivity(ip);
     }
 

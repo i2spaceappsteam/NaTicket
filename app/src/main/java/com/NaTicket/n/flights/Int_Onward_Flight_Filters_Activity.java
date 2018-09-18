@@ -8,6 +8,7 @@ import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.NaTicket.n.common.activities.ResultIPC;
 import com.NaTicket.n.flights.pojo.Flight_Filters_DTO;
 import com.NaTicket.n.flights.pojo.Flight_Utils;
 import com.crystal.crystalrangeseekbar.interfaces.OnRangeSeekbarChangeListener;
@@ -62,7 +63,8 @@ public class Int_Onward_Flight_Filters_Activity  extends BackActivity implements
         TextView toolbartitle = (TextView) findViewById(R.id.toolbartitle);
         toolbartitle.setText("Filters");
         initviews();
-        int_onward_list= (ArrayList<InternationalFlightsDTO>) getIntent().getSerializableExtra("Int_Onward_list");
+        int sync = getIntent().getIntExtra("Int_Onward_list",-1);
+        int_onward_list=  ResultIPC.get().getIntLargeData(sync);
         filterdeatils= (Flight_Filters_DTO) getIntent().getSerializableExtra("Filteredlist");
 
         Price_Range_SeekBar.setOnRangeSeekbarChangeListener(new OnRangeSeekbarChangeListener() {

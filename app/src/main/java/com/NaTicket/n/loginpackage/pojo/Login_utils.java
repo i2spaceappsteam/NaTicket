@@ -82,4 +82,16 @@ public class Login_utils {
     }
 
 
+    public void setDailindcodesresponse(String Content){
+        SharedPreferences.Editor localEditor = ctx.getSharedPreferences("DailingCodes", 0).edit();
+        localEditor.putString(Constants.DAILING_CODES, Content);
+        localEditor.apply();
+    }
+
+    public String getDailindcodesresponse(String id) {
+        SharedPreferences localSharedPreferences = ctx.getSharedPreferences("DailingCodes", 0);
+        return localSharedPreferences.getString(id, "");
+    }
+
+
 }

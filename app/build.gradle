@@ -17,14 +17,14 @@ repositories {
 
 android {
     compileSdkVersion 27
-    //buildToolsVersion "26.0.0"
     useLibrary 'org.apache.http.legacy'
     defaultConfig {
         applicationId "com.NaTicket.n"
         minSdkVersion 19
         targetSdkVersion 27
-        versionCode 7
-        versionName "1.6"
+        versionCode 8
+        versionName "1.7"
+
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
     }
@@ -39,7 +39,7 @@ android {
             debuggable false
         }
         debug {
-            debuggable false
+            debuggable true
         }
     }
 

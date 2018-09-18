@@ -70,6 +70,8 @@ public class User_Details_DTO implements Serializable {
 
     private String Role;
 
+    private String DailingCode;
+
     public int getIsSIteAdminAgent() {
         return IsSIteAdminAgent;
     }
@@ -316,6 +318,14 @@ public class User_Details_DTO implements Serializable {
 
     public void setRole(String role) {
         Role = role;
+    }
+
+    public String getDailingCode() {
+        return DailingCode;
+    }
+
+    public void setDailingCode(String dailingCode) {
+        DailingCode = dailingCode;
     }
 }
 

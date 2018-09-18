@@ -66,16 +66,16 @@ public class Forgot_Password_Activity extends BackActivity implements View.OnCli
     }
 
     public void initviews(){
-        email_et= (EditText) findViewById(R.id.email_et);
-        enter_tv= (TextView) findViewById(R.id.submitTv);
+        email_et=  findViewById(R.id.email_et);
+        enter_tv=  findViewById(R.id.submitTv);
         enter_tv.setOnClickListener(this);
 
 
-        User_Radio= (RadioButton) findViewById(R.id.user_radio);
-        Agent_Radio= (RadioButton) findViewById(R.id.Agent_radio);
+        User_Radio=  findViewById(R.id.user_radio);
+        Agent_Radio=  findViewById(R.id.Agent_radio);
         User_Radio.setChecked(true);
 
-        RadioGroup radioGroup = (RadioGroup) findViewById(R.id.radio_group_for);
+        RadioGroup radioGroup =  findViewById(R.id.radio_group_for);
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
         {
             @Override
@@ -151,7 +151,11 @@ public class Forgot_Password_Activity extends BackActivity implements View.OnCli
             Reader reader = new InputStreamReader(stream);
             getUserDetailsDTO = gson.fromJson(reader, User_Details_DTO.class);
             if (getUserDetailsDTO != null) {
-                Mobile = getUserDetailsDTO.getMobile();
+                if (getUserDetailsDTO.getDailingCode()!=null){
+                    Mobile =getUserDetailsDTO.getDailingCode()+getUserDetailsDTO.getMobile();
+                }else {
+                    Mobile = "91"+getUserDetailsDTO.getMobile();
+                }
                 ShowOtpAlert();
 
             } else {
@@ -184,9 +188,9 @@ public class Forgot_Password_Activity extends BackActivity implements View.OnCli
         OTPAlert.setContentView(R.layout.logout_permisson_dialog);
         OTPAlert.setCancelable(false);
 
-        TextView Msg= (TextView) OTPAlert.findViewById(R.id.Msg_alert);
-        TextView Positive = (TextView) OTPAlert.findViewById(R.id.logout);
-        TextView Negative = (TextView) OTPAlert.findViewById(R.id.dialog_cancel);
+        TextView Msg=  OTPAlert.findViewById(R.id.Msg_alert);
+        TextView Positive =  OTPAlert.findViewById(R.id.logout);
+        TextView Negative =  OTPAlert.findViewById(R.id.dialog_cancel);
 
         Positive.setText("YES");
 

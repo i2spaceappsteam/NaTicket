@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:customfontdemo="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundforrg"
+    >
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+
+
+        <com.NaTicket.n.custom.MyTextViewBold
+            android:id="@+id/BSDTittle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Select "
+            android:textSize="18dp"
+            android:layout_weight="1.0"
+            android:textAlignment="center"
+            customfontdemo:fontName="@string/custom_font"/>
+
+
+        <ImageView
+            android:id="@+id/closePopup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_close"
+            android:padding="5dp"
+            android:layout_gravity="end"
+            android:tint="@color/colorBlack"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        >
+        <com.NaTicket.n.custom.MyEdiText
+            android:id="@+id/gst_company_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Company Name"
+            android:padding="8dp"
+            android:inputType="textPersonName"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/backgroundforrg"
+            customfontdemo:fontName="@string/custom_font"/>
+
+        <com.NaTicket.n.custom.MyEdiText
+            android:id="@+id/gst_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="GST Number"
+            android:padding="8dp"
+            android:textSize="15sp"
+            android:maxLength="15"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/backgroundforrg"
+            customfontdemo:fontName="@string/custom_font"/>
+
+        <com.NaTicket.n.custom.MyEdiText
+            android:id="@+id/company_contact_num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Company Contact Number"
+            android:padding="8dp"
+            android:inputType="phone"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:maxLength="10"
+            android:background="@drawable/backgroundforrg"
+            customfontdemo:fontName="@string/custom_font"/>
+
+        <com.NaTicket.n.custom.MyEdiText
+            android:id="@+id/gst_company_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Company Email"
+            android:padding="8dp"
+            android:inputType="textEmailAddress"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/backgroundforrg"
+            customfontdemo:fontName="@string/custom_font"/>
+
+        <com.NaTicket.n.custom.MyEdiText
+            android:id="@+id/gst_company_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Company Address"
+            android:padding="8dp"
+            android:inputType="textPostalAddress"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/backgroundforrg"
+            customfontdemo:fontName="@string/custom_font"/>
+    </LinearLayout>
+    <com.NaTicket.n.custom.MyTextView
+        android:id="@+id/submit_gst"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:padding="15dp"
+        android:gravity="center"
+        android:background="@color/colorAccent"
+        android:textColor="@android:color/white"
+        android:layout_margin="@dimen/dimen_10dp"
+        android:textSize="17sp"
+        customfontdemo:fontName="@string/custom_font" />
+    </LinearLayout>
+</ScrollView>
+</LinearLayout>
